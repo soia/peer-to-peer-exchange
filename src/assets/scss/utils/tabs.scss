@@ -1,0 +1,13 @@
+.tab-content {
+    display: block ;
+    height: 0;
+    overflow: hidden;
+}
+
+.tab-content.selected-item {
+    height: auto;
+}
+
+.tab-container__tab {
+    display: flex;
+}

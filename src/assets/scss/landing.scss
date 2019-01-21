@@ -1,0 +1,272 @@
+.landing {
+    &__bg-header {
+        position: absolute;
+        top: 0;
+        right: 0;
+        // left: 0;
+        // margin: 0 auto;
+        background-image: url("../img/landing/logo&icons/bglogo.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 1085px;
+        height: 1085px;
+        z-index: -1;
+    }
+}
+
+// peer to peer exchange
+
+.exchange {
+    margin: 90px 36px 0 122px;
+
+    &__text {
+        &_title {
+            color: $semiBlack;
+            font-family: $regularFont;
+            font-weight: $medium;
+            font-size: 60px;
+            line-height: 80px;
+        }
+
+        &_description {
+            color: $gray;
+            font-family: $regularFont;
+            font-weight: $normal;
+            font-size: 24px;
+            line-height: 44px;
+            max-width: 463px;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        margin-top: 60px;
+
+        &_button {
+            display: flex;
+
+            a {
+                width: 220px;
+                height: 60px;
+                color: $white;
+                font-family: $regularFont;
+                font-weight: $medium;
+                font-size: 14px;
+                line-height: 14px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:first-child {
+                    background-color: $turquoise;
+                    margin-right: 25px;
+                }
+
+                &:last-child {
+                    background-color: $red;
+                }
+
+            }
+        }
+
+        &_play-video {
+            margin-top: 140px;
+
+            &_link {
+                display: flex;
+                align-items: center;
+                width: max-content;
+
+                p {
+                    color: $semiBlack;
+                    font-family: $regularFont;
+                    font-weight: $medium;
+                    font-size: 20px;
+                    line-height: 20px;
+                    margin-left: 15px;
+                }
+            }
+        }
+
+        &_left-side {
+
+        }
+
+        &_svg-icons {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            transform: translateY(-20px);
+
+            &_item {
+                width: calc(100% / 3);
+                display: flex;
+                flex-direction: column;
+                max-width: 200px;
+
+                img {
+                    height: 93px;
+                }
+
+                p {
+                    color: $semiBlack;
+                    font-family: $regularFont;
+                    font-weight: $normal;
+                    font-size: 20px;
+                    line-height: 30px;
+                    margin-top: 40px;   
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+// list of sellers
+
+.list-sellers {
+    padding: 100px 122px 70px 122px;
+    display: flex;
+    justify-content: space-between;
+
+    &__left-side {
+
+        &_title {
+            color: $semiBlack;
+            font-family: $regularFont;
+            font-weight: $medium;
+            font-size: 40px;
+            line-height: 47px;
+        }
+    }
+
+    &__right-side {
+
+        .tab-container__tab-item {
+            width: 164px;
+            height: 36px;
+            font-family: $regularFont;
+            font-weight: $medium;
+            font-size: 14px;
+            line-height: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            
+            &:first-child {
+                background-color: $turquoise;
+                color: $white;
+            }
+
+            &:last-child {
+                color: $gray;
+                border: 1px solid $red;
+            }
+
+
+        }
+    }
+}
+
+// graph block
+
+.graph-block {
+    background-image: url("../img/landing/logo&icons/graph-block.svg");
+    background-repeat: no-repeat;
+    height: 231px;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 250px;
+
+    &__item {
+        p {
+            color: $white;
+            font-family: $regularFont;
+
+            &:first-child {
+                font-weight: $medium;
+                font-size: 40px;
+                line-height: 47px;
+                text-align: center;
+            }
+        }
+
+        &_description {
+            font-size: 24px;
+            line-height: 24px;
+            margin: 20px auto 0;
+            max-width: 185px;
+            text-align: center;
+        }
+
+        &:first-child {
+            position: relative;
+
+            img {
+                position: absolute;
+                top: -20px;
+                left: -50px;
+            }
+        }
+    }
+}
+
+// as seen in
+
+.asSeenIn {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 122px 80px 122px;
+
+    &__left-side {
+        margin-right: 100px;
+
+        p {
+            &:first-child {
+                color: $semiBlack;
+                font-family: $regularFont;
+                font-size: 40px;
+                font-weight: $medium;
+                line-height: 47px;
+            }
+
+            &:last-child {
+                color: $gray;
+                font-family: $regularFont;;
+                font-size: 24px;
+                line-height: 44px;
+                max-width: 369px;
+            }
+        }
+    }
+
+    &__right-side {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        img {
+            filter: grayscale(100%);
+        }
+    }
+}
+
+// reviews
+
+.reviews {
+    padding: 60px 122px 20px 122px;
+
+    &__title-block {
+
+        &_title {
+            color: $semiBlack;
+            font-family: $regularFont;
+            font-weight: $medium;
+            font-size: 40px;
+            line-height: 47px;
+        }
+    }
+}

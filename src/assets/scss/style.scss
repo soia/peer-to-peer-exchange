@@ -1,9 +1,26 @@
+html {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+    overflow-x: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+}
+
+@import "./utils/mixins-variables";
+@import "./utils/nice-select";
+@import "./utils/tabs";
 @import "./base/fonts";
 @import "./base/reset";
 @import "./base/slick";
 @import "./base/slick-theme";
-@import "./layout/footer";
 @import "./layout/header";
+@import "./layout/footer";
+@import "./layout/modal-window";
 @import "./main/main";
-@import "./utils/mixins-variables";
 @import "./landing";

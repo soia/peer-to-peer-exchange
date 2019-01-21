@@ -4,11 +4,13 @@
   window.inflot = $.extend({}, {
 
     init: function () {
+      inflot.initOpenModal();
+
+      
       inflot.initMenu();
       inflot.initSearch();
       inflot.initLiked();
       inflot.initTabs();
-      inflot.initOpenModal();
       inflot.initAccordion();
       inflot.initHideAccordion();
       inflot.initShowHideRewiews();
@@ -18,6 +20,21 @@
       inflot.initDatePicker();
       inflot.initSlickSlider();
     },
+
+    initOpenModal: function () {
+      $('.popUp').magnificPopup({
+        delegate: 'a',
+        removalDelay: 500,
+        callbacks: {
+          beforeOpen: function () {
+            this.st.mainClass = this.st.el.attr('data-effect');
+          }
+        },
+        midClick: true
+      });
+    },
+
+
 
     initMenu: function () {
       let dynamicMenu = $("#menu"),
@@ -75,19 +92,6 @@
         $(this).addClass('selected-item');
         $("#" + tab_id).addClass('selected-item');
       })
-    },
-
-    initOpenModal: function () {
-      $('.popUp').magnificPopup({
-        delegate: 'a',
-        removalDelay: 500,
-        callbacks: {
-          beforeOpen: function () {
-            this.st.mainClass = this.st.el.attr('data-effect');
-          }
-        },
-        midClick: true
-      });
     },
 
     initAccordion: function () {

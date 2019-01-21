@@ -1,0 +1,29 @@
+.landing_body {
+    background-color: $bgColor;
+
+    a {
+        text-decoration: none;
+    }
+
+    .bold {
+        font-weight: $bold;
+    }
+
+    .fixed-social-icons {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 25px;
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+
+        &__links {
+            padding: 15px;
+
+            &:not(:last-child) {
+                margin-bottom: 80px;
+            }
+        }
+    }
+}

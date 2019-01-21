@@ -1,7 +1,149 @@
-@@include('modules/html-head.html',{ "bodyClass": "support_body", "pageTitle": "PeerToPeerExchange" })
-@@include('modules/header-white.html',{
+@@include('modules/html-head.html',{ "bodyClass": "landing_body", "pageTitle": "PeerToPeerExchange" })
+@@include('modules/header-landing.html',{
 "headerClass": "" })
 
 <main class="landing">
 
+    <!-- background img header -->
+
+    <div class="landing__bg-header">
+
+    </div>
+
+    <!-- fixed social icons -->
+    <div class="fixed-social-icons">
+        <a href="#" target="_blank" class="fixed-social-icons__links">
+            <img src="./assets/img/landing/logo&icons/Instagram.svg" alt="Instagram">
+        </a>
+        <a href="#" target="_blank" class="fixed-social-icons__links">
+            <img src="./assets/img/landing/logo&icons/facebook.svg" alt="facebook">
+        </a>
+        <a href="#" target="_blank" class="fixed-social-icons__links">
+            <img src="./assets/img/landing/logo&icons/Twitter.svg" alt="Twitter">
+        </a>
+    </div>
+
+    <!-- peer to peer exchange -->
+
+    <div class="exchange">
+        <div class="exchange__text">
+            <section>
+                <h1 class="exchange__text_title">Peer to peer exchange</h1>
+                <p class="exchange__text_description">Its main gon the way to crypto/oal to bring 200 milion new retail
+                    investors to crypto by eliminating all fiat obstacles on the way to crypto.</p>
+            </section>
+        </div>
+
+        <div class="exchange__wrapper">
+            <div class="exchange__wrapper_left-side">
+                <div class="exchange__wrapper_button">
+                    <a href="#">Buy</a>
+                    <a href="#">Sell</a>
+                </div>
+                <div class="exchange__wrapper_play-video popUp">
+                    <a href="#video" data-effect="mfp-zoom-in" class="exchange__wrapper_play-video_link">
+                        <img src="./assets/img/landing/logo&icons/video.svg" alt="video">
+                        <p>How it work video</p>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="exchange__wrapper_right-side exchange__wrapper_svg-icons">
+                <div class="exchange__wrapper_svg-icons_item">
+                    <img src="./assets/img/landing/logo&icons/buy-sell.svg" alt="logo">
+                    <p><span class="bold">Buy/Sell</span> <br> Cryptocurency and Fiat Money</p>
+                </div>
+                <div class="exchange__wrapper_svg-icons_item">
+                    <img src="./assets/img/landing/logo&icons/arbitrage.svg" alt="logo">
+                    <p><span class="bold">Arbitrage</span> <br> transaction security</p>
+                </div>
+                <div class="exchange__wrapper_svg-icons_item">
+                    <img src="./assets/img/landing/logo&icons/accessibility.svg" alt="logo">
+                    <p><span class="bold">Accessibility</span> <br> and convenience from any device</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- list of sellers -->
+    <div class="list-sellers">
+        <div class="list-sellers__left-side">
+            <section>
+                <h4 class="list-sellers__left-side_title">List of sellers</h4>
+            </section>
+        </div>
+        <div class="list-sellers__right-side">
+            <ul class="tab-container__tab">
+                <li class="tab-container__tab-item tab-link selected-item" data-tab="tab-1">
+                    <span>Buy</span>
+                </li>
+                <li class="tab-container__tab-item tab-link" data-tab="tab-2">
+                    <span>Sell</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- tab 1 -->
+    <div class="tab-content tab-content-remove selected-item" id="tab-1">
+
+    </div>
+
+    <!-- tab 2 -->
+    <div class="tab-content tab-content-remove" id="tab-2">
+    </div>
+
+
+    <!-- graph block -->
+
+    <div class="graph-block">
+        <div class="graph-block__item">
+            <p>$ 500 Million+</p>
+            <p class="graph-block__item_description">Digital currency exchanged</p>
+            <img class="graph-block__item_img" src="./assets/img/landing/logo&icons/info.svg" alt="info">
+        </div>
+        <div class="graph-block__item">
+            <p>30+</p>
+            <p class="graph-block__item_description">Countries supported</p>
+        </div>
+        <div class="graph-block__item">
+            <p>1.5 Million+</p>
+            <p class="graph-block__item_description">Customers served</p>
+        </div>
+    </div>
+
+    <!-- as seen in -->
+    <div class="asSeenIn">
+        <div class="asSeenIn__left-side">
+            <p>As seen in</p>
+            <p>Paypeer is the powerful and seamless trading platform that bridges the worlds of fiat and crypto.</p>
+        </div>
+        <div class="asSeenIn__right-side">
+            <a href="#">
+                <img src="./assets/img/landing/logo&icons/coindesc.svg" alt="coindesc">
+            </a>
+            <a href="#">
+                <img src="./assets/img/landing/logo&icons/cointelegraph.svg" alt="cointelegraph">
+            </a>
+            <a href="#">
+                <img src="./assets/img/landing/logo&icons/yahoo.svg" alt="yahoo">
+            </a>
+        </div>
+    </div>
+
+    <!-- reviews about us -->
+
+    <div class="reviews">
+        <div class="reviews__title-block">
+            <section>
+                <h4 class="reviews__title-block_title">Reviews about us</h4>
+            </section>
+        </div>
+    </div>
+
+
 </main>
+
+@@include('modules/modal-window.html')
+@@include('modules/html-footer.html')
