@@ -222,6 +222,7 @@
 
     &__left-side {
         margin-right: 100px;
+        width: 30%;
 
         p {
             &:first-child {
@@ -246,7 +247,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 100%;
+        width: 70%;
 
         img {
             filter: grayscale(100%);

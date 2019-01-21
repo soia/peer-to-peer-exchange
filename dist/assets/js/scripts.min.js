@@ -149,8 +149,8 @@
     initShowHideRewiews: function () {
       let showChar = 100,
         ellipsesText = "...",
-        moretext = "Читать далее",
-        lesstext = "Скрыть"
+        moretext = "Read more",
+        lesstext = "Hide"
 
       $('.rewiews-list__content_item').each(function () {
         let content = $(this).html();

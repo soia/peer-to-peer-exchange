@@ -1,0 +1,100 @@
+.rewiews {
+    &-list {
+
+        &_item {
+            display: flex;
+            margin: 20px 122px;
+            padding: 30px 115px 30px 40px;
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+            background-color: $liteWhite;
+
+            &:hover {
+                box-shadow: 0 0 24px rgba(0, 0, 0, 0.05);
+                background-color: $white;
+            }
+
+            .hideCommentStatic {
+                visibility: visible;
+                height: 100%;
+            }
+
+            .hideComment {
+                visibility: hidden;
+            }
+
+            &_date {
+                color: $gray;
+                font-family: $regularFont;
+                font-size: 18px;
+                line-height: 18px;
+                position: absolute;
+                top: 30px;
+                right: 116px;
+            }
+        }
+
+        &__img {
+
+            img {
+                border-radius: 50%;
+            }
+        }
+
+        &__content {
+            margin-left: 25px;
+
+            &_name {
+
+                p {
+                    color: $darkBlack;
+                    font-family: $regularFont;
+                    font-weight: $medium;
+                    font-size: 20px;
+                    line-height: 20px;
+                    display: inline-block;
+                    border-bottom: 1px solid $darkBlack;
+                }
+            }
+
+            &_text {
+                max-width: 830px;
+                width: 100%;
+                font-family: $regularFont;
+                color: $semiBlack;
+                font-size: 20px;
+                line-height: 30px;
+                transition: all 0.3s;
+                font-size: 18px;
+                line-height: 28px;
+            }
+
+            &_item {
+                overflow: hidden;
+                max-height: 30px;
+                transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+            }
+        }
+
+        &__link {
+            font-family: $regularFont;
+            font-size: 18px;
+            line-height: 28px;
+            transition: all 0.3s;
+            position: absolute;
+            bottom: 30px;
+            right: 116px;
+            color: $lightBlue;
+        }
+
+        .openRewiews {
+            background-color: $white;
+        }
+
+        .openRewiews .rewiews-list__content_item {
+            max-height: 1000px;
+            transition: max-height 1s ease-in-out;
+        }
+    }
+}
