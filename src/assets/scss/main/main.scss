@@ -26,4 +26,46 @@
             }
         }
     }
+
+    // help styles
+
+    .btn-turquoise-inside {
+        @include btn-turquoise-inside
+    }
+
+    .btn-turquoise {
+        @include btn-turquoise;
+        @include empty-turquoise-btn-hover;
+    }
+
+    .btn-red-inside {
+        @include btn-red-inside;
+    }
+
+    .btn-red {
+        @include btn-red;
+        @include empty-red-btn-hover;
+    }
+
+    input:focus::-webkit-input-placeholder { 
+        color:transparent; 
+    }
+
+    input:focus:-moz-placeholder { 
+        color:transparent; 
+    }
+
+    /* Chrome */
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number]{
+    -moz-appearance: textfield;
+    }
 }

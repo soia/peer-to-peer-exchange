@@ -8,6 +8,7 @@ $darkBlack: #323c47;
 $red: #ff455c;
 $turquoise: #00c99c;
 $lightBlue: #0277ff;
+$black: #000;
 
 // Fonts
 
@@ -22,6 +23,106 @@ $mainBorder: 1px solid rgba(207, 213, 231, .5);
 
 
 // Mixins
+
+@mixin btn-turquoise {
+    width: 146px;
+    height: 48px;
+    border: 2px solid $turquoise;
+    transition: all 0.25s;
+    position: relative;
+}
+
+@mixin empty-turquoise-btn-hover {
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: scaleY(0);
+        transform-origin: top center;
+        background: $turquoise;
+        transition: transform .4s,-webkit-transform .4s,-moz-transform .4s,-o-transform .4s;
+    }
+    
+    &:hover:after {
+        transform: scaleY(1);
+        transform-origin: bottom center;
+    }
+
+    &:hover {
+        span {
+            color: $white;
+            position: relative;
+            z-index: 1;
+        }
+    }
+}
+
+@mixin btn-turquoise-inside {
+    color: $turquoise;
+    font-family: $regularFont;
+    font-weight: $medium;
+    font-size: 14px;
+    line-height: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transition: all 0.25s;
+}
+
+@mixin btn-red {
+    width: 146px;
+    height: 48px;
+    border: 2px solid $red;
+    transition: all 0.25s;
+    position: relative;
+}
+
+
+@mixin empty-red-btn-hover {
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: scaleY(0);
+        transform-origin: top center;
+        background: $red;
+        transition: transform .4s,-webkit-transform .4s,-moz-transform .4s,-o-transform .4s;
+    }
+    
+    &:hover:after {
+        transform: scaleY(1);
+        transform-origin: bottom center;
+    }
+
+    &:hover {
+        span {
+            color: $white;
+            position: relative;
+            z-index: 1;
+        }
+    }
+}
+
+@mixin btn-red-inside {
+    color: $red;
+    font-family: $regularFont;
+    font-weight: $medium;
+    font-size: 14px;
+    line-height: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transition: all 0.25s;
+}
+
 @mixin linkMenu {
     color: $white;
     font-family: $regularFont;

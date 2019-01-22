@@ -1,6 +1,7 @@
 .video-modal-window {
     height: calc(100vh - 200px);
     margin: 100px 200px;
+    position: relative;
 
     &__close {
         width: 20px;
@@ -18,8 +19,125 @@
         width: 100%;
         height: 100%;
     }
+
+
+    .mfp-close {
+        right: -50px !important;
+        top: -50px !important;
+        color: $white !important;
+    }
 }
 
-body .mfp-auto-cursor .mfp-content {
-    cursor: pointer;
+.login-popUp {
+    position: relative;
+    width: 464px;
+    height: 521px;
+    margin: 0 auto;
+    background-color: #fcfcfc;
+    padding: 60px 98px 90px 98px;
+
+    &__title {
+        color: $darkBlack;
+        font-family: $boldFont;
+        font-size: 36px;
+        line-height: 36px;
+    }
+
+    &__text {
+        color: $gray;
+        font-family: $regularFont;
+        font-size: 14px;
+        line-height: 14px;
+        margin-top: 10px;
+    }
+
+    &__wrapper {
+        width: 268px;
+
+        &-input {
+            margin-top: 40px;
+        }
+
+        &_signinWith {
+            color: $lightBlue;
+            font-family:  $regularFont;
+            font-size: 14px;
+            line-height: 14px;
+            margin: 32px auto 24px;
+            text-align: center;
+        }
+    }
+
+    &__label {
+        color: #1f1f1f;
+        font-family: $regularFont;
+        font-size: 12px;
+        line-height: 12px;
+        text-transform: uppercase;
+    }
+
+    &__input {
+        height: 60px;
+        width: 100%;
+        border: none;
+        background-color: #f2f2f2;
+        padding: 16px 0 22px 13px;
+        color: #a0a0a0;
+        font-family: $regularFont;
+        font-size: 20px;
+        line-height: 20px;
+        outline: none;
+    }
+
+    &__button {
+        width: 268px;
+        height: 60px;
+        background-color: $lightBlue;
+        border: none;
+        color: $white;
+        font-family: $regularFont;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 14px;
+        text-transform: uppercase;
+        margin-top: 24px;
+        cursor: pointer;
+    }
+
+    &__socials {
+        display: flex;
+        justify-content: space-between;
+
+        &_facebook, &_google {
+            width: 122px;
+            height: 60px;
+            color: $white;
+            font-family: $regularFont;
+            font-size: 14px;
+            font-weight: $bold;
+            line-height: 14px;
+            display: block;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &_facebook {
+            background-color: $turquoise;
+
+        }
+
+        &_google {
+            background-color: $lightBlue;
+        }
+    }
 }
+
+body {
+
+    .mfp-close-btn-in .mfp-close {
+        color: $black;
+        font-size: 35px;
+    }
+} 

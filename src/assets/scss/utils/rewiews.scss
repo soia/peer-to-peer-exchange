@@ -18,6 +18,8 @@
             .hideCommentStatic {
                 visibility: visible;
                 height: 100%;
+                user-select: none;
+                pointer-events: none;
             }
 
             .hideComment {
@@ -32,6 +34,8 @@
                 position: absolute;
                 top: 30px;
                 right: 116px;
+                user-select: none;
+                pointer-events: none;
             }
         }
 
@@ -74,6 +78,8 @@
                 overflow: hidden;
                 max-height: 30px;
                 transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+                user-select: none;
+                pointer-events: none;
             }
         }
 

@@ -88,10 +88,6 @@
             }
         }
 
-        &_left-side {
-
-        }
-
         &_svg-icons {
             display: flex;
             justify-content: center;
@@ -162,12 +158,302 @@
             &:last-child {
                 color: $gray;
                 border: 1px solid $red;
+                position: relative;
+                @include empty-red-btn-hover;
             }
-
-
         }
     }
 }
+
+.tab-buy {
+    margin: 20px 122px 40px;
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__price {
+            color: $lightBlue;
+            font-family: $regularFont;
+            font-weight: $medium;
+            line-height: 14px;
+            font-size: 24px;
+
+            span {
+                font-size: 20px;
+            }
+        }
+
+        &__or {
+            color: $semiBlack;
+            font-family: $regularFont;
+            font-weight: $medium;
+            font-size: 24px;
+            line-height: 28px;
+            transform: translateX(135px);
+        }
+
+        &__createAd {
+
+            .createAd {
+                margin-right: 98px;
+            }
+        }
+
+        &_seller {
+            display: flex;
+            transition: all 0.25s;
+
+            &:hover {
+                .tab-buy__row_seller-name_first, .tab-buy__row_seller-name_last {
+                    color: $lightBlue;
+                }
+            }
+
+            &_link {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                transition: all 0.25s;
+                padding: 28px 98px 28px 38px;
+                margin-bottom: 24px;
+
+                &:hover {
+                    box-shadow: 0 0 24px rgba(0, 0, 0, 0.05);
+                    background-color: $white;
+                }
+            }
+
+            &-img {
+                position: relative;
+                margin-right: 24px;
+
+                img {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            }
+
+            &-dots-quick, &-dots-slow {
+                position: absolute;
+                right: 0px;
+                bottom: 0px;
+                width: 16px;
+                height: 16px;
+                border-radius: 30px;
+                border: 2px solid $white;
+            }
+
+            &-dots-quick {
+                background-color: $lightBlue;
+            }
+
+            &-dots-slow {
+                background-color: $red;
+            }
+
+            &-name {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                &_first, &_last {
+                    color: $darkBlack;
+                    font-family: $regularFont;
+                    font-weight: $medium;
+                    font-size: 20px;
+                    line-height: 20px;
+                }
+
+                &_quick, &_slow  {
+                    font-family: $regularFont;
+                }
+
+                &_quick {
+                    color: $lightBlue;
+                }
+
+                &_slow {
+                    color: $red;
+                }
+            }
+        }
+
+        &_payment {
+            display: flex;
+
+            &-method {
+                margin-right: 30px;
+                p {
+                    &:first-child {
+                        color: $gray;
+                        font-family: $regularFont;
+                        font-size: 14px;
+                        margin-bottom: 10px;
+                    }
+    
+                    &:last-child {
+                        color: $semiBlack;
+                        font-family: $regularFont;
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            &-price {
+                p {
+                    &:first-child {
+                        color: $gray;
+                        font-family: $regularFont;
+                        font-size: 14px;
+                        margin-bottom: 10px;
+                    }
+    
+                    &:last-child {
+                        color: $lightBlue;
+                        font-family: $regularFont;
+                        font-weight: $medium;
+                        font-size: 18px;
+                        line-height: 20px;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+
+        &_button {
+            display: flex;
+
+            &-total {
+                margin-right: 50px;
+
+                p {
+                    &:first-child {
+                        color: $gray;
+                        font-family: $regularFont;
+                        font-size: 14px;
+                        margin-bottom: 10px;
+                    }
+    
+                    &:last-child {
+                        color: $semiBlack;
+                        font-family: $regularFont;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__inputs {
+        position: relative;
+        margin-right: 12px;
+        width: 50%;
+
+        &_currency {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 80px;
+            font-family: $regularFont;
+            color: $semiBlack;
+            font-size: 36px;
+            line-height: 36px;
+            text-transform: uppercase;
+            user-select: none;
+        }
+
+        label {
+            position: absolute;
+            top: -15px;
+            color: $semiBlack;
+            font-family: $regularFont;
+            font-size: 14px;
+            line-height: 14px;
+            text-transform: uppercase;
+        }
+
+        input {
+            width: 100%;
+            height: 90px;
+            background-color: #f2f3f9;
+            border: none;
+            padding: 27px 150px 27px 24px;
+            font-family: $regularFont;
+            color: $semiBlack;
+            font-size: 36px;
+            line-height: 36px;
+            outline: none;
+
+            &::placeholder {
+                color: $semiBlack;
+            }
+        }
+    }
+
+    &__wrapper-dropdown {
+        position: relative;
+        margin-left: 12px;
+        width: 50%;
+
+        &_label {
+            position: absolute;
+            top: -15px;
+            color: $semiBlack;
+            font-family: $regularFont;
+            font-size: 14px;
+            line-height: 14px;
+            text-transform: uppercase;
+        }
+    }
+
+    &__dropdown {
+        width: 100%;
+        height: 90px;
+        background-color: #f2f3f9;
+        border: none;
+        padding: 27px 0 27px 24px;
+        font-family: $regularFont;
+        color: $semiBlack;
+        font-size: 36px;
+        line-height: 36px;
+        outline: none;
+
+        &:after {
+            border-bottom: 1px solid $black;
+            border-right: 1px solid $black;
+            width: 10px;
+            height: 10px;
+            right: 50px;
+        }
+
+        .list {
+            width: 100%;
+        }
+
+        .option {
+            width: 100%;
+            height: 90px;
+            background-color: #f2f3f9 !important;
+            border: none;
+            color: $semiBlack;
+            padding: 27px 0 27px 24px;
+            font-size: 36px;
+            line-height: 36px;
+            outline: none;
+            font-weight: $normal !important;
+        }
+
+        .disabled  {
+            display: none;
+        }
+    }
+}
+
 
 // graph block
 
@@ -210,6 +496,37 @@
                 left: -50px;
             }
         }
+    }
+}
+
+.createAd {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 32px 220px 40px 0;
+
+    &__text {
+        color: $semiBlack;
+        font-family: $regularFont;
+        font-weight: $medium;
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    &__btn {
+        width: 146px;
+        height: 48px;
+        background-color: $lightBlue;
+        color: $white;
+        font-family: $regularFont;
+        font-weight: $medium;
+        font-size: 14px;
+        line-height: 14px;
+        margin-left: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
     }
 }
 
