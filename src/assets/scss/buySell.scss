@@ -1,0 +1,267 @@
+.buySell {
+    &__title {
+        color: $semiBlack;
+        font-family: $regularFont;
+        font-weight: $medium;
+        font-size: 34px;
+        line-height: 34px;
+        margin: 64px 0 98px 122px;
+    }
+
+    &__wrapper {
+        margin-left: 159px;
+    }
+
+    &__wantToBuy {
+        display: flex;
+        align-items: center;
+
+        &_icon {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 24px;
+                height: 24px;
+                object-fit: cover;
+                margin-right: 60px;
+            }
+        }
+
+        &_wrapper-tabs {
+            display: flex;
+            align-items: center;
+
+            &-text {
+                color: $semiBlack;
+                font-family: $regularFont;
+                font-weight: $medium;
+                font-size: 24px;
+                line-height: 24px;
+                margin-right: 23px;
+            }
+        }
+
+        &_tabs {
+            @include tab-buy-sell;
+        }
+    }
+
+    &__price {
+        display: flex;
+        align-items: center;
+        margin-top: 60px;
+
+        &_icon {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 24px;
+                height: 24px;
+                object-fit: cover;
+                margin-right: 60px;
+            }
+        }
+
+        &_text {
+            color: $semiBlack;
+            font-family: $regularFont;
+            font-weight: $medium;
+            font-size: 24px;
+            line-height: 24px;
+            margin-right: 23px; 
+        }
+
+        &-form {
+            &_wrapper {
+                display: flex;
+            }
+
+            &_line {
+                width: 24px;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                margin-top: 30px;
+            }
+
+
+            &_content {
+                margin: 34px 0 0 60px;
+                width: 100%;
+            }
+
+            &_subprice {
+                display: flex;
+
+                p {
+                    &:first-child {
+                        color: $semiBlack;
+                        font-family: $regularFont;
+                        font-size: 20px;
+                        line-height: 20px;
+                        width: 210px;
+                        margin-right: 135px;
+                    }
+
+                    &:nth-child(2) {
+                        color: $semiBlack;
+                        font-family: $regularFont;
+                        font-weight: $medium;
+                        font-size: 24px;
+                        line-height: 24px;
+                        text-transform: uppercase;
+                        width: 200px;
+                        margin-right: 150px;
+                    }
+
+                    &:nth-child(3) {
+                        color: $gray;
+                        font-family: $regularFont;
+                        font-size: 20px;
+                        line-height: 20px;
+                    }
+                }
+            }
+
+            &_receive-price {
+                display: flex;
+                margin-top: 60px;
+
+                p {
+                    &:first-child {
+                        color: $semiBlack;
+                        font-family: $regularFont;
+                        font-size: 20px;
+                        line-height: 20px;
+                        width: 210px;
+                        margin-right: 135px;
+                    }
+
+                    &:nth-child(2) {
+                        color: $semiBlack;
+                        font-family: $regularFont;
+                        font-weight: $medium;
+                        font-size: 24px;
+                        line-height: 24px;
+                        text-transform: uppercase;
+                        width: 200px;
+                        margin-right: 150px;
+                    }
+                }
+            }
+
+            &__inputs {
+                width: 463px;
+                height: 90px;
+                position: relative;
+                margin-top: 60px;
+
+                input {
+                    width: 463px;
+                    height: 90px;
+                    background-color: #f2f3f9;
+                    border: none;
+                    padding: 27px 133px 27px 24px;
+                    color: $semiBlack;
+                    font-family: $regularFont;
+                    font-size: 32px;
+                    line-height: 36px;
+                    outline: none;
+
+                    &::placeholder {
+                        color: $semiBlack;
+                    }
+                }
+
+                label {
+                    position: absolute;
+                    top: -15px;
+                    color: $semiBlack;
+                    font-family: $regularFont;
+                    font-size: 14px;
+                    line-height: 14px;
+                    text-transform: uppercase;
+                }
+
+                &_currency {
+                    width: 84px;
+                    height: 66px;
+                    background-color: #e5e6ef;
+                    opacity: 0.5;
+                    color: $gray;
+                    font-family: $regularFont;
+                    font-size: 24px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    text-transform: uppercase;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    top: 13px;
+                    right: 10px;
+                    user-select: none;
+                }
+            }
+
+            &__select {
+                margin-top: 60px;
+                position: relative;
+            }
+
+            &__dropdown {
+                height: 90px;
+                background-color: #f2f3f9;
+                border: none;
+                padding: 27px 0 27px 24px;
+                font-family: "FuturaPT",sans-serif;
+                color: #4a4a4a;
+                font-size: 36px;
+                line-height: 36px;
+                outline: none;
+                width: 463px;
+                margin-right: 148px;
+
+                &:after {
+                    border-bottom: 1px solid $black;
+                    border-right: 1px solid $black;
+                    width: 10px;
+                    height: 10px;
+                    right: 50px;
+                }
+        
+                .list {
+                    width: 100%;
+                    max-height: 350px;
+                    overflow-y: scroll;
+                }
+        
+                .option {
+                    width: 100%;
+                    height: 90px;
+                    background-color: #f2f3f9 !important;
+                    border: none;
+                    color: $semiBlack;
+                    padding: 27px 0 27px 24px;
+                    font-size: 36px;
+                    line-height: 36px;
+                    outline: none;
+                    font-weight: $normal !important;
+                }
+        
+                .disabled  {
+                    display: none;
+                }
+            }
+
+            &__submit {
+                @include btn-empty-black;
+                width: 220px;
+                height: 60px;
+                margin: 60px 0 0 84px;
+            }
+        }
+    }
+}

@@ -137,31 +137,7 @@
     }
 
     &__right-side {
-
-        .tab-container__tab-item {
-            width: 164px;
-            height: 36px;
-            font-family: $regularFont;
-            font-weight: $medium;
-            font-size: 14px;
-            line-height: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            
-            &:first-child {
-                background-color: $turquoise;
-                color: $white;
-            }
-
-            &:last-child {
-                color: $gray;
-                border: 1px solid $red;
-                position: relative;
-                @include empty-red-btn-hover;
-            }
-        }
+        @include tab-buy-sell;
     }
 }
 

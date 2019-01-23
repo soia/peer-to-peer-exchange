@@ -24,12 +24,107 @@ $mainBorder: 1px solid rgba(207, 213, 231, .5);
 
 // Mixins
 
+@mixin btn-empty-black { 
+    border: 1px solid $semiBlack;
+    color: $semiBlack;
+    font-family: $regularFont;
+    font-weight: $medium;
+    background-color: transparent;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: scaleY(0);
+        transform-origin: top center;
+        background: $lightBlue;
+        transition: transform .4s,-webkit-transform .4s,-moz-transform .4s,-o-transform .4s;
+    }
+    
+    &:hover:after {
+        transform: scaleY(1);
+        transform-origin: bottom center;
+    }
+
+    &:hover {
+        border: 1px solid $lightBlue;
+        
+        span {
+            color: $white;
+            position: relative;
+            z-index: 1;
+        }
+    }
+}
+
+@mixin btn-blue { 
+    background-color: $lightBlue;
+    color: $white;
+    font-family: $regularFont;
+    font-weight: $bold;
+    font-size: 14px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.25s;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+@mixin empty-blue-btn-hover {
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: scaleY(0);
+        transform-origin: top center;
+        background: $lightBlue;
+        transition: transform .4s,-webkit-transform .4s,-moz-transform .4s,-o-transform .4s;
+    }
+    
+    &:hover:after {
+        transform: scaleY(1);
+        transform-origin: bottom center;
+    }
+
+    &:hover {
+        span {
+            color: $white;
+            position: relative;
+            z-index: 1;
+        }
+    }
+}
+
 @mixin btn-turquoise {
     width: 146px;
     height: 48px;
     border: 2px solid $turquoise;
     transition: all 0.25s;
     position: relative;
+    text-transform: uppercase;
+    transition: all 0.25s;
+
+    &:hover {
+        opacity: 0.9;
+    }
 }
 
 @mixin empty-turquoise-btn-hover {
@@ -63,7 +158,7 @@ $mainBorder: 1px solid rgba(207, 213, 231, .5);
 @mixin btn-turquoise-inside {
     color: $turquoise;
     font-family: $regularFont;
-    font-weight: $medium;
+    font-weight: $bold;
     font-size: 14px;
     line-height: 14px;
     display: flex;
@@ -71,6 +166,7 @@ $mainBorder: 1px solid rgba(207, 213, 231, .5);
     align-items: center;
     height: 100%;
     transition: all 0.25s;
+    letter-spacing: 2px;
 }
 
 @mixin btn-red {
@@ -79,6 +175,12 @@ $mainBorder: 1px solid rgba(207, 213, 231, .5);
     border: 2px solid $red;
     transition: all 0.25s;
     position: relative;
+    text-transform: uppercase;
+    transition: all 0.25s;
+
+    &:hover {
+        opacity: 0.9;
+    }
 }
 
 
@@ -113,7 +215,7 @@ $mainBorder: 1px solid rgba(207, 213, 231, .5);
 @mixin btn-red-inside {
     color: $red;
     font-family: $regularFont;
-    font-weight: $medium;
+    font-weight: $bold;
     font-size: 14px;
     line-height: 14px;
     display: flex;
@@ -121,13 +223,66 @@ $mainBorder: 1px solid rgba(207, 213, 231, .5);
     align-items: center;
     height: 100%;
     transition: all 0.25s;
+    letter-spacing: 2px;
+}
+
+@mixin tab-buy-sell {
+
+    .tab-container__tab-item {
+        width: 164px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        span {
+            font-family: $regularFont;
+            font-weight: $bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 14px;
+            line-height: 14px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        &:first-child {
+            color: $turquoise;
+            border: 1px solid $turquoise;
+            position: relative;
+            @include empty-turquoise-btn-hover;
+        }
+
+        &:last-child {
+            color: $red;
+            border: 1px solid $red;
+            position: relative;
+            @include empty-red-btn-hover;
+        }
+    }
+
+    .red.selected-item {
+        background-color: $red;
+        span {
+            color: $white;
+        }
+    }
+    
+    .turquoise.selected-item {
+        background-color: $turquoise;
+    
+        span {
+            color: $white;
+        }
+    }
 }
 
 @mixin linkMenu {
     color: $white;
     font-family: $regularFont;
     font-size: 12px;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     line-height: 14px;
     text-decoration: none;
     text-transform: uppercase;
@@ -137,179 +292,4 @@ $mainBorder: 1px solid rgba(207, 213, 231, .5);
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-@mixin text-slider {
-    color: $white;
-    font-family: $regularFont;
-}
-
-@mixin titles-block {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px 105px;
-    flex-wrap: wrap;
-
-    @media screen and (min-width: 768px) and (max-width: 1250px) { 
-        padding: 40px 80px;
-    }
-
-    @media screen and (max-width: 767px) { 
-        padding: 40px;
-        justify-content: center;
-        flex-direction: column;
-        max-width: 100%;
-        margin: 0;
-    }
-}
-
-@mixin h3-titles-block {
-    color: $blue;
-    font-family: $boldFont;
-    font-size: 44px;
-    line-height: 52px;
-
-    @media screen and (max-width: 767px) { 
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 32px;
-        margin-bottom: 20px;
-    }
-
-    @media screen and (min-width: 768px) and (max-width: 1250px) { 
-        font-size: 32px;
-    }
-}
-
-@mixin btn-titles-block {
-    width: 184px;
-    height: 48px;
-    background-color: $turquoise;
-    color: $white;
-    font-family: $regularFont;
-    font-size: 12px;
-    line-height: 14px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    z-index: 0;
-    position: relative;
-    text-transform: uppercase;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    letter-spacing: 2px;
-
-    @media screen and (max-width: 767px) { 
-        width: 100%;
-    }
-}
-
-@mixin linkHover {
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    transition: color .6s cubic-bezier(.19,1,.22,1);
-
-    &:hover {
-        opacity: 1;
-    }
-
-    &:before {
-        content: "";
-        position: absolute;
-        bottom: 10px;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background: #fff;
-        transform: translate3d(-102%,0,0);
-        transition: transform .7s cubic-bezier(.19,1,.22,1);
-        box-sizing: border-box;
-    }
-
-    &:hover:before {
-        transform: translate3d(0,0,0);
-        transition: transform .5s cubic-bezier(.19,1,.22,1);
-    }
-}
-
-@mixin hoverBtn {
-    &::after {
-        -webkit-transition: all 0.3s;
-          -moz-transition: all 0.3s;
-        -o-transition: all 0.3s;
-          transition: all 0.3s;
-          height: 100%;
-          left: 0;
-          top: 0;
-          width: 0;
-    }
-
-    &::before,
-    &::after {
-        content: '';
-        background: $blue;
-        position: absolute;
-        z-index: -1;
-    }
-
-    &:hover:after {
-        width: 100%;
-    }
-
-    &:hover {
-        color: $white;
-    }
-}
-
-@mixin small-slider {
-    width: 100%;
-    background-color: $lightGray;
-}
-
-
-@mixin position-content-small-slider {
-    display: flex;
-    justify-content: space-between;
-    max-width: 290px;
-    margin: 30px auto;
-
-    @media screen and (min-width: 768px) and (max-width: 1250px) {
-        max-width: 237px;
-    }
-}
-
-@mixin cost-small-slider {
-    color: $blue;
-    font-family: $boldFont;
-    font-size: 16px;
-    line-height: 26px;
-
-    @media screen and (max-width: 767px) { 
-        font-size: 14px;
-    }
-}
-
-@mixin date-small-slider {
-    color: $blue;
-    font-family: $regularFont;
-    font-size: 16px;
-    line-height: 26px;
-
-    @media screen and (max-width: 767px) { 
-        font-size: 14px;
-    }
-}
-
-@mixin cruise-name-small-slider {
-    opacity: 0.5;
-    color: $blue;
-    font-family: $regularFont;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 26px;
-    transition: all 0.25s;
 }

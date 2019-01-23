@@ -1,0 +1,56 @@
+@@include('modules/html-head.html',{ "bodyClass": "dashboard__body", "pageTitle": "Dashboard" })
+@@include('modules/header-landing.html',{
+"headerClass": "" })
+
+<main class="dashboard">
+    <div class="dashboard-tabs">
+        <div class="dashboard-tabs__left-side">
+            <section>
+                <h4 class="dashboard-tabs__left-side_title">Pending Trades</h4>
+            </section>
+        </div>
+        <div class="dashboard-tabs__right-side">
+            <ul class="tab-container__tab">
+                <li class="tab-container__tab-item tab-link selected-item" data-tab="tab-1">
+                    <span>Pending</span>
+                </li>
+                <li class="tab-container__tab-item  red tab-link" data-tab="tab-2">
+                    <span>Canceled</span>
+                </li>
+                <li class="tab-container__tab-item  red tab-link" data-tab="tab-3">
+                    <span>Completed</span>
+                </li>
+                <li class="tab-container__tab-item  red tab-link" data-tab="tab-4">
+                    <span>Your Ads</span>
+                </li>
+                <li class="tab-container__tab-item  red tab-link" data-tab="tab-5">
+                    <span>Referals</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="dashboard__table">
+        <div class="dashboard__table_row">
+
+        </div>
+        <div class="dashboard__table_row">
+            
+            </div>
+            <div class="dashboard__table_row">
+            
+                </div>
+                <div class="dashboard__table_row">
+            
+                    </div>
+                    <div class="dashboard__table_row">
+            
+                        </div>
+    </div>
+
+    @@include('modules/pagination.html')
+
+</main>
+
+@@include('modules/modal-window.html')
+@@include('modules/html-footer.html')

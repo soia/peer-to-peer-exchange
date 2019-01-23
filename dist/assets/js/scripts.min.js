@@ -4,9 +4,8 @@
   window.inflot = $.extend({}, {
 
     init: function () {
+      inflot.initActiveLink();
       inflot.initOpenModal();
-
-      
       inflot.initMenu();
       inflot.initSearch();
       inflot.initLiked();
@@ -21,6 +20,18 @@
       inflot.initSlickSlider();
     },
 
+    initActiveLink: function () {
+      let activeLink = $("#header__left-side_link li a");
+
+      activeLink.each(function () {
+        const location = window.location.href;
+        const link = this.href;
+        if (location == link) {
+          $(this).addClass('header__left-side_selected');
+        }
+      });
+    },
+
     initOpenModal: function () {
       $('.popUp').magnificPopup({
         delegate: 'a',
@@ -33,8 +44,6 @@
         midClick: true
       });
     },
-
-
 
     initMenu: function () {
       let dynamicMenu = $("#menu"),

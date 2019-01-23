@@ -1,0 +1,60 @@
+.dashboard {
+    &-tabs {
+        padding: 64px 122px 0 122px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        &__left-side {
+    
+            &_title {
+                color: $semiBlack;
+                font-family: $regularFont;
+                font-weight: $medium;
+                font-size: 40px;
+                line-height: 47px;
+            }
+        }
+    
+        &__right-side {
+    
+            .tab-container__tab-item {
+                @include empty-blue-btn-hover;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                background-color: #f5f6fb;
+                width: 164px;
+                height: 36px;
+                cursor: pointer;
+                color: $gray;
+                font-family: $regularFont;
+                font-weight: $medium;
+                font-size: 14px;
+                line-height: 14px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+    
+                span {
+                    z-index: 10;
+                }
+            }
+    
+            .selected-item {
+                @include btn-blue;
+            }
+        }
+    }
+    
+    &__table {
+        padding: 100px 122px 70px 122px;
+
+        &_row {
+
+            &:nth-child(even) {
+                background-color: #fbfcfd;
+            }
+        }
+    }
+}

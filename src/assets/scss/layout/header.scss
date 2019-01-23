@@ -5,6 +5,7 @@
 
     &__left-side {
         display: flex;
+        align-items: center;
 
         &_link {
             display: flex;
@@ -21,7 +22,16 @@
                 font-weight: $medium;
                 line-height: 23px;
                 font-size: 20px;
+                transition: all 0.25s;
+
+                &:hover {
+                    color: $lightBlue;
+                }
             }
+        }
+
+        &_selected {
+            color: $lightBlue !important;
         }
     }
 
@@ -42,6 +52,10 @@
                     font-weight: $medium;
                     font-size: 20px;
                     line-height: 20px;
+
+                    &:hover {
+                        color: $lightBlue;
+                    }
                 }
             }
 

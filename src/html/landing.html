@@ -75,10 +75,10 @@
         </div>
         <div class="list-sellers__right-side">
             <ul class="tab-container__tab">
-                <li class="tab-container__tab-item tab-link selected-item" data-tab="tab-1">
+                <li class="tab-container__tab-item tab-link turquoise selected-item" data-tab="tab-1">
                     <span>Buy</span>
                 </li>
-                <li class="tab-container__tab-item tab-link" data-tab="tab-2">
+                <li class="tab-container__tab-item  red tab-link" data-tab="tab-2">
                     <span>Sell</span>
                 </li>
             </ul>
@@ -267,50 +267,7 @@
 
         </form>
 
-        <!-- pagination -->
-
-        <section class="wrapper__pagination">
-            <nav aria-label="#">
-                <ul class="pagination">
-                    <li class="pagination__prev">
-                        <a href="#" data-page="#">Previous</a>
-                    </li>
-                    <li>
-                        <a href="#" data-page="#">1</a>
-                    </li>
-                    <li>
-                        <a href="#" data-page="#">2</a>
-                    </li>
-                    <li class="pagination__current">
-                        <a href="#" data-page="#">3</a>
-                    </li>
-                    <li>
-                        <a href="#" data-page="#">4</a>
-                    </li>
-                    <li>
-                        <a href="#" data-page="#">5</a>
-                    </li>
-                    <li>
-                        <a href="#" data-page="#">6</a>
-                    </li>
-                    <li>
-                        <a href="#" data-page="#">7</a>
-                    </li>
-                    <li>
-                        <a href="#" data-page="#">8</a>
-                    </li>
-                    <li>
-                        <a href="#" data-page="#">9</a>
-                    </li>
-                    <li>
-                        <a href="#" data-page="#">10</a>
-                    </li>
-                    <li class="pagination__next">
-                        <a href="#" data-page="#">Next</a>
-                    </li>
-                </ul>
-            </nav>
-        </section>
+        @@include('modules/pagination.html')
 
     </div>
 
@@ -321,8 +278,8 @@
             <div class="tab-buy__row">
 
                 <div class="tab-buy__inputs">
-                    <label for="amount">Amount of SSC*</label>
-                    <input type="number" name="amount" id="amount" placeholder="39.001" step="0.001">
+                    <label for="amount2">Amount of SSC*</label>
+                    <input type="number" name="amount" id="amount2" placeholder="39.001" step="0.001">
                     <p class="tab-buy__inputs_currency">ssc</p>
                 </div>
 
@@ -495,50 +452,8 @@
 
         </form>
 
-        <!-- pagination -->
+        @@include('modules/pagination.html')
 
-        <section class="wrapper__pagination">
-            <nav aria-label="#">
-                <ul class="pagination">
-                    <li class="pagination__prev">
-                        <a href="#" data-page="#">Previous</a>
-                    </li>
-                    <li>
-                        <a href="#" data-page="#">1</a>
-                    </li>
-                    <li>
-                        <a href="#" data-page="#">2</a>
-                    </li>
-                    <li class="pagination__current">
-                        <a href="#" data-page="#">3</a>
-                    </li>
-                    <li>
-                        <a href="#" data-page="#">4</a>
-                    </li>
-                    <li>
-                        <a href="#" data-page="#">5</a>
-                    </li>
-                    <li>
-                        <a href="#" data-page="#">6</a>
-                    </li>
-                    <li>
-                        <a href="#" data-page="#">7</a>
-                    </li>
-                    <li>
-                        <a href="#" data-page="#">8</a>
-                    </li>
-                    <li>
-                        <a href="#" data-page="#">9</a>
-                    </li>
-                    <li>
-                        <a href="#" data-page="#">10</a>
-                    </li>
-                    <li class="pagination__next">
-                        <a href="#" data-page="#">Next</a>
-                    </li>
-                </ul>
-            </nav>
-        </section>
     </div>
 
     <div class="createAd">
@@ -673,50 +588,7 @@
         </div>
     </div>
 
-    <!-- pagination -->
-
-    <section class="wrapper__pagination">
-        <nav aria-label="#">
-            <ul class="pagination">
-                <li class="pagination__prev">
-                    <a href="#" data-page="#">Previous</a>
-                </li>
-                <li>
-                    <a href="#" data-page="#">1</a>
-                </li>
-                <li>
-                    <a href="#" data-page="#">2</a>
-                </li>
-                <li class="pagination__current">
-                    <a href="#" data-page="#">3</a>
-                </li>
-                <li>
-                    <a href="#" data-page="#">4</a>
-                </li>
-                <li>
-                    <a href="#" data-page="#">5</a>
-                </li>
-                <li>
-                    <a href="#" data-page="#">6</a>
-                </li>
-                <li>
-                    <a href="#" data-page="#">7</a>
-                </li>
-                <li>
-                    <a href="#" data-page="#">8</a>
-                </li>
-                <li>
-                    <a href="#" data-page="#">9</a>
-                </li>
-                <li>
-                    <a href="#" data-page="#">10</a>
-                </li>
-                <li class="pagination__next">
-                    <a href="#" data-page="#">Next</a>
-                </li>
-            </ul>
-        </nav>
-    </section>
+    @@include('modules/pagination.html')
 
 </main>
 
