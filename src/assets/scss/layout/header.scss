@@ -45,34 +45,25 @@
         }
 
         &_button {
-            &:first-child {
-                a {
-                    color: $semiBlack;
-                    font-family: $regularFont;
-                    font-weight: $medium;
-                    font-size: 20px;
-                    line-height: 20px;
 
-                    &:hover {
-                        color: $lightBlue;
-                    }
-                }
-            }
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 147px;
+                height: 48px;
+                background-color: #0277ff;
+                color: $white;
+                font-family: $regularFont;
+                font-weight: $medium;
+                font-size: 14px;
+                line-height: 14px;
+                margin: 0 40px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
 
-            &:last-child {
-                a {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 147px;
-                    height: 48px;
-                    background-color: #0277ff;
-                    color: #ffffff;
-                    font-family: $regularFont;
-                    font-weight: $medium;
-                    font-size: 14px;
-                    line-height: 14px;
-                    margin: 0 40px;
+                &:hover {
+                    opacity: 0.9;
                 }
             }
         }

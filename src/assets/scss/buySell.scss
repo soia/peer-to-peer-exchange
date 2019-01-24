@@ -94,15 +94,17 @@
 
             &_subprice {
                 display: flex;
+                max-width: 70%;
 
                 p {
+                    overflow: hidden;
+                    width: 33.3%;
+
                     &:first-child {
                         color: $semiBlack;
                         font-family: $regularFont;
                         font-size: 20px;
                         line-height: 20px;
-                        width: 210px;
-                        margin-right: 135px;
                     }
 
                     &:nth-child(2) {
@@ -112,8 +114,6 @@
                         font-size: 24px;
                         line-height: 24px;
                         text-transform: uppercase;
-                        width: 200px;
-                        margin-right: 150px;
                     }
 
                     &:nth-child(3) {
@@ -128,15 +128,17 @@
             &_receive-price {
                 display: flex;
                 margin-top: 60px;
+                max-width: 70%;
 
                 p {
+                    overflow: hidden;
+                    width: 33.3%;
+
                     &:first-child {
                         color: $semiBlack;
                         font-family: $regularFont;
                         font-size: 20px;
                         line-height: 20px;
-                        width: 210px;
-                        margin-right: 135px;
                     }
 
                     &:nth-child(2) {
@@ -146,8 +148,6 @@
                         font-size: 24px;
                         line-height: 24px;
                         text-transform: uppercase;
-                        width: 200px;
-                        margin-right: 150px;
                     }
                 }
             }

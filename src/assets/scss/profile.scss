@@ -1,0 +1,92 @@
+.profile {
+    padding: 60px 122px 20px 122px;
+
+    &__title-block {
+
+        &_title {
+            color: $semiBlack;
+            font-family: $boldFont;
+            font-size: 40px;
+            line-height: 47px;
+        }
+    }
+
+    &-wrapper {
+        padding: 64px 0 40px 122px;
+
+        &__left-side {
+            display: flex;
+
+            &_avatar {
+                width: 100px;
+                height: 100px;
+                background-color: yellow;
+                border-radius: 50%;
+                margin-right: 24px;
+            }
+
+            &_item-center {
+                margin-right: 90px;
+
+                &_row {
+
+                    &:not(:last-child) {
+                        margin-bottom: 30px;
+                    }
+
+                    .profile-wrapper__left-side_name {
+                        color: $darkBlack;
+                        font-family: $regularFont;
+                        font-weight: $medium;
+                        font-size: 20px;
+                        line-height: 20px;
+                    }
+                    p {
+                        &:first-child {
+                            color: $gray;
+                            font-family: $regularFont;
+                            font-size: 14px;
+                            line-height: 14px;
+                            margin-bottom: 10px;
+                        }
+
+                        &:last-child {
+                            color: $semiBlack;
+                            font-family: $regularFont;
+                            font-size: 24px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+
+            &_item-right {
+                transform: translateY(73px);
+            
+                &_row {
+                    
+                    &:not(:last-child) {
+                        margin-bottom: 30px;
+                    }
+
+                    p {
+                        &:first-child {
+                            color: $gray;
+                            font-family: $regularFont;
+                            font-size: 14px;
+                            line-height: 14px;
+                            margin-bottom: 10px;
+                        }
+            
+                        &:last-child {
+                            color: $semiBlack;
+                            font-family: $regularFont;
+                            font-size: 24px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

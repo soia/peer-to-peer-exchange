@@ -51,9 +51,170 @@
         padding: 100px 122px 70px 122px;
 
         &_row {
+            display: flex;
+            padding: 20px 20px 20px 37px;
+
+            &:hover {
+                box-shadow: 0 0 24px rgba(0, 0, 0, 0.05);
+                background-color: #ffffff;
+            }
 
             &:nth-child(even) {
                 background-color: #fbfcfd;
+            }
+
+            &-item {
+                overflow: hidden;
+                margin-right: 15px;
+
+                &:first-child {
+                    width: 5%;
+                }
+                
+                &:nth-child(2) {
+                    width: 20%;
+                }
+
+                &:nth-child(3) {
+                    width: 20%;
+                }
+
+                &:nth-child(4) {
+                    width: 10%;
+                }
+
+                &:nth-child(5) {
+                    width: 20%;
+                }
+
+                &:nth-child(6) {
+                    width: 10%;
+                }
+
+                &:last-child {
+                    width: 15%;
+                } 
+
+                p {
+                    &:first-child {
+                        color: $gray;
+                        font-family: $regularFont;
+                        font-size: 14px;
+                        line-height: 14px;
+                        margin-bottom: 15px;
+                    }
+
+                    &:last-child {
+                        font-family: $regularFont;
+                        font-size: 18px;
+                        line-height: 18px;
+                    }
+
+                }
+            }
+
+            .dashboard-number {
+                p {
+                    &:last-child {
+                        color: $semiBlack;
+                        font-weight: $medium;
+                    }
+                }
+            }
+
+            .dashboard-status-red {
+                p {
+                    &:last-child {
+                        color: $red;
+                    }
+                }
+            }
+
+            .dashboard-status-green {
+                p {
+                    &:last-child {
+                        color: $turquoise;
+                    }
+                }
+            }
+
+            .dashboard-status-blue {
+                p {
+                    &:last-child {
+                        color: $lightBlue;
+                    }
+                }
+            }
+
+            .dashboard-id {
+                p {
+                    &:last-child {
+                        color: $semiBlack;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+            .dashboard-id {
+                p {
+                    &:last-child {
+                        color: $semiBlack;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+
+            .dashboard-operation-red {
+                p {
+                    &:last-child {
+                        color: $red;
+                    }
+                }
+            }
+
+            .dashboard-operation-green {
+                p {
+                    &:last-child {
+                        color: $turquoise;
+                    }
+                }
+            }
+
+            .dashboard-sum {
+                p {
+                    &:last-child {
+                        color: $semiBlack;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+
+            .dashboard-trade-red{
+                p {
+                    &:last-child {
+                        color: $red;
+                    }
+                }
+            }
+
+            .dashboard-trade-green {
+                p {
+                    &:last-child {
+                        color: $turquoise;
+                    }
+                }
+            }
+
+            .dashboard-transfer {
+                p a {
+                    &:last-child {
+                        color: $lightBlue;
+                        border-bottom: 1px solid $lightBlue;
+
+                        &:hover {
+                            opacity: 0.8;
+                        }
+                    }
+                }
             }
         }
     }

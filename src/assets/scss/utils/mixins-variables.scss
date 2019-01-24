@@ -114,8 +114,6 @@ $mainBorder: 1px solid rgba(207, 213, 231, .5);
 }
 
 @mixin btn-turquoise {
-    width: 146px;
-    height: 48px;
     border: 2px solid $turquoise;
     transition: all 0.25s;
     position: relative;
@@ -170,8 +168,6 @@ $mainBorder: 1px solid rgba(207, 213, 231, .5);
 }
 
 @mixin btn-red {
-    width: 146px;
-    height: 48px;
     border: 2px solid $red;
     transition: all 0.25s;
     position: relative;

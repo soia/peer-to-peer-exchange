@@ -6,15 +6,16 @@
     init: function () {
       inflot.initActiveLink();
       inflot.initOpenModal();
+      inflot.initTabs();
+      inflot.initShowHideRewiews();
+      inflot.initSelect();
+
       inflot.initMenu();
       inflot.initSearch();
       inflot.initLiked();
-      inflot.initTabs();
       inflot.initAccordion();
       inflot.initHideAccordion();
-      inflot.initShowHideRewiews();
       inflot.initPreloader();
-      inflot.initSelect();
       inflot.initDeckSelect();
       inflot.initDatePicker();
       inflot.initSlickSlider();
@@ -45,6 +46,62 @@
       });
     },
 
+    initTabs: function () {
+      $('ul.tab-container__tab .tab-link').click(function () {
+        let tab_id = $(this).attr('data-tab');
+
+        $('ul.tab-container__tab .tab-link').removeClass('selected-item');
+        $('.tab-content-remove').removeClass('selected-item');
+
+        $(this).addClass('selected-item');
+        $("#" + tab_id).addClass('selected-item');
+      })
+
+      $('ul.tab-container__tab .tab-team').click(function () {
+        let tab_id = $(this).attr('data-tab');
+
+        $('ul.tab-container__tab .tab-team').removeClass('selected-item');
+        $('.team-tab-remove').removeClass('selected-item');
+
+        $(this).addClass('selected-item');
+        $("#" + tab_id).addClass('selected-item');
+      })
+    },
+
+    initShowHideRewiews: function () {
+      const showChar = 120,
+        ellipsesText = "..."
+
+      $('.rewiews-list__content_item').each(function () {
+        const content = $(this).html();
+
+        if (content.length > showChar) {
+          const rewiws = content.substr(0, showChar);
+          const rewiwsShowchar = content.substr(showChar, content.length - showChar);
+
+          const html = rewiws + '<span class="moreEllipses">' + ellipsesText + '</span><span class="morecontent"><span class="hideComment hideCommentStatic">' +
+            rewiwsShowchar;
+
+          $(this).html(html);
+        }
+
+        if (content.length > showChar) {
+          $(this).closest('.rewiews-list_item').addClass('link-show');
+        }
+      });
+
+      $(".rewiews-list_item").click(function (e) {
+        e.preventDefault();
+
+        $(this).toggleClass('openRewiews');
+        $(this).siblings( ".openRewiews" ).toggleClass('openRewiews');
+      });
+    },
+
+    initSelect: function () {
+      $('select').niceSelect();
+    },
+ 
     initMenu: function () {
       let dynamicMenu = $("#menu"),
         btnMenu = $(".btnMenu"),
@@ -79,28 +136,6 @@
           content.toggleClass("like-clicked");
         })
       });
-    },
-
-    initTabs: function () {
-      $('ul.tab-container__tab .tab-link').click(function () {
-        let tab_id = $(this).attr('data-tab');
-
-        $('ul.tab-container__tab .tab-link').removeClass('selected-item');
-        $('.tab-content-remove').removeClass('selected-item');
-
-        $(this).addClass('selected-item');
-        $("#" + tab_id).addClass('selected-item');
-      })
-
-      $('ul.tab-container__tab .tab-team').click(function () {
-        let tab_id = $(this).attr('data-tab');
-
-        $('ul.tab-container__tab .tab-team').removeClass('selected-item');
-        $('.team-tab-remove').removeClass('selected-item');
-
-        $(this).addClass('selected-item');
-        $("#" + tab_id).addClass('selected-item');
-      })
     },
 
     initAccordion: function () {
@@ -155,63 +190,11 @@
       });
     },
 
-    initShowHideRewiews: function () {
-      let showChar = 100,
-        ellipsesText = "...",
-        moretext = "Read more",
-        lesstext = "Hide"
-
-      $('.rewiews-list__content_item').each(function () {
-        let content = $(this).html();
-
-        if (content.length > showChar) {
-
-          let rewiws = content.substr(0, showChar);
-          let rewiwsShowchar = content.substr(showChar - 1, content.length - showChar);
-
-          let html = rewiws + '<span class="moreEllipses">' + ellipsesText + '</span><span class="morecontent"><span class="hideComment hideCommentStatic">' +
-            rewiwsShowchar + '</span><a href="" class="rewiews-list__link">' + moretext + '</a></span>';
-
-          $(this).html(html);
-        }
-
-      });
-
-      $(".rewiews-list_item").click(function (e) {
-        e.preventDefault();
-
-        $(this).toggleClass('openRewiews');
-
-        let $this = $(this),
-          index = $('.rewiews-list_item').index($this),
-          itemLink = $('.rewiews-list__link').eq(index),
-          moreEllipses = $('.moreEllipses').eq(index),
-          hideCommentStatic = $('.hideCommentStatic').eq(index)
-
-        if (itemLink.hasClass("less")) {
-          itemLink.removeClass("less");
-          itemLink.html(moretext);
-        } else {
-          itemLink.addClass("less");
-          itemLink.html(lesstext);
-        }
-
-        moreEllipses.toggle();
-        hideCommentStatic.toggleClass('hideComment');
-
-        return false;
-      });
-    },
-
     initPreloader: function () {
       setTimeout(function () {
         $('#preloader').fadeOut();
         $('.loader').delay(600).fadeOut('slow');
       }, 300);
-    },
-
-    initSelect: function () {
-      $('select').niceSelect();
     },
 
     initDeckSelect: function () {

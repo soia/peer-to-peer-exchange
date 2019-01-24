@@ -22,8 +22,7 @@
     &__text {
         &_title {
             color: $semiBlack;
-            font-family: $regularFont;
-            font-weight: $medium;
+            font-family: $boldFont;
             font-size: 60px;
             line-height: 80px;
         }
@@ -56,6 +55,13 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                transition: all 0.25s;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+
+                &:hover {
+                    opacity: 0.9;
+                }
 
                 &:first-child {
                     background-color: $turquoise;
@@ -129,8 +135,7 @@
 
         &_title {
             color: $semiBlack;
-            font-family: $regularFont;
-            font-weight: $medium;
+            font-family: $boldFont;
             font-size: 40px;
             line-height: 47px;
         }
@@ -322,6 +327,11 @@
                     }
                 }
             }
+
+            .btn-turquoise, .btn-red {
+                width: 146px;
+                height: 48px;
+            }
         }
     }
 
@@ -428,8 +438,20 @@
             display: none;
         }
     }
-}
 
+    &__profile-title {
+        color: #393939;
+        font-family: $boldFont;
+        font-size: 34px;
+        line-height: 40px;
+        margin: 40px 0 25px 0;
+
+        &_name {
+            color: $lightBlue;
+            border-bottom: 1px solid $lightBlue;
+        }
+    }
+}
 
 // graph block
 
@@ -520,9 +542,8 @@
         p {
             &:first-child {
                 color: $semiBlack;
-                font-family: $regularFont;
+                font-family: $boldFont;
                 font-size: 40px;
-                font-weight: $medium;
                 line-height: 47px;
             }
 
@@ -557,8 +578,7 @@
 
         &_title {
             color: $semiBlack;
-            font-family: $regularFont;
-            font-weight: $medium;
+            font-family: $boldFont;
             font-size: 40px;
             line-height: 47px;
         }

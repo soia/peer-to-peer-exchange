@@ -9,11 +9,13 @@
             cursor: pointer;
             position: relative;
             background-color: $liteWhite;
+            pointer-events: none;
 
             &:hover {
                 box-shadow: 0 0 24px rgba(0, 0, 0, 0.05);
                 background-color: $white;
             }
+
 
             .hideCommentStatic {
                 visibility: visible;
@@ -24,6 +26,10 @@
 
             .hideComment {
                 visibility: hidden;
+            }
+
+            .rewiews-list_item_read-more, .rewiews-list_item_hide {
+                display: none;
             }
 
             &_date {
@@ -37,12 +43,25 @@
                 user-select: none;
                 pointer-events: none;
             }
+
+            &_read-more, &_hide {
+                color: $lightBlue;
+                font-family: $regularFont;
+                font-size: 18px;
+                line-height: 18px;
+                position: absolute;
+                bottom: 30px;
+                right: 116px;
+                user-select: none;
+                pointer-events: none;
+            }
         }
 
         &__img {
 
             img {
                 border-radius: 50%;
+                user-select: none;
             }
         }
 
@@ -50,7 +69,8 @@
             margin-left: 25px;
 
             &_name {
-
+                user-select: none;
+                
                 p {
                     color: $darkBlack;
                     font-family: $regularFont;
@@ -96,11 +116,41 @@
 
         .openRewiews {
             background-color: $white;
+
+            .moreEllipses {
+                display: none;
+            }
+        
+            .hideCommentStatic {
+                visibility: visible;
+            }
+
+            .rewiews-list_item_read-more {
+                display: none !important;
+            }
+        
+            .rewiews-list_item_hide {
+                display: block;
+            }
+
         }
 
         .openRewiews .rewiews-list__content_item {
             max-height: 1000px;
             transition: max-height 1s ease-in-out;
         }
+    }
+}
+
+.link-show {
+    pointer-events: visible;
+
+    .rewiews-list_item_hide {
+        display: none;
+        
+    }
+
+    .rewiews-list_item_read-more {
+        display: block !important;
     }
 }
