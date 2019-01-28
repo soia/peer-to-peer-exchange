@@ -179,7 +179,6 @@ $mainBorder: 1px solid rgba(207, 213, 231, .5);
     }
 }
 
-
 @mixin empty-red-btn-hover {
     &:after {
         content: "";
@@ -288,4 +287,29 @@ $mainBorder: 1px solid rgba(207, 213, 231, .5);
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@mixin main-input {
+
+    input {
+        background-color: #f2f3f9;
+        border: none;
+        color: $semiBlack;
+        font-family: $regularFont;
+        outline: none;
+
+        &::placeholder {
+            color: $gray;
+        }
+    }
+
+    label {
+        position: absolute;
+        top: -15px;
+        color: $semiBlack;
+        font-family: $regularFont;
+        font-size: 14px;
+        line-height: 14px;
+        text-transform: uppercase;
+    }
 }

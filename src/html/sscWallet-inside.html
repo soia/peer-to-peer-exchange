@@ -1,0 +1,725 @@
+@@include('modules/html-head.html',{ "bodyClass": "sscWallet__body", "pageTitle": "SSC Wallet" })
+@@include('modules/header-landing.html',{
+"headerClass": "" })
+
+<main class="sscWalletInside">
+    <!-- tabs -->
+
+    <div class="sscWalletInside-tabs">
+        <div class="sscWalletInside-tabs__left-side">
+        </div>
+        <div class="sscWalletInside-tabs__right-side">
+            <ul class="tab-container__tab">
+                <li class="tab-container__tab-item tab-link" data-tab="tab-1">
+                    <span>Deposit</span>
+                </li>
+                <li class="tab-container__tab-item  red tab-link selected-item" data-tab="tab-2">
+                    <span>Withdrawal</span>
+                </li>
+                <li class="tab-container__tab-item  red tab-link" data-tab="tab-3">
+                    <span>History</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- tab 1 -->
+
+    <div class="tab-content tab-content-remove" id="tab-1">
+        <div class="sscWalletInside__table">
+            <div class="sscWalletInside__table_row">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- tab 2 -->
+    <div class="tab-content tab-content-remove selected-item" id="tab-2">
+        <section>
+            <h4 class="sscWalletInside-tabs__title">Withdrawal</h4>
+        </section>
+        <div class="sscWalletInside__table">
+            <form action="#">
+                <div class="sscWalletInside__table_transaction-history">
+                    <svg class="sscWalletInside__table_transaction-history_img" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.6691 19.9113L12.9375 21.6225V12.9375C12.9375 12.4197 12.5178 12 12 12C11.4822 12 11.0625 12.4197 11.0625 12.9375V21.5298L9.42459 19.9113C9.05629 19.5473 8.46271 19.5509 8.09877 19.9192C7.73484 20.2875 7.7384 20.881 8.10665 21.245L10.0561 23.1714C10.588 23.7058 11.2948 24 12.0469 24C12.799 24 13.5057 23.7058 14.0376 23.1714L15.9871 21.245C16.3553 20.881 16.3589 20.2875 15.995 19.9192C15.631 19.5509 15.0374 19.5473 14.6691 19.9113Z"
+                            fill="black" />
+                        <path d="M23.0625 12.9375C22.5447 12.9375 22.125 13.3572 22.125 13.875C22.125 14.9089 21.2839 15.75 20.25 15.75H15.75C15.2322 15.75 14.8125 16.1697 14.8125 16.6875C14.8125 17.2053 15.2322 17.625 15.75 17.625H20.25C22.3177 17.625 24 15.9427 24 13.875C24 13.3572 23.5803 12.9375 23.0625 12.9375Z"
+                            fill="black" />
+                        <path d="M14.5862 11.8977C14.7432 11.9988 14.919 12.0471 15.0929 12.0471C15.401 12.0471 15.7028 11.8953 15.882 11.617C16.4396 10.7511 16.7344 9.76309 16.7344 8.76001C16.7344 5.96856 14.6105 3.69751 12 3.69751C9.38948 3.69751 7.26562 5.96856 7.26562 8.76001C7.26562 9.83373 7.53741 10.7962 8.07342 11.6205C8.35566 12.0546 8.93639 12.1777 9.37041 11.8954C9.80447 11.6132 9.92756 11.0325 9.64533 10.5984C9.31045 10.0833 9.14062 9.46487 9.14062 8.76001C9.14062 7.00243 10.4233 5.57251 12 5.57251C13.5767 5.57251 14.8594 7.00243 14.8594 8.76001C14.8594 9.40229 14.6679 10.0392 14.3055 10.6019C14.0252 11.0372 14.1509 11.6174 14.5862 11.8977Z"
+                            fill="black" />
+                        <path d="M19.4531 9.70312C19.9709 9.70312 20.3906 9.28339 20.3906 8.76562C20.3906 8.24786 19.9709 7.82812 19.4531 7.82812C18.9354 7.82812 18.5156 8.24786 18.5156 8.76562C18.5156 9.28339 18.9354 9.70312 19.4531 9.70312Z"
+                            fill="black" />
+                        <path d="M4.54688 9.70312C5.06464 9.70312 5.48438 9.28339 5.48438 8.76562C5.48438 8.24786 5.06464 7.82812 4.54688 7.82812C4.02911 7.82812 3.60938 8.24786 3.60938 8.76562C3.60938 9.28339 4.02911 9.70312 4.54688 9.70312Z"
+                            fill="black" />
+                        <path d="M20.25 0H3.75C1.68225 0 0 1.68225 0 3.75V13.875C0 15.9427 1.68225 17.625 3.75 17.625H8.25C8.76778 17.625 9.1875 17.2053 9.1875 16.6875C9.1875 16.1697 8.76778 15.75 8.25 15.75H3.75C2.71613 15.75 1.875 14.9089 1.875 13.875V3.75C1.875 2.71613 2.71613 1.875 3.75 1.875H20.25C21.2839 1.875 22.125 2.71613 22.125 3.75V9.1875C22.125 9.70528 22.5447 10.125 23.0625 10.125C23.5803 10.125 24 9.70528 24 9.1875V3.75C24 1.68225 22.3177 0 20.25 0Z"
+                            fill="black" />
+                    </svg>
+                    <p class="sscWalletInside__table_transaction-history_title">Transaction history</p>
+                </div>
+                <div class="sscWalletInside-tabs__input-wrapper">
+                    <div class="sscWalletInside-tabs__input-wrapper_item">
+                        <svg class="sscWalletInside-tabs__input-wrapper_item-img" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M23.001 12C23.001 12.5523 22.5533 13 22.001 13H12.001C11.4487 13 11.001 12.5523 11.001 12V2C11.001 1.44772 11.4487 1 12.001 1C14.9184 1 17.7163 2.15893 19.7792 4.22183C21.8421 6.28473 23.001 9.08262 23.001 12ZM20.2899 15.5005C18.7148 19.2255 14.8484 21.4424 10.8379 20.9199C6.82749 20.3975 3.65807 17.264 3.08985 13.2598C2.52163 9.25559 4.69418 5.3641 8.40094 3.74653C8.90713 3.52564 9.13841 2.93623 8.91752 2.43004C8.69662 1.92385 8.10721 1.69258 7.60102 1.91347C3.07053 3.8905 0.415198 8.64676 1.10969 13.5408C1.80418 18.4348 5.67792 22.2646 10.5796 22.9032C15.4812 23.5417 20.2069 20.8322 22.132 16.2795C22.3471 15.7708 22.1091 15.1841 21.6005 14.969C21.0918 14.7539 20.505 14.9919 20.2899 15.5005ZM13.001 3.0557C15.02 3.28137 16.9145 4.18561 18.3649 5.63604C19.8154 7.08647 20.7196 8.98098 20.9453 11H13.001V3.0557Z"
+                                fill="black" />
+                        </svg>
+                        <label for="availableBalance">Available balance</label>
+                        <input type="number" name="availableBalance" id="availableBalance" placeholder="0.00000712"
+                            step="0.001">
+                    </div>
+                    <div class="sscWalletInside-tabs__input-wrapper_item">
+                        <svg class="sscWalletInside-tabs__input-wrapper_item-img" width="24" height="25" viewBox="0 0 24 25"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M23 13.5416C22.4477 13.5416 22 13.0752 22 12.4999V8.76473L14.2071 16.8823C13.8166 17.2891 13.1834 17.2891 12.7929 16.8823L8.5 12.4106L1.70711 19.4865C1.31658 19.8933 0.683418 19.8933 0.292893 19.4865C-0.0976311 19.0797 -0.0976311 18.4201 0.292893 18.0134L7.79289 10.2008C8.18342 9.79405 8.81658 9.79405 9.20711 10.2008L13.5 14.6726L20.5858 7.29159H17C16.4477 7.29159 16 6.82522 16 6.24992C16 5.67462 16.4477 5.20825 17 5.20825H23C23.1356 5.20825 23.2649 5.23636 23.3828 5.28729C23.5007 5.33813 23.6112 5.41348 23.7071 5.51335C23.803 5.61322 23.8753 5.72833 23.9241 5.85119C23.9719 5.97121 23.9988 6.10257 24 6.2403C24 6.2435 24 6.24671 24 6.24992V6.25094"
+                                fill="black" />
+                        </svg>
+                        <label for="sscAmount">SSC amount*</label>
+                        <input type="text" name="sscAmount" id="sscAmount" placeholder="Write your amount">
+                        <p class="sscWalletInside-tabs__input-wrapper_item-dropDown-text">Maximum number of ssc
+                            withdrawn:-0.00000000</p>
+                    </div>
+                    <div class="sscWalletInside-tabs__input-wrapper_item">
+                        <svg class="sscWalletInside-tabs__input-wrapper_item-img" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M23.001 12C23.001 12.5523 22.5533 13 22.001 13H12.001C11.4487 13 11.001 12.5523 11.001 12V2C11.001 1.44772 11.4487 1 12.001 1C14.9184 1 17.7163 2.15893 19.7792 4.22183C21.8421 6.28473 23.001 9.08262 23.001 12ZM20.2899 15.5005C18.7148 19.2255 14.8484 21.4424 10.8379 20.9199C6.82749 20.3975 3.65807 17.264 3.08985 13.2598C2.52163 9.25559 4.69418 5.3641 8.40094 3.74653C8.90713 3.52564 9.13841 2.93623 8.91752 2.43004C8.69662 1.92385 8.10721 1.69258 7.60102 1.91347C3.07053 3.8905 0.415198 8.64676 1.10969 13.5408C1.80418 18.4348 5.67792 22.2646 10.5796 22.9032C15.4812 23.5417 20.2069 20.8322 22.132 16.2795C22.3471 15.7708 22.1091 15.1841 21.6005 14.969C21.0918 14.7539 20.505 14.9919 20.2899 15.5005ZM13.001 3.0557C15.02 3.28137 16.9145 4.18561 18.3649 5.63604C19.8154 7.08647 20.7196 8.98098 20.9453 11H13.001V3.0557Z"
+                                fill="black" />
+                        </svg>
+                        <label for="walletToSend">Wallet to send</label>
+                        <input type="text" name="walletToSend" id="walletToSend" placeholder="3K9jqXW41RP69E9gvFNKva4iUdV55vXEuM">
+                    </div>
+
+                    <button type="submit" class="sscWalletInside-tabs__input-wrapper_btn"><span>To Send</span></button>
+                </div>
+                <div class="sscWalletInside__table_transaction-history">
+                    <img class="sscWalletInside__table_transaction-history_img" src="./assets/img/cabinet/wallet/filter.svg">
+                    <p class="sscWalletInside__table_transaction-history_title">History of SSC withdraw</p>
+                </div>
+            </form>
+
+            <div class="withdrawal__table">
+                <div class="sscWalletInside__table_row">
+                    <div class="sscWalletInside__table_row-item sscWalletInside-number">
+                        <p>№</p>
+                        <p>490</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-status">
+                        <p>Wallet</p>
+                        <p>1G1uuDtggjLmBDqNaXbBYik2KH9pNzAytM</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-currency">
+                        <p>Quantity</p>
+                        <p>0.0000000</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-operation">
+                        <p>Date</p>
+                        <p>11/01/2019</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-time">
+                        <p>Time</p>
+                        <p>16:08:47</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-num-green">
+                        <p>Info</p>
+                        <p>Completed</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-type">
+                        <p>Details</p>
+                        <p>192451daa711cbbbd13083cd7d50ac810c7a888d894bb7bcd0c554442c5b0a363</p>
+                    </div>
+                </div>
+                <div class="sscWalletInside__table_row">
+                    <div class="sscWalletInside__table_row-item sscWalletInside-number">
+                        <p>№</p>
+                        <p>489</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-status-red">
+                        <p>Wallet</p>
+                        <p>-0.00123220 </p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-currency">
+                        <p>Quantity</p>
+                        <p>SSC</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-operation">
+                        <p>Date</p>
+                        <p>31/12/2018</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-time">
+                        <p>Time</p>
+                        <p>20:51:44</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-num-blue">
+                        <p>Info</p>
+                        <p>#6677772T60829447</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-type">
+                        <p>Details</p>
+                        <p>Transaction</p>
+                    </div>
+                </div>
+                <div class="sscWalletInside__table_row">
+                    <div class="sscWalletInside__table_row-item sscWalletInside-number">
+                        <p>№</p>
+                        <p>488</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-status-red">
+                        <p>Wallet</p>
+                        <p>-0.00123220</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-currency">
+                        <p>Quantity</p>
+                        <p>SSC</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-operation">
+                        <p>Date</p>
+                        <p>16/12/2018</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-time">
+                        <p>Time</p>
+                        <p>13:07:12</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-num-blue">
+                        <p>Info</p>
+                        <p>#6677772T60796132</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-type">
+                        <p>Details</p>
+                        <p>Transaction</p>
+                    </div>
+                </div>
+                <div class="sscWalletInside__table_row">
+                    <div class="sscWalletInside__table_row-item sscWalletInside-number">
+                        <p>№</p>
+                        <p>487</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-status-red">
+                        <p>Wallet</p>
+                        <p>-0.00123220</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-currency">
+                        <p>Quantity</p>
+                        <p>SSC</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-operation">
+                        <p>Date</p>
+                        <p>06/12/2018</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-time">
+                        <p>Time</p>
+                        <p>10:51:28</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-num-blue">
+                        <p>Info</p>
+                        <p>#6677772T60796132</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-type">
+                        <p>Details</p>
+                        <p>Transaction</p>
+                    </div>
+                </div>
+                <div class="sscWalletInside__table_row">
+                    <div class="sscWalletInside__table_row-item sscWalletInside-number">
+                        <p>№</p>
+                        <p>486</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-status-green">
+                        <p>Wallet</p>
+                        <p>0.00300000 </p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-currency">
+                        <p>Quantity</p>
+                        <p>SSC</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-operation">
+                        <p>Date</p>
+                        <p>13/11/2018</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-time">
+                        <p>Time</p>
+                        <p>10:02:26</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-num-blue">
+                        <p>Info</p>
+                        <p></p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-type">
+                        <p>Details</p>
+                        <p>Recharge</p>
+                    </div>
+                </div>
+                <div class="sscWalletInside__table_row">
+                    <div class="sscWalletInside__table_row-item sscWalletInside-number">
+                        <p>№</p>
+                        <p>485</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-status-red">
+                        <p>Wallet</p>
+                        <p>-0.00123220 </p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-currency">
+                        <p>Quantity</p>
+                        <p>SSC</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-operation">
+                        <p>Date</p>
+                        <p>13/11/2018</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-time">
+                        <p>Time</p>
+                        <p>12:03:21</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-num-blue">
+                        <p>Info</p>
+                        <p>#6677772T60796132</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-type">
+                        <p>Details</p>
+                        <p>Withdrawal</p>
+                    </div>
+                </div>
+                <div class="sscWalletInside__table_row">
+                    <div class="sscWalletInside__table_row-item sscWalletInside-number">
+                        <p>№</p>
+                        <p>484</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-status-green">
+                        <p>Wallet</p>
+                        <p>0.00120000</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-currency">
+                        <p>Quantity</p>
+                        <p>SSC</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-operation">
+                        <p>Date</p>
+                        <p>13/11/2018</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-time">
+                        <p>Time</p>
+                        <p>10:02:26</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-num-blue">
+                        <p>Info</p>
+                        <p>#6677772T60796132</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-type">
+                        <p>Details</p>
+                        <p>Recharge</p>
+                    </div>
+                </div>
+                <div class="sscWalletInside__table_row">
+                    <div class="sscWalletInside__table_row-item sscWalletInside-number">
+                        <p>№</p>
+                        <p>483</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-status-red">
+                        <p>Wallet</p>
+                        <p>-0.00123220</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-currency">
+                        <p>Quantity</p>
+                        <p>SSC</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-operation">
+                        <p>Date</p>
+                        <p>13/11/2018</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-time">
+                        <p>Time</p>
+                        <p>10:03:21</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-num-blue">
+                        <p>Info</p>
+                        <p></p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-type">
+                        <p>Details</p>
+                        <p>Withdrawal</p>
+                    </div>
+                </div>
+                <div class="sscWalletInside__table_row">
+                    <div class="sscWalletInside__table_row-item sscWalletInside-number">
+                        <p>№</p>
+                        <p>482</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-status-green">
+                        <p>Wallet</p>
+                        <p>0.00212196 </p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-currency">
+                        <p>Quantity</p>
+                        <p>SSC</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-operation">
+                        <p>Date</p>
+                        <p>13/11/2018</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-time">
+                        <p>Time</p>
+                        <p>10:02:26</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-num-blue">
+                        <p>Info</p>
+                        <p>#6677772T60796132</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-type">
+                        <p>Details</p>
+                        <p>Recharge</p>
+                    </div>
+                </div>
+                <div class="sscWalletInside__table_row">
+                    <div class="sscWalletInside__table_row-item sscWalletInside-number">
+                        <p>№</p>
+                        <p>481</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-status-green">
+                        <p>Wallet</p>
+                        <p>0.00212196</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-currency">
+                        <p>Quantity</p>
+                        <p>SSC</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-operation">
+                        <p>Date</p>
+                        <p>16/10/2018</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-time">
+                        <p>Time</p>
+                        <p>13:53:54</p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-num-blue">
+                        <p>Info</p>
+                        <p></p>
+                    </div>
+                    <div class="sscWalletInside__table_row-item sscWalletInside-type">
+                        <p>Details</p>
+                        <p>Withdrawal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- tab 3 -->
+
+    <div class="tab-content tab-content-remove" id="tab-3">
+        <section>
+            <h4 class="sscWalletInside-tabs__title">History</h4>
+        </section>
+        <div class="sscWalletInside__table">
+            <div class="sscWalletInside__table_transaction-history">
+                <img class="sscWalletInside__table_transaction-history_img" src="./assets/img/cabinet/wallet/filter.svg">
+                <p class="sscWalletInside__table_transaction-history_title">Transaction history</p>
+            </div>
+            <div class="sscWalletInside__table_row">
+                <div class="sscWalletInside__table_row-item sscWalletInside-number">
+                    <p>№</p>
+                    <p>490</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-status-red">
+                    <p>Amount</p>
+                    <p>-0.00123220</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-currency">
+                    <p>Сurrency</p>
+                    <p>SSC</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-operation">
+                    <p>Date</p>
+                    <p>11/01/2019</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-time">
+                    <p>Time</p>
+                    <p>16:08:47</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-num-blue">
+                    <p>Number</p>
+                    <p>#6677772T60879035</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-type">
+                    <p>Type</p>
+                    <p>Transaction</p>
+                </div>
+            </div>
+            <div class="sscWalletInside__table_row">
+                <div class="sscWalletInside__table_row-item sscWalletInside-number">
+                    <p>№</p>
+                    <p>489</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-status-red">
+                    <p>Amount</p>
+                    <p>-0.00123220 </p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-currency">
+                    <p>Сurrency</p>
+                    <p>SSC</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-operation">
+                    <p>Date</p>
+                    <p>31/12/2018</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-time">
+                    <p>Time</p>
+                    <p>20:51:44</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-num-blue">
+                    <p>Number</p>
+                    <p>#6677772T60829447</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-type">
+                    <p>Type</p>
+                    <p>Transaction</p>
+                </div>
+            </div>
+            <div class="sscWalletInside__table_row">
+                <div class="sscWalletInside__table_row-item sscWalletInside-number">
+                    <p>№</p>
+                    <p>488</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-status-red">
+                    <p>Amount</p>
+                    <p>-0.00123220</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-currency">
+                    <p>Сurrency</p>
+                    <p>SSC</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-operation">
+                    <p>Date</p>
+                    <p>16/12/2018</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-time">
+                    <p>Time</p>
+                    <p>13:07:12</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-num-blue">
+                    <p>Number</p>
+                    <p>#6677772T60796132</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-type">
+                    <p>Type</p>
+                    <p>Transaction</p>
+                </div>
+            </div>
+            <div class="sscWalletInside__table_row">
+                <div class="sscWalletInside__table_row-item sscWalletInside-number">
+                    <p>№</p>
+                    <p>487</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-status-red">
+                    <p>Amount</p>
+                    <p>-0.00123220</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-currency">
+                    <p>Сurrency</p>
+                    <p>SSC</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-operation">
+                    <p>Date</p>
+                    <p>06/12/2018</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-time">
+                    <p>Time</p>
+                    <p>10:51:28</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-num-blue">
+                    <p>Number</p>
+                    <p>#6677772T60796132</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-type">
+                    <p>Type</p>
+                    <p>Transaction</p>
+                </div>
+            </div>
+            <div class="sscWalletInside__table_row">
+                <div class="sscWalletInside__table_row-item sscWalletInside-number">
+                    <p>№</p>
+                    <p>486</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-status-green">
+                    <p>Amount</p>
+                    <p>0.00300000 </p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-currency">
+                    <p>Сurrency</p>
+                    <p>SSC</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-operation">
+                    <p>Date</p>
+                    <p>13/11/2018</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-time">
+                    <p>Time</p>
+                    <p>10:02:26</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-num-blue">
+                    <p>Number</p>
+                    <p></p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-type">
+                    <p>Type</p>
+                    <p>Recharge</p>
+                </div>
+            </div>
+            <div class="sscWalletInside__table_row">
+                <div class="sscWalletInside__table_row-item sscWalletInside-number">
+                    <p>№</p>
+                    <p>485</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-status-red">
+                    <p>Amount</p>
+                    <p>-0.00123220 </p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-currency">
+                    <p>Сurrency</p>
+                    <p>SSC</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-operation">
+                    <p>Date</p>
+                    <p>13/11/2018</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-time">
+                    <p>Time</p>
+                    <p>12:03:21</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-num-blue">
+                    <p>Number</p>
+                    <p>#6677772T60796132</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-type">
+                    <p>Type</p>
+                    <p>Withdrawal</p>
+                </div>
+            </div>
+            <div class="sscWalletInside__table_row">
+                <div class="sscWalletInside__table_row-item sscWalletInside-number">
+                    <p>№</p>
+                    <p>484</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-status-green">
+                    <p>Amount</p>
+                    <p>0.00120000</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-currency">
+                    <p>Сurrency</p>
+                    <p>SSC</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-operation">
+                    <p>Date</p>
+                    <p>13/11/2018</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-time">
+                    <p>Time</p>
+                    <p>10:02:26</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-num-blue">
+                    <p>Number</p>
+                    <p>#6677772T60796132</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-type">
+                    <p>Type</p>
+                    <p>Recharge</p>
+                </div>
+            </div>
+            <div class="sscWalletInside__table_row">
+                <div class="sscWalletInside__table_row-item sscWalletInside-number">
+                    <p>№</p>
+                    <p>483</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-status-red">
+                    <p>Amount</p>
+                    <p>-0.00123220</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-currency">
+                    <p>Сurrency</p>
+                    <p>SSC</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-operation">
+                    <p>Date</p>
+                    <p>13/11/2018</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-time">
+                    <p>Time</p>
+                    <p>10:03:21</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-num-blue">
+                    <p>Number</p>
+                    <p></p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-type">
+                    <p>Type</p>
+                    <p>Withdrawal</p>
+                </div>
+            </div>
+            <div class="sscWalletInside__table_row">
+                <div class="sscWalletInside__table_row-item sscWalletInside-number">
+                    <p>№</p>
+                    <p>482</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-status-green">
+                    <p>Amount</p>
+                    <p>0.00212196 </p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-currency">
+                    <p>Сurrency</p>
+                    <p>SSC</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-operation">
+                    <p>Date</p>
+                    <p>13/11/2018</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-time">
+                    <p>Time</p>
+                    <p>10:02:26</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-num-blue">
+                    <p>Info</p>
+                    <p>#6677772T60796132</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-type">
+                    <p>Type</p>
+                    <p>Recharge</p>
+                </div>
+            </div>
+            <div class="sscWalletInside__table_row">
+                <div class="sscWalletInside__table_row-item sscWalletInside-number">
+                    <p>№</p>
+                    <p>481</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-status-green">
+                    <p>Amount</p>
+                    <p>0.00212196</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-currency">
+                    <p>Quantity</p>
+                    <p>SSC</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-operation">
+                    <p>Date</p>
+                    <p>16/10/2018</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-time">
+                    <p>Time</p>
+                    <p>13:53:54</p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-num-blue">
+                    <p>Info</p>
+                    <p></p>
+                </div>
+                <div class="sscWalletInside__table_row-item sscWalletInside-type">
+                    <p>Type</p>
+                    <p>Withdrawal</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @@include('modules/pagination.html')
+
+</main>
+
+@@include('modules/modal-window.html')
+@@include('modules/html-footer.html')

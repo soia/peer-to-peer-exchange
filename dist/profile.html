@@ -63,7 +63,27 @@
 
     <div class="profile-wrapper">
         <div class="profile-wrapper__left-side">
-            <div class="profile-wrapper__left-side_avatar"></div>
+
+            <!-- another user avatar -->
+
+            <div class="profile-wrapper__left-side_avatar another-user-avatar">
+                <img class="profile-wrapper__left-side_avatar-img profile-pic" src="./assets/img/cabinet/profile/none_photo.png"
+                    alt="none_photo">
+            </div>
+
+            <!-- user avatar -->
+        
+            <form method="post" enctype="multipart/form-data">
+                <div class="profile-wrapper__left-side_avatar">
+                    <img class="profile-wrapper__left-side_avatar-img profile-pic" src="./assets/img/cabinet/profile/none_photo.png"
+                        alt="none_photo">
+                    <div class="profile-wrapper__left-side_upload">
+                        <img class="profile-wrapper__left-side_upload_img upload-button" src="./assets/img/cabinet/profile/download-arrow.svg"
+                            alt="download-arrow">
+                        <input class="profile-wrapper__left-side_upload_file file-upload" type="file" accept="image/*" />
+                    </div>
+                </div>
+            </form>
             <div class="profile-wrapper__left-side_item-center">
                 <div class="profile-wrapper__left-side_item-center_row">
                     <p>True name</p>
@@ -92,27 +112,53 @@
                     <p>few seconds ago</p>
                 </div>
             </div>
-    
         </div>
         <div class="profile-wrapper__right-side">
-            <div class="profile-wrapper__right-side_item-left">
-                <div class="profile-wrapper__right-side_item-left_row">
-                    <p>True name</p>
-                    <p>John Doe</p>
+            <form action="#">
+                <div class="profile-wrapper__right-side_item">
+                    <p class="profile-wrapper__right-side_title">Identity and Residence Proof</p>
+                    <div class="profile-wrapper__right-side_submit-wrapper">
+                        <p class="not-submitted">Not submitted</p>
+                        <div class="profile-wrapper__right-side_submit-input">
+                            <label for="sumited-documents">Upload documents</label>
+                            <input type="file" id="sumited-documents">
+                        </div>
+                    </div>
                 </div>
-                <div class="profile-wrapper__right-side_item-left_row">
-                    <p>Number of successful trades</p>
-                    <p>245</p>
+                <div class="profile-wrapper__right-side_item">
+                    <p class="profile-wrapper__right-side_title">Phone number</p>
+                    <div class="profile-wrapper__right-side_submit-wrapper">
+                        <p class="pending">Pending</p>
+                        <div class="profile-wrapper__right-side_submit-input">
+                            <label for="sumited-documents">Add phone number</label>
+                            <input type="file" id="sumited-documents">
+                        </div>
+                    </div>
                 </div>
-                <div class="profile-wrapper__right-side_item-left_row">
-                    <p>Number of different partners</p>
-                    <p>10</p>
+                <div class="profile-wrapper__right-side_item profile-wrapper__right-side_messenger">
+                    <div>
+                        <p class="profile-wrapper__right-side_title">Viber</p>
+                        <div class="profile-wrapper__right-side_submit-wrapper">
+                            <p class="submitted">Submitted</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="profile-wrapper__right-side_title">Telegram</p>
+                        <div class="profile-wrapper__right-side_submit-wrapper">
+                            <p class="not-submitted-black">Not submitted</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="profile-wrapper__right-side_item-left_row">
-                    <p>Feedback score</p>
-                    <p>4562</p>
+                <div class="profile-wrapper__right-side_item profile-wrapper__right-side_messenger">
+                    <div>
+                        <p class="profile-wrapper__right-side_title">WeChat</p>
+                        <div class="profile-wrapper__right-side_submit-wrapper">
+                            <p class="not-submitted-black">Not submitted</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
+                <button class="profile-wrapper__right-side_button" type="submit">Block this account</button>
+            </form>
         </div>
     </div>
 

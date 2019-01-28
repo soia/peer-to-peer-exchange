@@ -64,3 +64,367 @@
         }
     }
 }
+
+// sscWalletInside
+
+.sscWalletInside {
+    &-tabs {
+        padding: 64px 122px 0 122px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__input-wrapper {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 80px 0 60px 0;
+
+            &_item {
+                @include main-input;
+                position: relative;
+                width: calc(50% - 70px);
+                margin-bottom: 60px;
+
+                &:nth-child(3) {
+                    width: 100%;
+                }
+
+                &-img {
+                    position: absolute;
+                    left: 31px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+    
+                &:first-child {
+                    margin-right: 140px;
+                }
+                
+    
+                input {
+                    width: calc(100% - 116px);
+                    height: 90px;
+                    padding: 27px 24px 27px 24px;
+                    font-size: 32px;
+                    line-height: 36px;
+                    margin-left: 116px;
+                }
+
+                label {
+                    margin-left: 116px;
+                }
+
+                &-dropDown-text {
+                    color: $lightBlue;
+                    font-family: $regularFont;
+                    font-size: 14px;
+                    letter-spacing: 1px;
+                    line-height: 14px;
+                    text-transform: uppercase;
+                    margin-left: 116px;
+                    margin-top: 5px;
+                }
+            }
+
+            &_btn {
+                @include btn-empty-black;
+                font-weight: $medium;
+                width: 220px;
+                height: 60px;
+                font-size: 14px !important;
+                line-height: 14px;
+                margin-left: 116px;
+            }
+        }
+
+        &__title {
+            color: $semiBlack;
+            font-family: $regularFont;
+            font-weight: $medium;
+            font-size: 40px;
+            line-height: 47px;
+            transform: translate(122px, -41px);
+            position: absolute;
+            display: none;
+        }
+    
+        &__right-side {
+    
+            .tab-container__tab-item {
+                @include empty-blue-btn-hover;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                background-color: #f5f6fb;
+                width: 164px;
+                height: 36px;
+                cursor: pointer;
+                color: $gray;
+                font-family: $regularFont;
+                font-weight: $medium;
+                font-size: 14px;
+                line-height: 14px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+    
+                span {
+                    z-index: 10;
+                }
+            }
+    
+            .selected-item {
+                @include btn-blue;
+            }
+        }
+    }
+    
+    &__table {
+        padding: 32px 122px 40px 122px;
+
+        &_transaction-history {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+
+            &_title {
+                color: $semiBlack;
+                font-family: $regularFont;
+                font-weight: $medium;
+                font-size: 24px;
+                line-height: 24px;
+            }
+
+            &_img {
+                margin: 0 61px 0 31px;
+            }
+        }
+
+        &_row {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 20px 20px 37px;
+
+            &:hover {
+                box-shadow: 0 0 24px rgba(0, 0, 0, 0.05);
+                background-color: $white;
+            }
+
+            &:nth-child(even) {
+                background-color: #fbfcfd;
+            }
+
+            &-item {
+                overflow: hidden;
+                margin-right: 15px;
+
+                &:first-child {
+                    width: 5%;
+                }
+                
+                &:nth-child(2) {
+                    width: 15%;
+                }
+
+                &:nth-child(3) {
+                    width: 10%;
+                }
+
+                &:nth-child(4) {
+                    width: 12.5%;
+                }
+
+                &:nth-child(5) {
+                    width: 12.5%;
+                }
+
+                &:nth-child(6) {
+                    width: 20%;
+                }
+
+                &:last-child {
+                    width: 10%;
+                } 
+
+                p {
+                    &:first-child {
+                        color: $gray;
+                        font-family: $regularFont;
+                        font-size: 14px;
+                        line-height: 14px;
+                        margin-bottom: 15px;
+                    }
+
+                    &:last-child {
+                        font-family: $regularFont;
+                        font-size: 18px;
+                        line-height: 18px;
+                    }
+
+                }
+            }
+
+            .sscWalletInside-number {
+                p {
+                    &:last-child {
+                        color: $semiBlack;
+                        font-weight: $medium;
+                    }
+                }
+            }
+
+            .sscWalletInside-status-red {
+                p {
+                    &:last-child {
+                        color: $red;
+                    }
+                }
+            }
+
+            .sscWalletInside-status-green {
+                p {
+                    &:last-child {
+                        color: $turquoise;
+                    }
+                }
+            }
+
+            .sscWalletInside-status-blue {
+                p {
+                    &:last-child {
+                        color: $lightBlue;
+                    }
+                }
+            }
+
+            .sscWalletInside-currency {
+                p {
+                    &:last-child {
+                        color: $semiBlack;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+            .sscWalletInside-currency {
+                p {
+                    &:last-child {
+                        color: $semiBlack;
+                        font-weight: $medium;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+
+            .sscWalletInside-operation-red {
+                p {
+                    &:last-child {
+                        color: $red;
+                    }
+                }
+            }
+
+            .sscWalletInside-operation-green {
+                p {
+                    &:last-child {
+                        color: $turquoise;
+                    }
+                }
+            }
+
+            .sscWalletInside-time {
+                p {
+                    &:last-child {
+                        color: $semiBlack;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+
+            .sscWalletInside-num-red{
+                p {
+                    &:last-child {
+                        color: $red;
+                    }
+                }
+            }
+
+            .sscWalletInside-num-green {
+                p {
+                    &:last-child {
+                        color: $turquoise;
+                    }
+                }
+            }
+
+            .sscWalletInside-num-blue {
+                p {
+                    &:last-child {
+                        color: $lightBlue;
+                    }
+                }
+            }
+
+            .sscWalletInside-type {
+                p a {
+                    &:last-child {
+                        color: $lightBlue;
+                        border-bottom: 1px solid $lightBlue;
+
+                        &:hover {
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+        }
+
+        .withdrawal__table {
+            .sscWalletInside__table_row {
+                flex-wrap: wrap;
+
+                &-item {
+                    &:first-child {
+                        width: 5%;
+                    }
+                    
+                    &:nth-child(2) {
+                        width: 25%;
+                    }
+    
+                    &:nth-child(3) {
+                        width: 10%;
+                    }
+    
+                    &:nth-child(4) {
+                        width: 12.5%;
+                    }
+    
+                    &:nth-child(5) {
+                        width: 12.5%;
+                    }
+    
+                    &:nth-child(6) {
+                        width: 20%;
+                    }
+    
+                    &:last-child {
+                        width: 100%;
+                    } 
+                }
+
+                .sscWalletInside__table_row-item {
+                    &:last-child {
+                        margin: 16px 0 20px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .tab-content-remove.selected-item {
+        .sscWalletInside-tabs__title {
+            display: block !important;
+        }
+    }
+}

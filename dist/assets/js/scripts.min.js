@@ -1,24 +1,25 @@
 (function ($) {
   "use strict";
 
-  window.inflot = $.extend({}, {
+  window.peerToPeer = $.extend({}, {
 
     init: function () {
-      inflot.initActiveLink();
-      inflot.initOpenModal();
-      inflot.initTabs();
-      inflot.initShowHideRewiews();
-      inflot.initSelect();
+      peerToPeer.initActiveLink();
+      peerToPeer.initOpenModal();
+      peerToPeer.initTabs();
+      peerToPeer.initShowHideRewiews();
+      peerToPeer.initSelect();
+      peerToPeer.initUploadImage();
 
-      inflot.initMenu();
-      inflot.initSearch();
-      inflot.initLiked();
-      inflot.initAccordion();
-      inflot.initHideAccordion();
-      inflot.initPreloader();
-      inflot.initDeckSelect();
-      inflot.initDatePicker();
-      inflot.initSlickSlider();
+      peerToPeer.initMenu();
+      peerToPeer.initSearch();
+      peerToPeer.initLiked();
+      peerToPeer.initAccordion();
+      peerToPeer.initHideAccordion();
+      peerToPeer.initPreloader();
+      peerToPeer.initDeckSelect();
+      peerToPeer.initDatePicker();
+      peerToPeer.initSlickSlider();
     },
 
     initActiveLink: function () {
@@ -101,7 +102,32 @@
     initSelect: function () {
       $('select').niceSelect();
     },
- 
+
+    initUploadImage: function () {
+      let fileUpload = $(".file-upload"),
+        uploadButton = $(".upload-button"),
+        avatarImg = $('.profile-wrapper__left-side_avatar-img');
+
+      const readURL = function (input) {
+        if (input.files && input.files[0]) {
+          const reader = new FileReader();
+
+          reader.onload = function (e) {
+            avatarImg.attr('src', e.target.result);
+          }
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+
+      fileUpload.on('change', function () {
+        readURL(this);
+      });
+
+      uploadButton.on('click', function () {
+        fileUpload.click();
+      });
+    },
+
     initMenu: function () {
       let dynamicMenu = $("#menu"),
         btnMenu = $(".btnMenu"),
@@ -466,6 +492,6 @@
   });
 
   $(document).ready(function () {
-    inflot.init();
+    peerToPeer.init();
   });
 })(jQuery);

@@ -12,17 +12,53 @@
     }
 
     &-wrapper {
-        padding: 64px 0 40px 122px;
+        padding: 64px 237px 40px 122px;
+        display: flex;
+        justify-content: space-between;
 
         &__left-side {
             display: flex;
 
+            .another-user-avatar {
+                cursor: initial;
+                display: none;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+
             &_avatar {
-                width: 100px;
-                height: 100px;
-                background-color: yellow;
-                border-radius: 50%;
                 margin-right: 24px;
+                position: relative;
+                cursor: pointer;
+                transition: all 0.25s;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+
+                &-img {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            }
+
+            &_upload {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                &_img {
+
+                }
+
+                &_file {
+                    display: none;
+                }
             }
 
             &_item-center {
@@ -86,6 +122,87 @@
                         }
                     }
                 }
+            }
+        }
+
+        &__right-side {
+
+            &_item {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 30px;
+            }
+
+            &_messenger {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            &_title {
+                color: $gray;
+                font-family: $regularFont;
+                font-size: 14px;
+                line-height: 14px;
+                margin-bottom: 10px;
+            }
+
+            &_submit-wrapper {
+                display: flex;
+                justify-content: space-between;
+
+                .not-submitted, .submitted, .pending, .not-submitted-black {
+                    font-family: $regularFont;
+                    font-size: 24px;
+                    line-height: 20px;
+                    margin-right: 30px;
+                }
+
+                .not-submitted {
+                    color: $red;
+                }
+
+                .not-submitted-black {
+                    color: $darkBlack;
+                }
+
+                .submitted {
+                    color: $turquoise;
+                }
+
+                .pending {
+                    color: $gray;
+                }
+            }
+
+            &_submit-input {
+
+                label {
+                    color: $lightBlue;
+                    font-family: $regularFont;
+                    font-size: 24px;
+                    line-height: 20px;
+                    border-bottom: 1px solid $lightBlue;
+                    cursor: pointer;
+                }
+
+                input {
+                    display: none;
+                }
+            }
+
+            &_button {
+                @include btn-red;
+                background-color: $red;
+                color: $white;
+                font-family: $regularFont;
+                width: 220px;
+                height: 60px;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 14px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                cursor: pointer;
             }
         }
     }
