@@ -259,7 +259,7 @@
                     &:last-child {
                         font-family: $regularFont;
                         font-size: 18px;
-                        line-height: 18px;
+                        line-height: 21px;
                     }
 
                 }
@@ -353,6 +353,7 @@
                 p {
                     &:last-child {
                         color: $turquoise;
+                        font-weight: $medium;
                     }
                 }
             }
@@ -382,6 +383,11 @@
         .withdrawal__table {
             .sscWalletInside__table_row {
                 flex-wrap: wrap;
+                justify-content: flex-start;
+
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                } 
 
                 &-item {
                     &:first-child {
@@ -389,11 +395,11 @@
                     }
                     
                     &:nth-child(2) {
-                        width: 25%;
+                        width: 33%;
                     }
     
                     &:nth-child(3) {
-                        width: 10%;
+                        width: 12.5%;
                     }
     
                     &:nth-child(4) {
@@ -405,17 +411,83 @@
                     }
     
                     &:nth-child(6) {
-                        width: 20%;
+                        width: 15%;
                     }
     
                     &:last-child {
                         width: 100%;
+
+                        p {
+                            &:last-child {
+                                color: #0277ff;
+                            }
+                        }
                     } 
+                }
+
+                p {
+                    &:first-child {
+                        font-weight: $medium;
+                    }
                 }
 
                 .sscWalletInside__table_row-item {
                     &:last-child {
                         margin: 16px 0 20px 0;
+                        margin-left: calc(5% + 15px);
+                    }
+                }
+            }
+        }
+
+        .deposit__table {
+            .sscWalletInside__table_row {
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                } 
+
+                &-item {
+                    &:first-child {
+                        width: 5%;
+                    }
+                    
+                    &:nth-child(2) {
+                        width: 33%;
+                    }
+    
+                    &:nth-child(3) {
+                        width: 12.5%;
+                    }
+    
+                    &:nth-child(4) {
+                        width: 12.5%;
+                    }
+    
+                    &:nth-child(5) {
+                        width: 12.5%;
+                    }
+    
+                    &:nth-child(6) {
+                        width: 15%;
+                    }
+    
+                    &:last-child {
+                        width: 9.5%;
+
+                        p {
+                            &:last-child {
+                                color: #0277ff;
+                            }
+                        }
+                    } 
+                }
+
+                p {
+                    &:first-child {
+                        font-weight: $medium;
                     }
                 }
             }
@@ -427,4 +499,66 @@
             display: block !important;
         }
     }
+
+    &-Qr-container {
+        position: relative;
+        @include main-input;
+        display: flex;
+        align-items: center;
+        max-width: 1068px;
+        width: 100%;
+        margin-top: 80px;
+
+        &__input {
+            width: 100%;
+        }
+
+        input {
+            width: 100%;
+            height: 90px;
+            padding: 27px 24px 27px 24px;
+            font-size: 32px;
+            line-height: 36px;
+        }
+
+        &__banner {
+            max-width: 952px;
+            width: 100%;
+            height: 60px;
+            background-color: $lightBlue;
+            margin-left: 116px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            &_img {
+                margin-right: 40px;
+            }
+
+            &_text {
+                color: $white;
+                font-family: $regularFont;
+                font-size: 18px;
+                line-height: 28px;
+
+                span {
+                    font-weight: $medium;
+                }
+            }
+
+            &_triangle {
+                position: absolute;
+                border: 13px solid transparent;
+                border-bottom: 13px solid $lightBlue;
+                top: -26px;
+                right: 40px;
+            }
+        }
+    }
 }
+
+#qrcode {
+    width: 220px;
+    height: 220px;
+  }

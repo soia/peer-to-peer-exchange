@@ -10,6 +10,9 @@
       peerToPeer.initShowHideRewiews();
       peerToPeer.initSelect();
       peerToPeer.initUploadImage();
+      peerToPeer.initCopyToClipboard();
+      peerToPeer.initQrCode();
+
 
       peerToPeer.initMenu();
       peerToPeer.initSearch();
@@ -127,6 +130,44 @@
         fileUpload.click();
       });
     },
+
+    initCopyToClipboard: function () {
+      new ClipboardJS('.copyToClipboard');
+    },
+
+    initQrCode: function () {
+      try {
+        const qrcode = new QRCode("qrCode");
+      
+        function makeCode() {
+          const elText = document.getElementById("inputQrCode");
+      
+          if (!elText.value) {
+            console.log("Input a text");
+            elText.focus();
+            return;
+          }
+      
+          qrcode.makeCode(elText.value);
+        }
+      
+        makeCode();
+      
+        $("#inputQrCode").
+          on("blur", function () {
+            makeCode();
+          }).
+          on("keydown", function (e) {
+            if (e.keyCode == 13) {
+              makeCode();
+            }
+          });
+      
+      } catch (e) {
+        
+      }
+    },
+    
 
     initMenu: function () {
       let dynamicMenu = $("#menu"),
