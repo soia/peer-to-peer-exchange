@@ -1,20 +1,20 @@
-@@include('modules/html-head.html',{ "bodyClass": "buySell__body", "pageTitle": "Buy / Sell SSC" })
+@@include('modules/html-head.html',{ "bodyClass": "createAd__body", "pageTitle": "Create new advertisement" })
 @@include('modules/header-landing.html',{
 "headerClass": "" })
 
-<main class="buySell">
-    <h3 class="buySell__title">
+<main class="createAd.html">
+    <h3 class="createAd__title">
         Create new advertisement
     </h3>
 
-    <div class="buySell__wrapper">
-        <div class="buySell__wantToBuy">
-            <div class="buySell__wantToBuy_icon">
+    <div class="createAd__wrapper">
+        <div class="createAd__wantToBuy">
+            <div class="createAd__wantToBuy_icon">
                 <img src="./assets/img/landing/buy-sell/filter.svg" alt="icon">
             </div>
-            <div class="buySell__wantToBuy_wrapper-tabs">
-                <p class="buySell__wantToBuy_wrapper-tabs-text">I want to</p>
-                <div class="buySell__wantToBuy_tabs">
+            <div class="createAd__wantToBuy_wrapper-tabs">
+                <p class="createAd__wantToBuy_wrapper-tabs-text">I want to</p>
+                <div class="createAd__wantToBuy_tabs">
                     <ul class="tab-container__tab">
                         <li class="tab-container__tab-item tab-link turquoise selected-item" data-tab="tab-1">
                             <span>Buy ssc</span>
@@ -33,34 +33,34 @@
 
         <div class="tab-content tab-content-remove selected-item" id="tab-1">
             <form action="#" method="POST">
-                <div class="buySell__price">
-                    <div class="buySell__price_icon">
+                <div class="createAd__price">
+                    <div class="createAd__price_icon">
                         <img src="./assets/img/landing/buy-sell/marker.svg" alt="icon">
                     </div>
-                    <p class="buySell__price_text">Price</p>
+                    <p class="createAd__price_text">Price</p>
                 </div>
-                <div class="buySell__price-form">
-                    <div class="buySell__price-form_wrapper">
-                        <div class="buySell__price-form_line">
+                <div class="createAd__price-form">
+                    <div class="createAd__price-form_wrapper">
+                        <div class="createAd__price-form_line">
                             <img src="./assets/img/landing/buy-sell/line.svg" alt="line">
                         </div>
-                        <div class="buySell__price-form_content">
-                            <div class="buySell__price-form_subprice">
+                        <div class="createAd__price-form_content">
+                            <div class="createAd__price-form_subprice">
                                 <p>Price</p>
                                 <p>23,230 VND/USD</p>
                                 <p>Price of 1 USD in VND</p>
                             </div>
-                            <div class="buySell__price-form__inputs">
+                            <div class="createAd__price-form__inputs">
                                 <label for="amountOfSsc">Amount of SSC*</label>
                                 <input type="number" name="amountOfSsc" id="amountOfSsc" placeholder="23300.848432708604" step="0.001">
-                                <p class="buySell__price-form__inputs_currency">ssc</p>
+                                <p class="createAd__price-form__inputs_currency">ssc</p>
                             </div>
-                            <div class="buySell__price-form__inputs">
+                            <div class="createAd__price-form__inputs">
                                 <label for="priceInUsd">Price for one SSC in USD</label>
                                 <input type="number" name="priceInUsd" id="priceInUsd" placeholder="1000.84">
-                                <p class="buySell__price-form__inputs_currency">usd</p>
+                                <p class="createAd__price-form__inputs_currency">usd</p>
                             </div>
-                            <div class="buySell__price-form_receive-price">
+                            <div class="createAd__price-form_receive-price">
                                 <p>SSC price that you receive</p>
                                 <p>93,372,985 VND</p>
                             </div>
@@ -68,25 +68,25 @@
                     </div>
                 </div>
 
-                <div class="buySell__price">
-                    <div class="buySell__price_icon">
+                <div class="createAd__price">
+                    <div class="createAd__price_icon">
                         <img src="./assets/img/landing/buy-sell/info.svg" alt="icon">
                     </div>
-                    <p class="buySell__price_text">Payment information</p>
+                    <p class="createAd__price_text">Payment information</p>
                 </div>
-                <div class="buySell__price-form">
-                    <div class="buySell__price-form_wrapper">
-                        <div class="buySell__price-form_line">
+                <div class="createAd__price-form">
+                    <div class="createAd__price-form_wrapper">
+                        <div class="createAd__price-form_line">
                             <img src="./assets/img/landing/buy-sell/line2.svg" alt="line">
                         </div>
-                        <div class="buySell__price-form_content">
-                            <div class="buySell__price-form_subprice">
+                        <div class="createAd__price-form_content">
+                            <div class="createAd__price-form_subprice">
                                 <p>Payment method</p>
                                 <p>Bank transfer</p>
                             </div>
                             <div class="flex">
-                                <div class="buySell__price-form__select">
-                                    <select class="main-dropdown buySell__price-form__dropdown">
+                                <div class="createAd__price-form__select">
+                                    <select class="main-dropdown createAd__price-form__dropdown">
                                         <option selected disabled value="1">ACB(Ngan Hang A chau)</option>
                                         <option value="2">ACB(Ngan Hang A chau)</option>
                                         <option value="3">ACB(Ngan Hang A chau)</option>
@@ -96,12 +96,12 @@
                                         <option value="7">ACB(Ngan Hang A chau)</option>
                                     </select>
                                 </div>
-                                <div class="buySell__price-form__inputs">
+                                <div class="createAd__price-form__inputs">
                                     <label for="bankAccount">Bank account number</label>
                                     <input type="text" name="bankAccount" id="bankAccount" placeholder="Write you Number">
                                 </div>
                             </div>
-                            <div class="buySell__price-form__inputs">
+                            <div class="createAd__price-form__inputs">
                                 <label for="bankAccountName">Bank account name</label>
                                 <input type="text" name="bankAccountName" id="bankAccountName" placeholder="Write your account Name">
                             </div>
@@ -109,7 +109,7 @@
                     </div>
                 </div>
 
-                <button type="submit" class="buySell__price-form__submit"><span>Create</span></button>
+                <button type="submit" class="createAd__price-form__submit"><span>Create</span></button>
 
             </form>
         </div>
@@ -118,34 +118,34 @@
 
         <div class="tab-content tab-content-remove" id="tab-2">
             <form action="#" method="POST">
-                <div class="buySell__price">
-                    <div class="buySell__price_icon">
+                <div class="createAd__price">
+                    <div class="createAd__price_icon">
                         <img src="./assets/img/landing/buy-sell/marker.svg" alt="icon">
                     </div>
-                    <p class="buySell__price_text">Price</p>
+                    <p class="createAd__price_text">Price</p>
                 </div>
-                <div class="buySell__price-form">
-                    <div class="buySell__price-form_wrapper">
-                        <div class="buySell__price-form_line">
+                <div class="createAd__price-form">
+                    <div class="createAd__price-form_wrapper">
+                        <div class="createAd__price-form_line">
                             <img src="./assets/img/landing/buy-sell/line.svg" alt="line">
                         </div>
-                        <div class="buySell__price-form_content">
-                            <div class="buySell__price-form_subprice">
+                        <div class="createAd__price-form_content">
+                            <div class="createAd__price-form_subprice">
                                 <p>Price</p>
                                 <p>25,410 VND/USD</p>
                                 <p>Price of 1 USD in VND</p>
                             </div>
-                            <div class="buySell__price-form__inputs">
+                            <div class="createAd__price-form__inputs">
                                 <label for="amount">Amount of SSC*</label>
                                 <input type="number" name="amount" id="amount" placeholder="34100.8484" step="0.001">
-                                <p class="buySell__price-form__inputs_currency">ssc</p>
+                                <p class="createAd__price-form__inputs_currency">ssc</p>
                             </div>
-                            <div class="buySell__price-form__inputs">
+                            <div class="createAd__price-form__inputs">
                                 <label for="priceForOne">Price for one SSC in USD</label>
                                 <input type="number" name="priceForOne" id="priceForOne" placeholder="1230.50">
-                                <p class="buySell__price-form__inputs_currency">usd</p>
+                                <p class="createAd__price-form__inputs_currency">usd</p>
                             </div>
-                            <div class="buySell__price-form_receive-price">
+                            <div class="createAd__price-form_receive-price">
                                 <p>SSC price that you receive</p>
                                 <p>65,150,765 VND</p>
                             </div>
@@ -153,25 +153,25 @@
                     </div>
                 </div>
 
-                <div class="buySell__price">
-                    <div class="buySell__price_icon">
+                <div class="createAd__price">
+                    <div class="createAd__price_icon">
                         <img src="./assets/img/landing/buy-sell/info.svg" alt="icon">
                     </div>
-                    <p class="buySell__price_text">Payment information</p>
+                    <p class="createAd__price_text">Payment information</p>
                 </div>
-                <div class="buySell__price-form">
-                    <div class="buySell__price-form_wrapper">
-                        <div class="buySell__price-form_line">
+                <div class="createAd__price-form">
+                    <div class="createAd__price-form_wrapper">
+                        <div class="createAd__price-form_line">
                             <img src="./assets/img/landing/buy-sell/line2.svg" alt="line">
                         </div>
-                        <div class="buySell__price-form_content">
-                            <div class="buySell__price-form_subprice">
+                        <div class="createAd__price-form_content">
+                            <div class="createAd__price-form_subprice">
                                 <p>Payment method</p>
                                 <p>Bank transfer</p>
                             </div>
                             <div class="flex">
-                                <div class="buySell__price-form__select">
-                                    <select class="main-dropdown buySell__price-form__dropdown">
+                                <div class="createAd__price-form__select">
+                                    <select class="main-dropdown createAd__price-form__dropdown">
                                         <option selected disabled value="1">ACB(Ngan Hang A chau)</option>
                                         <option value="2">ACB(Ngan Hang A chau)</option>
                                         <option value="3">ACB(Ngan Hang A chau)</option>
@@ -181,12 +181,12 @@
                                         <option value="7">ACB(Ngan Hang A chau)</option>
                                     </select>
                                 </div>
-                                <div class="buySell__price-form__inputs">
+                                <div class="createAd__price-form__inputs">
                                     <label for="bankAccountNumber">Bank account number</label>
                                     <input type="text" name="bankAccountNumber" id="bankAccountNumber" placeholder="Write you Number">
                                 </div>
                             </div>
-                            <div class="buySell__price-form__inputs">
+                            <div class="createAd__price-form__inputs">
                                 <label for="bankName">Bank account name</label>
                                 <input type="text" name="bankName" id="bankName" placeholder="Write your account Name">
                             </div>
@@ -194,7 +194,7 @@
                     </div>
                 </div>
 
-                <button type="submit" class="buySell__price-form__submit"><span>Create</span></button>
+                <button type="submit" class="createAd__price-form__submit"><span>Create</span></button>
 
             </form>
         </div>
