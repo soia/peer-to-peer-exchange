@@ -183,6 +183,30 @@
     &__table {
         padding: 32px 122px 40px 122px;
 
+        &_qrCode > img {
+            width: 220px;
+            height: 220px;
+        }
+
+        .qrCode_btn {
+            @include btn-empty-black;
+            width: 220px;
+            height: 60px;
+            font-size: 14px !important;
+            font-weight: 700;
+            line-height: 14px;
+            margin-left: 116px;
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+
+        .wrapper-QrCode {
+            width: 220px;
+            height: 220px;
+            margin-left: 116px;
+            margin-top: 74px;
+        }
+
         &_transaction-history {
             display: flex;
             align-items: center;
@@ -441,6 +465,7 @@
         }
 
         .deposit__table {
+
             .sscWalletInside__table_row {
                 flex-wrap: wrap;
                 justify-content: space-between;
@@ -523,7 +548,7 @@
 
         &__banner {
             max-width: 952px;
-            width: 100%;
+            width: calc(100% - 116px);
             height: 60px;
             background-color: $lightBlue;
             margin-left: 116px;
@@ -557,8 +582,3 @@
         }
     }
 }
-
-#qrcode {
-    width: 220px;
-    height: 220px;
-  }
