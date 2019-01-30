@@ -1,6 +1,10 @@
 body .accordion {
     padding: 0 122px;
 
+    @media screen and (min-width: 769px) and (max-width: 1250px) { 
+        padding: 0 40px;
+    }
+
     &__authentication-container {
         display: flex;
         justify-content: space-between;
@@ -313,5 +317,9 @@ body .accordion {
         background-color: $white;
         padding: 50px 104px 50px 104px;
         margin-bottom: 20px;
+
+        @media screen and (min-width: 769px) and (max-width: 1250px) { 
+            padding: 50px 43px 50px 43px;
+        }
     }
 }

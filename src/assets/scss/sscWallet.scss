@@ -2,6 +2,10 @@
     &__wrapper {
         display: flex;
         margin: 70px 122px 95px 160px;
+
+        @media screen and (min-width: 769px) and (max-width: 1250px) { 
+            margin: 70px 40px 95px 40px;
+        }
     }
 
     &__left-side {
@@ -17,6 +21,11 @@
 
     &__right-side {
         width: 60%;
+
+        @media screen and (min-width: 769px) and (max-width: 1250px) { 
+            width: calc(60% - 40px);
+            margin-left: 40px;
+        }
 
         &_title {
             color: $semiBlack;
@@ -74,6 +83,10 @@
         justify-content: space-between;
         align-items: center;
 
+        @media screen and (min-width: 769px) and (max-width: 1250px) { 
+            padding: 64px 40px 0 40px;
+        }
+
         &__input-wrapper {
             display: flex;
             justify-content: space-between;
@@ -85,6 +98,10 @@
                 position: relative;
                 width: calc(50% - 70px);
                 margin-bottom: 60px;
+
+                @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                    width: calc(50% - 20px);
+                }
 
                 &:nth-child(3) {
                     width: 100%;
@@ -99,9 +116,12 @@
     
                 &:first-child {
                     margin-right: 140px;
+
+                    @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                        margin-right: 40px;
+                    }
                 }
                 
-    
                 input {
                     width: calc(100% - 116px);
                     height: 90px;
@@ -109,6 +129,10 @@
                     font-size: 32px;
                     line-height: 36px;
                     margin-left: 116px;
+
+                    @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                        font-size: 24px;
+                    }
                 }
 
                 label {
@@ -124,6 +148,10 @@
                     text-transform: uppercase;
                     margin-left: 116px;
                     margin-top: 5px;
+
+                    @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                        font-size: 12px;
+                    }
                 }
             }
 
@@ -147,6 +175,11 @@
             transform: translate(122px, -41px);
             position: absolute;
             display: none;
+
+            @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                font-size: 34px;
+                transform: translate(40px, -41px);
+            }
         }
     
         &__right-side {
@@ -182,6 +215,10 @@
     
     &__table {
         padding: 32px 122px 40px 122px;
+
+        @media screen and (min-width: 769px) and (max-width: 1250px) { 
+            padding: 32px 40px 40px 40px;
+        }
 
         &_qrCode > img {
             width: 220px;
@@ -420,6 +457,10 @@
                     
                     &:nth-child(2) {
                         width: 33%;
+
+                        @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                            width: 37%;
+                        }
                     }
     
                     &:nth-child(3) {
@@ -436,6 +477,10 @@
     
                     &:nth-child(6) {
                         width: 15%;
+
+                        @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                            width: 10%;
+                        }
                     }
     
                     &:last-child {
@@ -544,6 +589,10 @@
             padding: 27px 24px 27px 24px;
             font-size: 32px;
             line-height: 36px;
+
+            @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                font-size: 24px;
+            }
         }
 
         &__banner {

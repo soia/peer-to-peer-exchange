@@ -3,6 +3,10 @@
     padding: 50px 122px 35px 122px;
     margin-top: 55px;
 
+    @media screen and (min-width: 769px) and (max-width: 1250px) { 
+        padding: 50px 40px 35px 40px;
+    }
+
     &__top-wrapper {
         display: flex;
         justify-content: space-between;

@@ -1,6 +1,10 @@
 .profile {
     padding: 60px 122px 20px 122px;
 
+    @media screen and (min-width: 769px) and (max-width: 1250px) { 
+        padding: 60px 40px 20px 40px;
+    }
+
     &__title-block {
 
         &_title {
@@ -8,6 +12,10 @@
             font-family: $boldFont;
             font-size: 40px;
             line-height: 47px;
+
+            @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                font-size: 34px;
+            }
         }
     }
 
@@ -15,6 +23,10 @@
         padding: 64px 237px 40px 122px;
         display: flex;
         justify-content: space-between;
+
+        @media screen and (min-width: 769px) and (max-width: 1250px) { 
+            padding: 64px 40px 40px 40px;
+        }
 
         &__left-side {
             display: flex;

@@ -11,6 +11,12 @@
             background-color: $liteWhite;
             pointer-events: none;
 
+            @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                margin: 0;
+                padding: 30px 40px 30px 40px;
+                margin: 0 40px;
+            }
+
             &:hover {
                 box-shadow: 0 0 24px rgba(0, 0, 0, 0.05);
                 background-color: $white;
@@ -42,6 +48,10 @@
                 right: 116px;
                 user-select: none;
                 pointer-events: none;
+
+                @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                    right: 40px;
+                }
             }
 
             &_read-more, &_hide {
@@ -54,6 +64,10 @@
                 right: 116px;
                 user-select: none;
                 pointer-events: none;
+
+                @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                    right: 40px;
+                }
             }
         }
 
@@ -112,6 +126,10 @@
             bottom: 30px;
             right: 116px;
             color: $lightBlue;
+
+            @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                right: 40px;
+            }
         }
 
         .openRewiews {

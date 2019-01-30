@@ -1,5 +1,9 @@
 .wrapper__pagination {
     margin: 0 140px;
+
+    @media screen and (min-width: 769px) and (max-width: 1250px) { 
+        margin: 0 138px;
+    }
 }
 
 .pagination {

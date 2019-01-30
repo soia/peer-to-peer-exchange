@@ -3,8 +3,6 @@
         position: absolute;
         top: 0;
         right: 0;
-        // left: 0;
-        // margin: 0 auto;
         background-image: url("../img/landing/logo&icons/bglogo.svg");
         background-repeat: no-repeat;
         background-size: cover;
@@ -19,12 +17,20 @@
 .exchange {
     margin: 90px 36px 0 122px;
 
+    @media screen and (min-width: 769px) and (max-width: 1250px) { 
+        margin: 90px 36px 0 40px;
+    }
+
     &__text {
         &_title {
             color: $semiBlack;
             font-family: $boldFont;
             font-size: 60px;
             line-height: 80px;
+
+            @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                font-size: 45px;
+            }
         }
 
         &_description {
@@ -58,6 +64,10 @@
                 transition: all 0.25s;
                 text-transform: uppercase;
                 letter-spacing: 2px;
+
+                @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                    width: 146px;
+                }
 
                 &:hover {
                     opacity: 0.9;
@@ -100,11 +110,21 @@
             width: 100%;
             transform: translateY(-20px);
 
+            @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                justify-content: space-between;
+                margin: 0 0 0 40px;
+            }
+
             &_item {
                 width: calc(100% / 3);
                 display: flex;
                 flex-direction: column;
                 max-width: 200px;
+
+                @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                    justify-content: space-between;
+                    max-width: 150px;
+                }
 
                 img {
                     height: 93px;
@@ -131,6 +151,10 @@
     display: flex;
     justify-content: space-between;
 
+    @media screen and (min-width: 769px) and (max-width: 1250px) { 
+        padding: 100px 40px 70px 40px;
+    }
+
     &__left-side {
 
         &_title {
@@ -138,6 +162,10 @@
             font-family: $boldFont;
             font-size: 40px;
             line-height: 47px;
+
+            @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                font-size: 34px;
+            }
         }
     }
 
@@ -149,10 +177,18 @@
 .tab-buy {
     margin: 20px 122px 40px;
 
+    @media screen and (min-width: 769px) and (max-width: 1250px) { 
+        margin: 20px 40px 40px;
+    }
+
     &__row {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @media screen and (min-width: 769px) and (max-width: 1250px) { 
+            padding: 0 40px;
+        }
 
         &__price {
             color: $lightBlue;
@@ -179,6 +215,10 @@
 
             .createAd {
                 margin-right: 98px;
+
+                @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                    margin-right: 0;
+                }
             }
         }
 
@@ -200,6 +240,10 @@
                 transition: all 0.25s;
                 padding: 28px 98px 28px 38px;
                 margin-bottom: 24px;
+
+                @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                    padding: 28px 40px 28px 38px;
+                }
 
                 &:hover {
                     box-shadow: 0 0 24px rgba(0, 0, 0, 0.05);
@@ -351,6 +395,10 @@
             line-height: 36px;
             text-transform: uppercase;
             user-select: none;
+
+            @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                font-size: 24px;
+            }
         }
 
         label {
@@ -374,6 +422,10 @@
             font-size: 36px;
             line-height: 36px;
             outline: none;
+
+            @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                font-size: 24px;
+            }
 
             &::placeholder {
                 color: $semiBlack;
@@ -409,6 +461,10 @@
         line-height: 36px;
         outline: none;
 
+        @media screen and (min-width: 769px) and (max-width: 1250px) { 
+            font-size: 24px;
+        }
+
         &:after {
             border-bottom: 1px solid $black;
             border-right: 1px solid $black;
@@ -432,6 +488,10 @@
             line-height: 36px;
             outline: none;
             font-weight: $normal !important;
+
+            @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                font-size: 24px;
+            }
         }
 
         .disabled  {
@@ -464,6 +524,10 @@
     justify-content: space-between;
     padding: 60px 250px;
 
+    @media screen and (min-width: 769px) and (max-width: 1250px) { 
+        padding: 60px 100px;
+    }
+
     &__item {
         p {
             color: $white;
@@ -474,6 +538,10 @@
                 font-size: 40px;
                 line-height: 47px;
                 text-align: center;
+
+                @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                    font-size: 34px;
+                }
             }
         }
 
@@ -502,6 +570,10 @@
     justify-content: flex-end;
     align-items: center;
     margin: 32px 220px 40px 0;
+
+    @media screen and (min-width: 769px) and (max-width: 1250px) { 
+        margin: 32px 80px 40px 0;
+    }
 
     &__text {
         color: $semiBlack;
@@ -535,9 +607,19 @@
     justify-content: space-between;
     padding: 30px 122px 80px 122px;
 
+    @media screen and (min-width: 769px) and (max-width: 1250px) { 
+        padding: 30px 40px 80px 40px;
+        flex-wrap: wrap;
+    }
+
     &__left-side {
         margin-right: 100px;
         width: 30%;
+
+        @media screen and (min-width: 769px) and (max-width: 1250px) { 
+            margin-right: 0;
+            width: 100%;
+        }
 
         p {
             &:first-child {
@@ -545,6 +627,10 @@
                 font-family: $boldFont;
                 font-size: 40px;
                 line-height: 47px;
+
+                @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                    font-size: 34px;
+                }
             }
 
             &:last-child {
@@ -563,6 +649,12 @@
         justify-content: space-between;
         width: 70%;
 
+        @media screen and (min-width: 769px) and (max-width: 1250px) { 
+            width: 100%;
+            margin-top: 40px;
+            padding: 0 40px;
+        }
+
         img {
             filter: grayscale(100%);
         }
@@ -574,6 +666,10 @@
 .reviews {
     padding: 0 122px 20px 122px;
 
+    @media screen and (min-width: 769px) and (max-width: 1250px) { 
+        padding: 0 40px 20px 40px;
+    }
+
     &__title-block {
 
         &_title {
@@ -581,6 +677,10 @@
             font-family: $boldFont;
             font-size: 40px;
             line-height: 47px;
+
+            @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                font-size: 34px;
+            }
         }
     }
 }

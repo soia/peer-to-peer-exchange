@@ -33,6 +33,10 @@ body {
         font-weight: $bold;
     }
 
+    .copyToClipboard {
+        cursor: pointer;
+    }
+
     .fixed-social-icons {
         position: fixed;
         bottom: 0;
@@ -40,6 +44,10 @@ body {
         display: flex;
         flex-direction: column;
         z-index: 1;
+
+        @media screen and (max-width: 1250px) { 
+            display: none;
+        }
 
         &__links {
             padding: 15px;
