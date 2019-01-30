@@ -2,6 +2,8 @@
     background-color: $lightBlue;
     padding: 50px 122px 35px 122px;
     margin-top: 55px;
+    position: relative;
+    z-index: 10;
 
     @media screen and (min-width: 769px) and (max-width: 1250px) { 
         padding: 50px 40px 35px 40px;

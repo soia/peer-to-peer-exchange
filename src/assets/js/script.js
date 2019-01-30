@@ -12,8 +12,8 @@
       peerToPeer.initUploadImage();
       peerToPeer.initCopyToClipboard();
       peerToPeer.initQrCode();
-
-
+      peerToPeer.initTimer();
+      peerToPeer.initHideBannerAccountClosed();
       peerToPeer.initMenu();
       peerToPeer.initSearch();
       peerToPeer.initLiked();
@@ -167,7 +167,49 @@
         
       }
     },
+
+    initTimer: function () {
+      if (typeof localStorage.getItem("min") !== 'undefined' && typeof localStorage.getItem("sec") !== 'undefined' && localStorage.getItem("min") != null && localStorage.getItem("sec") != null) {
+        var min = localStorage.getItem("min");
+        var sec = localStorage.getItem("sec");
+      } else {
+        var min = "0" + 1;
+        var sec = "0" + 0;
+      }
+      var time;
+
+      setInterval(function () {
+        localStorage.setItem("min", min);
+        localStorage.setItem("sec", sec);
+        time = min + " : " + sec;
+
+        $('.timer').html(time);
+        if (sec == "00") {
+          if (min != 0) {
+            min--;
+            sec = 59;
+            if (min < 10) {
+              min = "0" + min;
+            }
+          }
+        } else {
+          sec--;
+          if (sec < 10) {
+            sec = "0" + sec;
+          }
+        }
+      }, 1000);
+    },
     
+    initHideBannerAccountClosed: function () {
+      let toggleClass = $(".banner-accountIsClosed__close-btn");
+      
+      toggleClass.on("click", function () {
+
+        let bannerAccountIsClosed = $(".banner-accountIsClosed");
+        $(this).closest(bannerAccountIsClosed).toggleClass("banner-accountIsClosed__active");
+      });
+    },
 
     initMenu: function () {
       let dynamicMenu = $("#menu"),

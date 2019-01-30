@@ -523,6 +523,8 @@
     display: flex;
     justify-content: space-between;
     padding: 60px 250px;
+    position: relative;
+    z-index: 10;
 
     @media screen and (min-width: 769px) and (max-width: 1250px) { 
         padding: 60px 100px;
@@ -635,7 +637,7 @@
 
             &:last-child {
                 color: $gray;
-                font-family: $regularFont;;
+                font-family: $regularFont;
                 font-size: 24px;
                 line-height: 44px;
                 max-width: 369px;
@@ -682,5 +684,53 @@
                 font-size: 34px;
             }
         }
+    }
+}
+
+.banner-accountIsClosed {
+    height: 100px;
+    background-color: $red;
+    transform: translateY(55px);
+    transition: all 0.25s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 100px 0 160px;
+    transition: all 0.5s;
+
+
+    &__warning-img {
+        margin-right: 61px;
+    }
+
+    &__content {
+        p {
+            color: $white;
+            font-family: $regularFont;
+
+            &:first-child {
+                font-size: 14px;
+                letter-spacing: 1px;
+                line-height: 14px;
+                padding-bottom: 10px;
+            }
+
+            &:last-child {
+                font-size: 22px;
+                line-height: 20px;
+            }
+        }
+    }
+
+    &__close-btn {
+        margin-left: 200px;
+        cursor: pointer;
+        padding: 20px;
+    }
+
+    &__active {
+        position: relative;
+        transform: translateY(200px);
+        z-index: 2;
     }
 }

@@ -76,7 +76,8 @@
             }
 
             &-item {
-                overflow: hidden;
+                overflow-x: hidden;
+                overflow-y: -webkit-paged-y;
                 margin-right: 15px;
 
                 &:first-child {
@@ -228,6 +229,61 @@
                     }
                 }
             }
+        }
+
+        &_pending {
+            .dashboard__table_row {
+                justify-content: space-between;
+                
+                .dashboard-id {
+                    p {
+                        a {
+                            color: $lightBlue;
+                            border-bottom: 1px solid $lightBlue;
+
+                            &:hover {
+                                opacity: 0.8;
+                            }
+                        }
+                    }
+                }
+
+                .dashboard__table_row-item {
+                    &:first-child {
+                        width: 5%;
+                    }
+                    
+                    &:nth-child(2) {
+                        width: 10%;
+                    }
+    
+                    &:nth-child(3) {
+                        width: 15%;
+                    }
+    
+                    &:nth-child(4) {
+                        width: 10%;
+                    }
+    
+                    &:nth-child(5) {
+                        width: 15%;
+                    }
+    
+                    &:nth-child(6) {
+                        width: 10%;
+                    }
+    
+                    &:last-child {
+                        width: 7%;
+                    } 
+                }
+            }
+        }
+    }
+
+    .tab-content-remove.selected-item {
+        .sscWalletInside-tabs__title {
+            display: block !important;
         }
     }
 }

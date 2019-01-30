@@ -322,7 +322,6 @@
                         font-size: 18px;
                         line-height: 21px;
                     }
-
                 }
             }
 
@@ -413,7 +412,7 @@
             .sscWalletInside-num-green {
                 p {
                     &:last-child {
-                        color: $turquoise;
+                        color: $turquoise !important;
                         font-weight: $medium;
                     }
                 }
