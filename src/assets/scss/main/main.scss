@@ -2,6 +2,7 @@
 
 body {
     background-color: $bgColor;
+    overflow: hidden;
 
     .btn-blue {
         @include btn-blue;
@@ -33,8 +34,34 @@ body {
         font-weight: $bold;
     }
 
+    .help-block {
+        color: $red;
+        font-family: $regularFont;
+        font-size: 14px;
+        line-height: 14px;
+        margin-top: 10px;
+        text-align: center;
+    }
+
     .copyToClipboard {
         cursor: pointer;
+        width: 84px;
+        height: 66px;
+        background-color: #e5e6ef;
+        opacity: 0.5;
+        color: $gray;
+        font-family: $regularFont;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 24px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 13px;
+        right: 10px;
+        user-select: none;
     }
 
     .fixed-social-icons {
@@ -60,6 +87,11 @@ body {
 
     .flex {
         display: flex;
+    }
+
+    .center {
+        display: flex;
+        align-items: center;
     }
 
     input:focus::-webkit-input-placeholder { 

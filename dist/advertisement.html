@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css">
 
-    <title>Verify Documents</title>
+    <title>Advertisement</title>
 </head>
 
-<body class="verifyDocuments__body" id="body">
+<body class="advertisement__body" id="body">
 <header class="header log-in-header">
     <div class="header__left-side">
         <div class="header__left-side_logo">
@@ -103,97 +103,34 @@
 
 </header>
 
-<main class="verifyDocuments">
-    <h3 class="verifyDocuments__title">
-        Verify Documents
+<main class="advertisement">
+    <h3 class="advertisement_title">
+        Advertisement
     </h3>
 
-    <div class="verifyDocuments__warning">
-        <div class="verifyDocuments__warning_info">
-            <div class="flex">
-                <div class="verifyDocuments__warning_info-img">
-                    <img src="./assets/img/cabinet/settings/warning.svg" alt="warning">
-                </div>
-                <div class="verifyDocuments__warning_info-text">
-                </div>
-                <p class="verifyDocuments__warning_info-text_warningInfo">Warning Info</p>
+    <div class="advertisement__content">
+        <div class="advertisement__content_status">
+            <div class="advertisement__content_status-img">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12ZM13 16V12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12V16C11 16.5523 11.4477 17 12 17C12.5523 17 13 16.5523 13 16ZM12.7071 8.29289C13.0976 8.68342 13.0976 9.31658 12.7071 9.70711C12.3166 10.0976 11.6834 10.0976 11.2929 9.70711C10.9024 9.31658 10.9024 8.68342 11.2929 8.29289C11.6834 7.90237 12.3166 7.90237 12.7071 8.29289Z"
+                        fill="#000"></path>
+                    <mask maskUnits="userSpaceOnUse" x="1" y="1" width="22" height="22">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12ZM13 16V12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12V16C11 16.5523 11.4477 17 12 17C12.5523 17 13 16.5523 13 16ZM12.7071 8.29289C13.0976 8.68342 13.0976 9.31658 12.7071 9.70711C12.3166 10.0976 11.6834 10.0976 11.2929 9.70711C10.9024 9.31658 10.9024 8.68342 11.2929 8.29289C11.6834 7.90237 12.3166 7.90237 12.7071 8.29289Z"
+                            fill="white"></path>
+                    </mask>
+                </svg>
             </div>
-            <p class="verifyDocuments__warning_info-text_identity">Identity verification status: <span class="not-uploaded">NOT
-                    UPLOADED</span></p>
-            <div class="verifyDocuments__warning_list">
-                <p>The verification picture needs to satisfy these conditions:</p>
-                <ul>
-                    <li>Has not been modified</li>
-                    <li>Is not blurred</li>
-                </ul>
-                <p>Picture that does not satisfy any of the above will not be considered</p>
+            <p class="advertisement__content_status-text">This is your advertisement. Status <span class="advertisement-status_green">Active</span></p>
+        </div>
+        <div class="advertisement__content_iWant">
+            <img src="./assets/img/landing/buy-sell/filter.svg" alt="icon">
+            <p class="advertisement__content_iWant_text">I want to</p>
+            <div class="advertisement__content_iWant-wrapperBtn">
+                <buttton type="button" class="advertisement__content_iWant-btn">Disable</buttton>
+                <buttton type="button" class="advertisement__content_iWant-btn">Edit</buttton>
+                <buttton type="button" class="advertisement__content_iWant-btn">Timer off</buttton>
+                <buttton type="button" class="advertisement__content_iWant-btn">Delete</buttton>
             </div>
-        </div>
-
-        <div class="verifyDocuments__warning_verification">
-            <div class="verifyDocuments__warning_verification-img">
-                <img src="./assets/img/cabinet/settings/alert.svg" alt="alert"></div>
-            <div class="verifyDocuments__warning_verification-text">
-                <p class="verifyDocuments__warning_verification-text_verification">The verification process is instant.
-                    It takes only <span class="verification-minutes">2 - 3 minutes</span> to get your account verified.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="verifyDocuments__info">
-        <div class="verifyDocuments__info_title">
-            <div class="verifyDocuments__info-img">
-                <img src="./assets/img/cabinet/settings/invites.svg" alt="invites">
-            </div>
-            <p class="verifyDocuments__info_text">Info</p>
-        </div>
-        <p class="verifyDocuments__info_text_verify">To verify your documents, please upload national ID, passport or
-            driving license.:</p>
-        <div class="verifyDocuments__warning_list">
-            <p>The verification picture needs to satisfy these conditions:</p>
-            <ul>
-                <li>Has not been modified</li>
-                <li>Is not blurred</li>
-            </ul>
-            <p>Picture that does not satisfy any of the above will not be considered</p>
-        </div>
-
-        <div class="verifyDocuments__info_addFiles">
-            <form action="#" class="verifyDocuments__info_addFiles-form">
-                <div class="verifyDocuments__info_addFiles_wrapper">
-                    <div class="verifyDocuments__info_addFiles-btn">
-                        <label for="addFiles">+ Add files</label>
-                        <input type="file" id="addFiles">
-                    </div>
-                    <div class="verifyDocuments__info_addFiles-right-side">
-                        <img src="./assets/img/cabinet/settings/file-icon.svg" alt="file-icon">
-                        <p>Document Passport</p>
-                    </div>
-                </div>
-                <div class="verifyDocuments__info_addFiles_input-wrapper">
-                    <div class="verifyDocuments__info_addFiles_input-wrapper_item">
-                        <img class="verifyDocuments__info_addFiles_input-wrapper_item-img" src="./assets/img/cabinet/settings/user.svg"
-                            alt="user">
-                        <label for="realName">Real name</label>
-                        <input type="text" name="realName" id="realName" placeholder="John Doe">
-                    </div>
-                    <div class="verifyDocuments__info_addFiles_input-wrapper_item">
-                        <svg class="verifyDocuments__info_addFiles_input-wrapper_item-img" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12ZM13 16V12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12V16C11 16.5523 11.4477 17 12 17C12.5523 17 13 16.5523 13 16ZM12.7071 8.29289C13.0976 8.68342 13.0976 9.31658 12.7071 9.70711C12.3166 10.0976 11.6834 10.0976 11.2929 9.70711C10.9024 9.31658 10.9024 8.68342 11.2929 8.29289C11.6834 7.90237 12.3166 7.90237 12.7071 8.29289Z"
-                                fill="#A0A0A0" />
-                            <mask maskUnits="userSpaceOnUse" x="1" y="1" width="22" height="22">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12ZM13 16V12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12V16C11 16.5523 11.4477 17 12 17C12.5523 17 13 16.5523 13 16ZM12.7071 8.29289C13.0976 8.68342 13.0976 9.31658 12.7071 9.70711C12.3166 10.0976 11.6834 10.0976 11.2929 9.70711C10.9024 9.31658 10.9024 8.68342 11.2929 8.29289C11.6834 7.90237 12.3166 7.90237 12.7071 8.29289Z"
-                                    fill="white" />
-                            </mask>
-                        </svg>
-                        <label for="documentNumber">Document Number</label>
-                        <input type="text" name="documentNumber" id="documentNumber" placeholder="NV 245802">
-                    </div>
-
-                    <button type="submit" class="verifyDocuments__info_addFiles_input-wrapper_btn"><span>Verify</span></button>
-                </div>
-            </form>
         </div>
     </div>
 </main>

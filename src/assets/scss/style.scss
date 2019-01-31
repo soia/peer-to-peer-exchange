@@ -4,6 +4,7 @@ html {
     min-height: 100%;
     height: 100%;
     overflow-x: auto;
+    min-width: 1023px;
   }
 
   *,
@@ -33,3 +34,5 @@ html {
 @import "./dashboard";
 @import "./profile";
 @import "./settings";
+@import "./verifyDocuments";
+@import "./advertisement";

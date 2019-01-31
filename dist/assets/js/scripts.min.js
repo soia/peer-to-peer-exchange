@@ -14,6 +14,9 @@
       peerToPeer.initQrCode();
       peerToPeer.initTimer();
       peerToPeer.initHideBannerAccountClosed();
+      peerToPeer.initToggleHeaderIcon();
+      peerToPeer.initHeaderCabinetMenu();
+
       peerToPeer.initMenu();
       peerToPeer.initSearch();
       peerToPeer.initLiked();
@@ -208,6 +211,27 @@
 
         let bannerAccountIsClosed = $(".banner-accountIsClosed");
         $(this).closest(bannerAccountIsClosed).toggleClass("banner-accountIsClosed__active");
+      });
+    },
+
+    initHeaderCabinetMenu: function () {
+      let toggleClass = $(".log-in-header__right-side_dropdown");
+
+      toggleClass.on("click", function () {
+        toggleClass.toggleClass("header-menu-active");
+      });
+
+      let stopPropagation = $('.log-in-header__right-side_dropdown-menu_list');
+      stopPropagation.click(function(e){
+        e.stopPropagation();
+      });
+    },
+
+    initToggleHeaderIcon: function () {
+      let toggleClass = $(".log-in-header__right-side_bell, .log-in-header__right-side_mute");
+
+      toggleClass.on("click", function () {
+        $(this).toggleClass("header-icon-active");
       });
     },
 
@@ -578,3 +602,4 @@
     peerToPeer.init();
   });
 })(jQuery);
+
