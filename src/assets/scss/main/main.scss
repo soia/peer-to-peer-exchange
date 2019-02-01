@@ -94,6 +94,12 @@ body {
         align-items: center;
     }
 
+    .space-between {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
     input:focus::-webkit-input-placeholder { 
         color:transparent; 
     }
