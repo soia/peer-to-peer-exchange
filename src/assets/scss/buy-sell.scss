@@ -1,0 +1,21 @@
+.buy-sell {
+
+    .tab-buy {
+        margin: 20px 122px 40px 244px;
+
+        &__inputs {
+            margin-right: 80px;
+
+            &_img {
+                position: absolute;
+                left: -80px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        &__wrapper-dropdown {
+            margin-left: 80px;
+        }
+    }
+}
