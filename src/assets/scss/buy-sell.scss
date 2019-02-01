@@ -18,4 +18,62 @@
             margin-left: 80px;
         }
     }
+
+    &__advertisement {
+        margin-top: 35px;
+
+        &_item {
+            margin-bottom: 30px;
+            position: relative;
+
+            .tab-buy__row__price_blue {
+                color: $red;
+                font-family: $regularFont;
+                font-size: 24px;
+                line-height: 28px;
+            }
+        }
+    }
+
+    &__list-buy-from {
+        margin-top: 50px;
+        transform: translateX(-125px);
+
+        .list-sellers {
+            padding: 0;
+        }
+
+        .tab-buy__row_seller_link {
+            width: calc(100% + 125px);
+        }
+    }
+}
+
+.buy-single {
+
+    .tab-buy {
+
+        &__inputs {
+            &:last-child {
+                margin: 0 0 0 80px;
+            }
+        }
+
+        &__wrapper-dropdown {
+            display: flex;
+            margin: 50px 0 0 0;
+            width: calc(50% - 80px);
+        }
+    }
+
+    .accordion__authentication-container_right-side-btn {
+        border: 1px solid $turquoise;
+        color: $turquoise;
+        margin-top: 32px;
+    }
+
+    .list-sellers {
+        padding-bottom: 60px;
+    }
+    
 }
