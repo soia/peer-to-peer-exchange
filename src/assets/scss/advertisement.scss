@@ -48,10 +48,10 @@
         &_iWant {
             display: flex;
             align-items: center;
-            margin-left: 161px;
+            margin: 60px 0 0 161px;
 
             &-wrapperBtn {
-
+                margin-left: 23px;
             }
 
             &-btn {
@@ -60,6 +60,43 @@
                 justify-content: center;
                 width: 220px;
                 height: 60px;
+                cursor: pointer;
+                transition: all 0.25s;
+                font-family: $regularFont;
+                font-weight: $medium;
+                font-size: 14px;
+                line-height: 14px;
+                position: relative;
+
+                img {
+                    position: absolute;
+                    left: 30px;
+                }
+
+                svg {
+                    position: absolute;
+                    left: 30px;
+                }
+
+                a {
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                &:hover {
+                    opacity: 0.9;
+
+                    svg {
+                        fill: $white;
+
+                        path {
+                            fill: $white;
+                        }
+                    }
+                }
             }
 
             &_text {
@@ -73,6 +110,40 @@
 
             &-wrapperBtn {
                 display: flex;
+
+                .advertisement-disable, .advertisement-delete {
+                    color: $white;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+
+                    a {
+                        color: $white;
+                    }
+                }
+
+                .advertisement-disable {
+                    background-color: $red;
+                }
+
+                .advertisement-edit, .advertisement-timer {
+                    @include btn-empty-black;
+
+                    a {
+                        color: $semiBlack;
+                    }
+
+                    &:hover {
+                        color: $white;
+                    }
+                }
+
+                .advertisement-edit {
+                    border-right: none;
+                }
+
+                .advertisement-delete {
+                    background-color: $lightBlue;
+                }
             }
         }
     }

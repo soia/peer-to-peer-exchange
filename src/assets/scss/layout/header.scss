@@ -176,6 +176,10 @@
                     transform: translateY(-500px);
                     transition: all 0.25s;
 
+                    background-color: $white;
+                    border-radius: 5px;
+                    box-shadow: 0 0 0 1px rgba(68,68,68,0.11);
+
                     li {
                         width: 277px;
                         height: 63px;
@@ -183,6 +187,7 @@
                         background-color: #f9fbff;
                         transition: 0.25s;
                         user-select: none;
+                        border-radius: 5px;
 
                         &:hover {
                             background-color: #f0f2f9;
@@ -197,6 +202,11 @@
                             font-family: $regularFont;
                             font-size: 16px;
                             line-height: 19px;
+
+                            img {
+                                position: absolute;
+                                left: 50px;
+                            }
                         }
                     }
                 }

@@ -106,7 +106,7 @@
     },
 
     initSelect: function () {
-      $('select').niceSelect();
+      $('select').niceSelect('update');
     },
 
     initUploadImage: function () {

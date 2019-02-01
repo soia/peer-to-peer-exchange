@@ -58,8 +58,8 @@ $mainBorder: 1px solid rgba(207, 213, 231, .5);
 
     &:hover {
         border: 1px solid $lightBlue;
-        
-        span {
+
+        .btn-white-text, span {
             color: $white;
             position: relative;
             z-index: 1;
