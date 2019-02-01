@@ -127,7 +127,7 @@
                 }
 
                 img {
-                    height: 93px;
+                    object-fit: scale-down;
                 }
 
                 p {
@@ -136,7 +136,7 @@
                     font-weight: $normal;
                     font-size: 20px;
                     line-height: 30px;
-                    margin-top: 40px;   
+                    margin-top: 10px;   
                     text-align: center;
                 }
             }
