@@ -31,6 +31,10 @@
                 line-height: 23px;
                 margin-left: 64px;
 
+                @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                    margin-left: 25px;
+                }
+
                 .advertisement-status_green {
                     color: $turquoise;
                 }
@@ -50,6 +54,10 @@
             align-items: center;
             margin: 60px 0 0 161px;
 
+            @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                margin: 60px 0 0 40px;
+            }
+
             &-wrapperBtn {
                 margin-left: 23px;
             }
@@ -67,6 +75,10 @@
                 font-size: 14px;
                 line-height: 14px;
                 position: relative;
+
+                @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                    width: 198px;
+                }
 
                 img {
                     position: absolute;
@@ -106,6 +118,10 @@
                 margin-left: 64px;
                 font-size: 24px;
                 line-height: 24px;
+
+                @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                    margin-left: 25px;
+                }
             }
 
             &-wrapperBtn {
@@ -151,6 +167,10 @@
     &-details {
         margin: 0 122px;
 
+        @media screen and (min-width: 769px) and (max-width: 1250px) { 
+            margin: 0 40px;
+        }
+
         &_title {
             color: $semiBlack;
             font-family: $regularFont;
@@ -160,7 +180,7 @@
             margin: 46px 0 40px 0;
     
             @media screen and (min-width: 769px) and (max-width: 1250px) { 
-                margin: 46px 0 40px 40px;
+                margin: 46px 0 40px 0;
             }
         }
 
@@ -168,6 +188,10 @@
            width: 60%;
            display: flex;
            padding-right: 10vw;
+
+           @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                padding-right: 5vw;
+            }
 
            &_img {
                margin-right: 23px;
