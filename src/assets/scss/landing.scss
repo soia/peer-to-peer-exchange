@@ -684,7 +684,6 @@
 
 .banner-accountIsClosed {
     height: 100px;
-    background-color: $red;
     transition: all 0.25s;
     display: flex;
     align-items: center;
@@ -695,7 +694,6 @@
     bottom: 0;
     z-index: 1;
     width: 100%;
-
 
     &__warning-img {
         margin-right: 61px;
@@ -730,4 +728,14 @@
         transform: translateY(200px);
         z-index: 2;
     }
+}
+
+.banner-red {
+    background-color: $red;
+    transition: all 0.25s;
+}
+
+.banner-green {
+    background-color: $turquoise;
+    transition: all 0.25s;
 }

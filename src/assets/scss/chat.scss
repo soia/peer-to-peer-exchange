@@ -1,0 +1,497 @@
+.chat {
+    padding: 60px 122px 20px 122px;
+
+    @media screen and (min-width: 769px) and (max-width: 1250px) { 
+        padding: 60px 40px 20px 40px;
+    }
+
+    &__title-block {
+
+        &_title {
+            color: $semiBlack;
+            font-family: $boldFont;
+            font-size: 40px;
+            line-height: 47px;
+
+            @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                font-size: 34px;
+            }
+        }
+    }
+
+    &__progress-bar {
+        display: flex;
+        align-items: center;
+        margin: 25px 0 0 40px;
+
+        &_step-number-blue, &_step-number-green, &_step-number-gray {
+            font-family: $regularFont;
+            font-weight: $medium;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            line-height: 10px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+
+        &_step-number-blue {
+            color: $lightBlue;
+            border: 2px solid $lightBlue;
+        }
+
+        &_step-number-green {
+            color: $turquoise;
+            border: 2px solid $turquoise;
+        }
+
+        &_step-number-gray {
+            color: $gray;
+            border: 2px solid $gray;
+        }
+
+        &_line-blue, &_line-green, &_line-gray {
+            width: 48px;
+            height: 2px;
+            opacity: 0.3;
+            margin: 0 10px;
+        }
+
+        &_line-blue {
+            border: 1px solid $lightBlue;
+        }
+
+        &_line-green {
+            border: 1px solid $turquoise;
+        }
+
+        &_line-gray {
+            border: 1px solid $gray;
+        }
+
+        &_step-blue, &_step-green, &_step-gray {
+            font-family: $regularFont;
+            font-size: 20px;
+            line-height: 23px;
+        }
+
+        &_step-blue {
+            color: $lightBlue;
+        }
+
+        &_step-green {
+            color: $turquoise;
+        }
+
+        &_step-gray {
+            color: $gray;
+        }
+    }
+
+    &-description {
+
+        &_payment {
+            margin: 35px 0 0 128px;
+            max-width: 1000px;
+
+            &-text {
+                line-height: 44px;
+                color: #1f1f1f;
+                font-family: "Futura PT";
+                font-weight: 400;
+                font-size: 24px;
+            }
+
+            &-cost {
+                color: $lightBlue;
+                font-weight: $medium;
+            }
+
+            &-link {
+                color: $lightBlue;
+                font-weight: $medium;
+            }
+        }
+    }
+
+    &__clipboard {
+        width: 100%;
+        max-width: 530px;
+        position: relative;
+
+        &_input {
+            background-color: transparent;
+            color: $lightBlue;
+            font-weight: $medium;
+            width: 100%;
+            font-size: 24px;
+            border: none;
+            outline: none;
+        }
+
+        &_clipIcon {
+            position: absolute;
+            top: 0;
+            right: -50px;
+            cursor: pointer;
+            user-select: none;
+        }
+    }
+
+    &__timer {
+        margin: 65px 0 0 40px;
+
+        &_left-to-pay {
+            display: flex;
+
+            p {
+                color: $turquoise;
+                font-family: $regularFont;
+                font-size: 16px;
+                line-height: 19px;
+                margin-left: 60px;
+            }
+        }
+
+        &_counter {
+            margin: 20px 0 30px  80px;
+        
+            &-time {
+                color: $turquoise;
+                font-family: $regularFont;
+                font-size: 66px;
+                line-height: 66px;
+            }
+
+            &-description {
+                color: $turquoise;
+                font-family: $regularFont;
+                font-size: 24px;
+                line-height: 26px;
+            }
+        }
+    }
+
+    &__btn-block {
+        display: flex;
+        margin: 0 0 65px 120px;
+
+        &-green, &-red, &-black  {
+            font-family: $regularFont;
+            font-weight: $medium;
+            font-size: 14px;
+            line-height: 14px;
+            width: 220px;
+            height: 60px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        &-green, &-red {
+            color: $white;
+            transition: all 0.25s;
+            margin-right: 24px;
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+
+        &-green {
+            background-color: $turquoise;
+        }
+
+        &-red {
+            background-color: $red;
+        }
+
+        &-black {
+            @include btn-empty-black;
+        }
+    }
+
+    &__payment-detail {
+
+        .list-sellers {
+            padding: 60px 0 30px 0;
+        }
+
+        .advertisement-details__left-side {
+            padding-right: 5vw;
+        }
+
+        .advertisement-details__price {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .advertisement-details__price_payment-number {
+            color: $semiBlack;
+            font-family: $regularFont;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        .advertisement-details__price_cost {
+            font-size: 20px;
+        }
+    }
+
+    &__wrapper {
+        margin-left: 122px;
+
+        &-online {
+            .chat__wrapper-clean {
+                display: none;
+            }
+        }
+
+        &-active {
+            max-height: 500px;
+            overflow-y: scroll;
+
+
+            &_guest {
+                display: flex;
+                align-items: center;
+                margin: 15px 0;
+
+                &-img {
+                    position: relative;
+                    display: inline-block;
+
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+
+                &-dot {
+                    width: 17px;
+                    height: 17px;
+                    border-radius: 50%;
+                    border: 4px solid $white;
+                    background-color: #a0a0a0;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                }
+
+                &-message {
+                    color: $semiBlack;
+                    font-family: $regularFont;
+                    font-size: 14px;
+                    margin-left: 40px;
+                    width: calc(50% - 90px);
+                    background-color: $white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    border-radius: 20px;
+                    border-bottom-left-radius: 0;
+                    padding: 20px 40px;
+                }
+
+                &-messageFile {
+                    &_download {
+                        color: $semiBlack;
+                        font-family: $regularFont;
+                        font-size: 14px;
+                        margin-right: 40px;
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    img {
+                        width: 32px;
+                        height: 32px;
+                        margin-right: 15px;
+                    }
+                }
+            }
+
+            &_mine {
+                display: flex;
+                align-items: center;
+                flex-direction: row-reverse;
+                margin: 15px 0;
+
+                &-img {
+                    position: relative;
+                    display: inline-block;
+
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+
+                &-dot {
+                    width: 17px;
+                    height: 17px;
+                    border-radius: 50%;
+                    border: 4px solid $white;
+                    background-color: $lightBlue;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                }
+
+                &-message {
+                    color: $white;
+                    font-family: $regularFont;
+                    font-size: 14px;
+                    margin-right: 40px;
+                    width: calc(50% - 90px);
+                    background-color: $lightBlue;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    border-radius: 20px;
+                    border-bottom-right-radius: 0;
+                    padding: 20px 40px;
+                }
+
+                &-messageFile {
+
+                    &_download {
+                        color: $white;
+                        font-family: $regularFont;
+                        font-size: 14px;
+                        margin-right: 40px;
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    img {
+                        width: 32px;
+                        height: 32px;
+                        margin-right: 15px;
+                        background-color: $white;
+                    }
+                }
+            }
+        }
+
+        &_top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 60px 0;
+
+            &-line {
+                width: 100%;
+                height: 1px;
+                border: 1px solid #acadaf;
+            }
+
+            &-today {
+                display: flex;
+                align-items: center;
+                margin: 0 40px;
+
+                p {
+                    font-family: $regularFont;
+                    color: $gray;
+                    font-size: 14px;
+                    margin-left: 15px;
+                }
+            }
+        }
+
+        &-clean {
+            font-family: $regularFont;
+            color: #acadaf;
+            font-size: 64px;
+            line-height: 74px;
+            max-width: 500px;
+            margin: 150px auto 110px;
+        }
+
+        &_bottom {
+            margin-top: 20px;
+
+            &-responds {
+                color: $semi-black;
+                font-family: $regularFont;
+                font-size: 16px;
+
+                span {
+                    color: #7db7fd;
+                }
+            }
+        }
+
+        &_typeMessage {
+            display: flex;
+            position: relative;
+            margin-top: 10px;
+
+            input {
+                border-top: 2px solid $semi-black;
+                color: $darkBlack;
+                font-family: $regularFont;
+                width: 100%;
+                border: none;
+                outline: none;
+                height: 80px;
+                padding: 0 123px;
+                font-size: 14px;
+
+
+                &::placeholder {
+                    color: #cbcbcb;
+                    font-family: $regularFont;
+                    font-size: 24px;
+                }
+            }
+
+            button {
+                border: none;
+                background-color: transparent;
+                padding: 0;
+                outline: none;
+                cursor: pointer;
+                position: absolute;
+                right: 30px;
+                top: 50%;
+                transform: translateY(-50%);
+
+                svg {
+                    transition: all 0.25s;
+
+                    &:hover {
+                        path {
+                            fill: $lightBlue;
+                        }
+                    }
+                }
+            }
+
+            &_clipFile {
+                position: absolute;
+                left: 30px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+    }
+
+    .banner-accountIsClosed {
+        background-color: $turquoise;
+    }
+}

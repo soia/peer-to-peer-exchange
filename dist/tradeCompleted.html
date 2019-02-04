@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css">
 
-    <title>Create new advertisement</title>
+    <title>Trade completed</title>
 </head>
 
-<body class="createAd__body" id="body">
+<body class="chat__body" id="body">
 <header class="header log-in-header">
     
     <div class="header__left-side">
@@ -127,205 +127,87 @@
 
 </header>
 
-<main class="createAd.html">
-    <h3 class="createAd__title">
-        Create new advertisement
-    </h3>
+<main class="chat">
 
-    <div class="createAd__wrapper">
-        <div class="createAd__wantToBuy">
-            <div class="createAd__wantToBuy_icon">
-                <img src="./assets/img/landing/buy-sell/filter.svg" alt="icon">
-            </div>
-            <div class="createAd__wantToBuy_wrapper-tabs">
-                <p class="createAd__wantToBuy_wrapper-tabs-text">I want to</p>
-                <div class="createAd__wantToBuy_tabs">
-                    <ul class="tab-container__tab">
-                        <li class="tab-container__tab-item tab-link turquoise selected-item" data-tab="tab-1">
-                            <span>Buy ssc</span>
-                        </li>
-                        <li class="tab-container__tab-item  red tab-link" data-tab="tab-2">
-                            <span>Sell ssc</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+    <!-- title block -->
+
+    <div class="chat__title-block">
+        <section>
+            <h4 class="chat__title-block_title">Trade completed</h4>
+        </section>
+    </div>
+
+    <!-- description-payment -->
+
+    <div class="chat-description_payment">
+        <p class="chat-description_payment-text">You are buying <span class="chat-description_payment-cost">0.49504950
+                SSC</span> from <a href="./profile.html" class="chat-description_payment-link">Baobinh.</a> SSC has been sent to this address:
+        </p>
+        <div class="chat__clipboard">
+            <input type="text" name="walletClipboard" id="walletClipboard" readonly placeholder="3K9jqXW41RP69E9gvFNKva4iUdV55vXEuM"
+                value="tfYUkasd32GJGbas671ftGASqd936DsdjkFGJ" class="chat__clipboard_input">
+            <p data-clipboard-target="#walletClipboard" class="chat__clipboard_clipIcon copyToClipboard">
+                <img src="./assets/img/cabinet/wallet/copy.svg" alt="copy">
+            </p>
+        </div>
+    </div>
+
+    <!-- timer -->
+
+    <div class="chat__timer">
+        <div class="chat__timer_left-to-pay">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.8">
+                    <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99992 19.1666C4.93731 19.1666 0.833252 15.0626 0.833252 9.99998C0.833252 4.93737 4.93731 0.833313 9.99992 0.833313C15.0625 0.833313 19.1666 4.93737 19.1666 9.99998C19.1666 15.0626 15.0625 19.1666 9.99992 19.1666ZM9.99992 17.5C14.1421 17.5 17.4999 14.1421 17.4999 9.99998C17.4999 5.85784 14.1421 2.49998 9.99992 2.49998C5.85778 2.49998 2.49992 5.85784 2.49992 9.99998C2.49992 14.1421 5.85778 17.5 9.99992 17.5ZM9.99992 4.16665C10.4602 4.16665 10.8333 4.53974 10.8333 4.99998V9.6548L13.0892 11.9107C13.4146 12.2362 13.4146 12.7638 13.0892 13.0892C12.7637 13.4147 12.2361 13.4147 11.9107 13.0892L9.41066 10.5892C9.25438 10.433 9.16659 10.221 9.16659 9.99998V4.99998C9.16659 4.53974 9.53968 4.16665 9.99992 4.16665Z"
+                            fill="#00c99c" />
+                    </mask>
+                    <g mask="url(#mask0)">
+                        <rect width="20" height="20" fill="#00c99c" />
+                    </g>
+                </g>
+            </svg>
+            <p>Time left to pay</p>
         </div>
 
-        <!-- tabs -->
-
-        <!-- tab 1 -->
-
-        <div class="tab-content tab-content-remove selected-item" id="tab-1">
-            <form action="#" method="POST">
-                <div class="createAd__price">
-                    <div class="createAd__price_icon">
-                        <img src="./assets/img/landing/buy-sell/marker.svg" alt="icon">
-                    </div>
-                    <p class="createAd__price_text">Price</p>
-                </div>
-                <div class="createAd__price-form">
-                    <div class="createAd__price-form_wrapper">
-                        <div class="createAd__price-form_line">
-                            <img src="./assets/img/landing/buy-sell/line.svg" alt="line">
-                        </div>
-                        <div class="createAd__price-form_content">
-                            <div class="createAd__price-form_subprice">
-                                <p>Price</p>
-                                <p>23,230 VND/USD</p>
-                                <p>Price of 1 USD in VND</p>
-                            </div>
-                            <div class="createAd__price-form__inputs">
-                                <label for="amountOfSsc">Amount of SSC*</label>
-                                <input type="number" name="amountOfSsc" id="amountOfSsc" placeholder="23300.848432708604" step="0.001">
-                                <p class="createAd__price-form__inputs_currency">ssc</p>
-                            </div>
-                            <div class="createAd__price-form__inputs">
-                                <label for="priceInUsd">Price for one SSC in USD</label>
-                                <input type="number" name="priceInUsd" id="priceInUsd" placeholder="1000.84">
-                                <p class="createAd__price-form__inputs_currency">usd</p>
-                            </div>
-                            <div class="createAd__price-form_receive-price">
-                                <p>SSC price that you receive</p>
-                                <p>93,372,985 VND</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="createAd__price">
-                    <div class="createAd__price_icon">
-                        <img src="./assets/img/landing/buy-sell/info.svg" alt="icon">
-                    </div>
-                    <p class="createAd__price_text">Payment information</p>
-                </div>
-                <div class="createAd__price-form">
-                    <div class="createAd__price-form_wrapper">
-                        <div class="createAd__price-form_line">
-                            <img src="./assets/img/landing/buy-sell/line2.svg" alt="line">
-                        </div>
-                        <div class="createAd__price-form_content">
-                            <div class="createAd__price-form_subprice">
-                                <p>Payment method</p>
-                                <p>Bank transfer</p>
-                            </div>
-                            <div class="flex">
-                                <div class="createAd__price-form__select">
-                                    <select class="main-dropdown createAd__price-form__dropdown">
-                                        <option selected disabled value="1">ACB(Ngan Hang A chau)</option>
-                                        <option value="2">ACB(Ngan Hang A chau)</option>
-                                        <option value="3">ACB(Ngan Hang A chau)</option>
-                                        <option value="4">ACB(Ngan Hang A chau)</option>
-                                        <option value="5">ACB(Ngan Hang A chau)</option>
-                                        <option value="6">ACB(Ngan Hang A chau)</option>
-                                        <option value="7">ACB(Ngan Hang A chau)</option>
-                                    </select>
-                                </div>
-                                <div class="createAd__price-form__inputs">
-                                    <label for="bankAccount">Bank account number</label>
-                                    <input type="text" name="bankAccount" id="bankAccount" placeholder="Write you Number">
-                                </div>
-                            </div>
-                            <div class="createAd__price-form__inputs">
-                                <label for="bankAccountName">Bank account name</label>
-                                <input type="text" name="bankAccountName" id="bankAccountName" placeholder="Write your account Name">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <button type="submit" class="createAd__price-form__submit"><span>Create</span></button>
-
-            </form>
+        <div class="chat__timer_counter">
+            <p class="chat__timer_counter-time">00:14:36</p>
+            <p class="chat__timer_counter-description">When payment time went out the trade will be canceled and will
+                send back the fund to seller.</p>
         </div>
 
-        <!-- tab 2 -->
+    </div>
 
-        <div class="tab-content tab-content-remove" id="tab-2">
-            <form action="#" method="POST">
-                <div class="createAd__price">
-                    <div class="createAd__price_icon">
-                        <img src="./assets/img/landing/buy-sell/marker.svg" alt="icon">
-                    </div>
-                    <p class="createAd__price_text">Price</p>
-                </div>
-                <div class="createAd__price-form">
-                    <div class="createAd__price-form_wrapper">
-                        <div class="createAd__price-form_line">
-                            <img src="./assets/img/landing/buy-sell/line.svg" alt="line">
-                        </div>
-                        <div class="createAd__price-form_content">
-                            <div class="createAd__price-form_subprice">
-                                <p>Price</p>
-                                <p>25,410 VND/USD</p>
-                                <p>Price of 1 USD in VND</p>
-                            </div>
-                            <div class="createAd__price-form__inputs">
-                                <label for="amount">Amount of SSC*</label>
-                                <input type="number" name="amount" id="amount" placeholder="34100.8484" step="0.001">
-                                <p class="createAd__price-form__inputs_currency">ssc</p>
-                            </div>
-                            <div class="createAd__price-form__inputs">
-                                <label for="priceForOne">Price for one SSC in USD</label>
-                                <input type="number" name="priceForOne" id="priceForOne" placeholder="1230.50">
-                                <p class="createAd__price-form__inputs_currency">usd</p>
-                            </div>
-                            <div class="createAd__price-form_receive-price">
-                                <p>SSC price that you receive</p>
-                                <p>65,150,765 VND</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- chat wrapper -->
 
-                <div class="createAd__price">
-                    <div class="createAd__price_icon">
-                        <img src="./assets/img/landing/buy-sell/info.svg" alt="icon">
-                    </div>
-                    <p class="createAd__price_text">Payment information</p>
-                </div>
-                <div class="createAd__price-form">
-                    <div class="createAd__price-form_wrapper">
-                        <div class="createAd__price-form_line">
-                            <img src="./assets/img/landing/buy-sell/line2.svg" alt="line">
-                        </div>
-                        <div class="createAd__price-form_content">
-                            <div class="createAd__price-form_subprice">
-                                <p>Payment method</p>
-                                <p>Bank transfer</p>
-                            </div>
-                            <div class="flex">
-                                <div class="createAd__price-form__select">
-                                    <select class="main-dropdown createAd__price-form__dropdown">
-                                        <option selected disabled value="1">ACB(Ngan Hang A chau)</option>
-                                        <option value="2">ACB(Ngan Hang A chau)</option>
-                                        <option value="3">ACB(Ngan Hang A chau)</option>
-                                        <option value="4">ACB(Ngan Hang A chau)</option>
-                                        <option value="5">ACB(Ngan Hang A chau)</option>
-                                        <option value="6">ACB(Ngan Hang A chau)</option>
-                                        <option value="7">ACB(Ngan Hang A chau)</option>
-                                    </select>
-                                </div>
-                                <div class="createAd__price-form__inputs">
-                                    <label for="bankAccountNumber">Bank account number</label>
-                                    <input type="text" name="bankAccountNumber" id="bankAccountNumber" placeholder="Write you Number">
-                                </div>
-                            </div>
-                            <div class="createAd__price-form__inputs">
-                                <label for="bankName">Bank account name</label>
-                                <input type="text" name="bankName" id="bankName" placeholder="Write your account Name">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="chat__wrapper chat__wrapper-online">
 
-                <button type="submit" class="createAd__price-form__submit"><span>Create</span></button>
+        <!-- type message -->
 
+        <div class="chat__wrapper_bottom">
+            <p class="chat__wrapper_bottom-responds"><span>Reviewing…</span></p>
+            <form action="#">
+                <div class="chat__wrapper_typeMessage">
+                    <div class="profile-wrapper__right-side_submit-input">
+                        <label for="clipFile">
+                            <img class="chat__wrapper_typeMessage_clipFile" src="./assets/img/landing/logo&icons/clipFile.svg"
+                                alt="clipFile">
+                        </label>
+                        <input type="file" id="clipFile">
+                    </div>
+                    <input class="chat__wrapper_input" type="text" placeholder="Always contact him for trading. He is good and fast. Thanks ">
+                    <button type="button">
+                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.4036 20.4596L37.291 5.97827L3.77215 13.2212L16.4036 20.4596Z" fill="#9b9b9b" />
+                            <path d="M19.0207 34.9986L37.291 5.97836L16.5391 20.6532L19.0207 34.9986Z" fill="#9b9b9b" />
+                        </svg>
+                    </button>
+                </div>
             </form>
         </div>
     </div>
-</main>
 
+</main>
 
 
 <!-- video -->

@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://rawgithub.com/dimsemenov/Magnific-Popup/master/dist/magnific-popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css">
+
+    <title>Send payment</title>
+</head>
+
+<body class="chat__body" id="body">
+<header class="header log-in-header">
+    
+    <div class="header__left-side">
+        <div class="header__left-side_logo">
+            <a href="./landing.html">
+                <img src="./assets/img/landing/logo&icons/logo.svg" alt="logo">
+            </a>
+        </div>
+        <nav>
+            <ul class="header__left-side_link" id="header__left-side_link">
+                <li><a href="./buy-sell.html">Buy / Sell SSC</a></li>
+                <li><a href="./dashboard.html">Dashboard</a></li>
+                <li><a href="./sscWallet.html">SSC Wallet</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="header__right-side">
+        <nav>
+            <ul class="header__right-side_links popUp">
+                <li class="header__right-side_button">
+                    <a href="#log-in" data-effect="mfp-zoom-in">Log In</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header__right-side_language">
+            <div class="custom_select custom_select__header">
+                <div data-choosen="En" class="custom_select__choosen toggleSelect selected">
+                    <span>En</span>
+                </div>
+                <div class="custom_select__options">
+                    <div data-currency="Ru" class="custom_select__option selectOption">
+                        <a href="#" class="custom_select__link">
+                            <span>Ru</span>
+                        </a>
+                    </div>
+                    <div data-currency="Ua" class="custom_select__option selectOption">
+                        <a href="#" class="custom_select__link">
+                            <span>Ua</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="log-in-header__right-side">
+        <p class="log-in-header__right-side_balance">Balance <span class="log-in-header__right-side_balance-money">0.00000000</span>
+            <span class="log-in-header__right-side_balance-currency">ssc</span></p>
+
+        <div class="log-in-header__right-side_bell">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.7">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.66665 14.9999C0.555535 14.9999 0.555535 13.3333 1.66665 13.3333C2.58712 13.3333 3.33331 12.5871 3.33331 11.6666V7.49992C3.33331 3.81802 6.31808 0.833252 9.99998 0.833252C13.6819 0.833252 16.6666 3.81802 16.6666 7.49992V11.6666C16.6666 12.5871 17.4128 13.3333 18.3333 13.3333C19.4444 13.3333 19.4444 14.9999 18.3333 14.9999H1.66665ZM15 11.6666V7.49992C15 4.73849 12.7614 2.49992 9.99998 2.49992C7.23856 2.49992 4.99998 4.73849 4.99998 7.49992V11.6666C4.99998 12.2737 4.83766 12.843 4.55404 13.3333H15.4459C15.1623 12.843 15 12.2737 15 11.6666ZM10.0001 19.1636C10.8915 19.1636 11.7154 18.6891 12.1626 17.9181C12.4849 17.3625 12.0841 16.6666 11.4418 16.6666H8.55847C7.91621 16.6666 7.51537 17.3625 7.83763 17.9181C8.28488 18.6891 9.1088 19.1636 10.0001 19.1636Z"
+                        fill="black" />
+                </g>
+            </svg>
+        </div>
+
+        <div class="log-in-header__right-side_mute">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.7">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.3628 5.707C21.8762 9.2215 21.8762 14.9185 18.3628 18.433C17.9723 18.8236 17.9724 19.4567 18.363 19.8472C18.7536 20.2377 19.3867 20.2376 19.7772 19.847C24.0714 15.5515 24.0714 8.5885 19.7772 4.293C19.3867 3.90242 18.7536 3.90232 18.363 4.29279C17.9724 4.68325 17.9723 5.31642 18.3628 5.707ZM10.3753 4.28913L5.64922 8.07H2C1.44772 8.07 1 8.51772 1 9.07V15.07C1 15.6223 1.44772 16.07 2 16.07H5.64922L10.3753 19.8509C11.0301 20.3747 12 19.9085 12 19.07V5.07C12 4.23149 11.0301 3.76532 10.3753 4.28913ZM6.62469 9.85087L10 7.15062V16.9894L6.62469 14.2891C6.44738 14.1473 6.22707 14.07 6 14.07H3V10.07H6C6.22707 10.07 6.44738 9.99272 6.62469 9.85087ZM14.8328 14.893C16.3943 13.331 16.3943 10.799 14.8328 9.237C14.4423 8.84642 14.4424 8.21325 14.833 7.82279C15.2236 7.43232 15.8567 7.43242 16.2472 7.823C18.5895 10.166 18.5895 13.964 16.2472 16.307C15.8567 16.6976 15.2236 16.6977 14.833 16.3072C14.4424 15.9167 14.4423 15.2836 14.8328 14.893Z"
+                        fill="black" />
+                </g>
+            </svg>
+        </div>
+
+        <div class="log-in-header__right-side_dropdown">
+            <ul class="log-in-header__right-side_dropdown-menu_list">
+                <li><a href="./settings.html"><img src="./assets/img/cabinet/settings/settings.svg" alt="settings">
+                        Setings</a></li>
+                <li><a href="./profile.html"><img src="./assets/img/cabinet/settings/profile.svg" alt="profile">Profile</a></li>
+                <li><a href="#"><img src="./assets/img/cabinet/settings/logOut.svg" alt="logOut">Logout</a></li>
+            </ul>
+        </div>
+        <div class="log-in-header__right-side_user">
+            <div class="log-in-header__right-side_user-img">
+                <img src="./assets/img/cabinet/settings/dorn.jpg" alt="dorn">
+                <div class="log-in-header__right-side_user-status">
+                </div>
+            </div>
+
+            <div>
+                <div class="log-in-header__right-side_user-name">
+                    <p>Ivan</p>
+                    <p>Dorn</p>
+                </div>
+                <p class="log-in-header__right-side_user-name_status-green">Instant trade</p>
+            </div>
+        </div>
+        <div class="header__right-side_language">
+            <div class="custom_select custom_select__header">
+                <div data-choosen="En" class="custom_select__choosen toggleSelect selected">
+                    <span>En</span>
+                </div>
+                <div class="custom_select__options">
+                    <div data-currency="Ru" class="custom_select__option selectOption">
+                        <a href="#" class="custom_select__link">
+                            <span>Ru</span>
+                        </a>
+                    </div>
+                    <div data-currency="Ua" class="custom_select__option selectOption">
+                        <a href="#" class="custom_select__link">
+                            <span>Ua</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+<main class="chat">
+
+    <!-- title block -->
+
+    <div class="chat__title-block">
+        <section>
+            <h4 class="chat__title-block_title">Send payment</h4>
+        </section>
+    </div>
+
+    <!-- progress-bar -->
+
+    <div class="chat__progress-bar">
+        <p class="chat__progress-bar_step-number-blue">1</p>
+        <div class="chat__progress-bar_line-blue"></div>
+        <p class="chat__progress-bar_step-blue">First Step</p>
+        <div class="chat__progress-bar_line-blue"></div>
+        <p class="chat__progress-bar_step-number-blue">2</p>
+        <div class="chat__progress-bar_line-blue"></div>
+        <p class="chat__progress-bar_step-blue">Second Step</p>
+        <div class="chat__progress-bar_line-green"></div>
+        <p class="chat__progress-bar_step-number-green">3</p>
+        <div class="chat__progress-bar_line-green"></div>
+        <p class="chat__progress-bar_step-green">Pay seller</p>
+        <div class="chat__progress-bar_line-gray"></div>
+        <p class="chat__progress-bar_step-number-gray">4</p>
+        <div class="chat__progress-bar_line-gray"></div>
+        <p class="chat__progress-bar_step-gray">Fourth step</p>
+    </div>
+
+    <!-- description-payment -->
+
+    <div class="chat-description_payment">
+        <p class="chat-description_payment-text">You are buying <span class="chat-description_payment-cost">0.49504950
+                SSC</span> from <a href="./profile.html" class="chat-description_payment-link">Baobinh.</a> SSC of the
+            seller is already locked and secured for this trade.
+            Please send payment to the seller then confirm below. After the trade is completed, your SSC will be sent
+            to:
+        </p>
+        <div class="chat__clipboard">
+            <input type="text" name="chatClipboard" id="chatClipboard" readonly placeholder="3K9jqXW41RP69E9gvFNKva4iUdV55vXEuM"
+                value="tfYUkasd32GJGbas671ftGASqd936DsdjkFGJ" class="chat__clipboard_input">
+            <p data-clipboard-target="#chatClipboard" class="chat__clipboard_clipIcon copyToClipboard">
+                <img src="./assets/img/cabinet/wallet/copy.svg" alt="copy">
+            </p>
+        </div>
+    </div>
+
+    <!-- timer -->
+
+    <div class="chat__timer">
+        <div class="chat__timer_left-to-pay">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.8">
+                    <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99992 19.1666C4.93731 19.1666 0.833252 15.0626 0.833252 9.99998C0.833252 4.93737 4.93731 0.833313 9.99992 0.833313C15.0625 0.833313 19.1666 4.93737 19.1666 9.99998C19.1666 15.0626 15.0625 19.1666 9.99992 19.1666ZM9.99992 17.5C14.1421 17.5 17.4999 14.1421 17.4999 9.99998C17.4999 5.85784 14.1421 2.49998 9.99992 2.49998C5.85778 2.49998 2.49992 5.85784 2.49992 9.99998C2.49992 14.1421 5.85778 17.5 9.99992 17.5ZM9.99992 4.16665C10.4602 4.16665 10.8333 4.53974 10.8333 4.99998V9.6548L13.0892 11.9107C13.4146 12.2362 13.4146 12.7638 13.0892 13.0892C12.7637 13.4147 12.2361 13.4147 11.9107 13.0892L9.41066 10.5892C9.25438 10.433 9.16659 10.221 9.16659 9.99998V4.99998C9.16659 4.53974 9.53968 4.16665 9.99992 4.16665Z"
+                            fill="#00c99c" />
+                    </mask>
+                    <g mask="url(#mask0)">
+                        <rect width="20" height="20" fill="#00c99c" />
+                    </g>
+                </g>
+            </svg>
+            <p>Time left to pay</p>
+        </div>
+
+        <div class="chat__timer_counter">
+            <p class="chat__timer_counter-time">00:14:36</p>
+            <p class="chat__timer_counter-description">When payment time went out the trade will be canceled and will
+                send back the fund to seller.</p>
+        </div>
+
+    </div>
+
+    <!-- btn-block -->
+
+    <div class="chat__btn-block">
+        <button class="chat__btn-block-green">
+            I have paid seller
+        </button>
+
+        <button class="chat__btn-block-red">
+            canceled trade
+        </button>
+
+        <button class="chat__btn-block-black">
+            <span>Open Chat</span>
+        </button>
+    </div>
+
+    <!-- title block -->
+
+    <div class="chat__title-block">
+        <section>
+            <h4 class="chat__title-block_title">Chat</h4>
+        </section>
+    </div>
+
+    <!-- chat wrapper -->
+
+    <div class="chat__wrapper chat__wrapper-online">
+        <div class="chat__wrapper_top">
+            <div class="chat__wrapper_top-line"></div>
+            <div class="chat__wrapper_top-today">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.8">
+                        <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99992 19.1666C4.93731 19.1666 0.833252 15.0626 0.833252 9.99998C0.833252 4.93737 4.93731 0.833313 9.99992 0.833313C15.0625 0.833313 19.1666 4.93737 19.1666 9.99998C19.1666 15.0626 15.0625 19.1666 9.99992 19.1666ZM9.99992 17.5C14.1421 17.5 17.4999 14.1421 17.4999 9.99998C17.4999 5.85784 14.1421 2.49998 9.99992 2.49998C5.85778 2.49998 2.49992 5.85784 2.49992 9.99998C2.49992 14.1421 5.85778 17.5 9.99992 17.5ZM9.99992 4.16665C10.4602 4.16665 10.8333 4.53974 10.8333 4.99998V9.6548L13.0892 11.9107C13.4146 12.2362 13.4146 12.7638 13.0892 13.0892C12.7637 13.4147 12.2361 13.4147 11.9107 13.0892L9.41066 10.5892C9.25438 10.433 9.16659 10.221 9.16659 9.99998V4.99998C9.16659 4.53974 9.53968 4.16665 9.99992 4.16665Z"
+                                fill="#9b9b9b" />
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <rect width="20" height="20" fill="#9b9b9b" />
+                        </g>
+                    </g>
+                </svg>
+                <p>Today</p>
+            </div>
+            <div class="chat__wrapper_top-line"></div>
+        </div>
+
+        <!-- chat clean -->
+
+        <div class="chat__wrapper-clean">
+            <p>Nobody has sent messages yet.</p>
+        </div>
+
+        <!-- chat active -->
+
+        <div class="chat__wrapper-active" id="scrollDown">
+            <div class="chat__wrapper-active_guest">
+                <div class="chat__wrapper-active_guest-img">
+                    <img src="./assets/img/landing/rewiews/rewiews1.png" alt="alt">
+                    <div class="chat__wrapper-active_guest-dot"></div>
+                </div>
+                <p class="chat__wrapper-active_guest-message">Thx guys, that was fun Thx guys, that was funThx guys…</p>
+            </div>
+
+            <div class="chat__wrapper-active_mine">
+                <div class="chat__wrapper-active_mine-img">
+                    <img src="./assets/img/cabinet/settings/dorn.jpg" alt="dorn">
+                    <div class="chat__wrapper-active_mine-dot"></div>
+                </div>
+                <p class="chat__wrapper-active_mine-message">Thx guys, that was fun Thx guys, that was funThx guys…</p>
+            </div>
+            <div class="chat__wrapper-active_guest">
+                <div class="chat__wrapper-active_guest-img">
+                    <img src="./assets/img/landing/rewiews/rewiews1.png" alt="alt">
+                    <div class="chat__wrapper-active_guest-dot"></div>
+                </div>
+                <p class="chat__wrapper-active_guest-message">Thx guys, that was fun Thx guys, that was funThx guys…</p>
+            </div>
+
+            <div class="chat__wrapper-active_mine">
+                <div class="chat__wrapper-active_mine-img">
+                    <img src="./assets/img/cabinet/settings/dorn.jpg" alt="dorn">
+                    <div class="chat__wrapper-active_mine-dot"></div>
+                </div>
+                <p class="chat__wrapper-active_mine-message">Thx guys, that was fun Thx guys, that was funThx guys…</p>
+            </div>
+            <div class="chat__wrapper-active_guest">
+                <div class="chat__wrapper-active_guest-img">
+                    <img src="./assets/img/landing/rewiews/rewiews1.png" alt="alt">
+                    <div class="chat__wrapper-active_guest-dot"></div>
+                </div>
+                <p class="chat__wrapper-active_guest-message">Thx guys, that was fun Thx guys, that was funThx guys…</p>
+            </div>
+
+            <div class="chat__wrapper-active_mine">
+                <div class="chat__wrapper-active_mine-img">
+                    <img src="./assets/img/cabinet/settings/dorn.jpg" alt="dorn">
+                    <div class="chat__wrapper-active_mine-dot"></div>
+                </div>
+                <p class="chat__wrapper-active_mine-message">Thx guys, that was fun Thx guys, that was fun Thx guys,
+                    that was guys, that was fun Thx guys, that wasguys, that was funThx guys…</p>
+            </div>
+            <div class="chat__wrapper-active_guest">
+                <div class="chat__wrapper-active_guest-img">
+                    <img src="./assets/img/landing/rewiews/rewiews1.png" alt="alt">
+                    <div class="chat__wrapper-active_guest-dot"></div>
+                </div>
+                <p class="chat__wrapper-active_guest-message">Thx guys, that was fun Thx guys, that was fun Thx guys,
+                    that was guys, that was fun Thx guys, that wasguys, that was funThx guys…</p>
+            </div>
+
+            <div class="chat__wrapper-active_mine">
+                <div class="chat__wrapper-active_mine-img">
+                    <img src="./assets/img/cabinet/settings/dorn.jpg" alt="dorn">
+                    <div class="chat__wrapper-active_mine-dot"></div>
+                </div>
+                <p class="chat__wrapper-active_mine-message">Thx guys, that was guys, that was fun Thx guys, that was
+                    guys, that was fun Thx guys, that was guys, that was fun Thx guys, that was fun Thx guys, that was
+                    funThx guys…</p>
+            </div>
+            <div class="chat__wrapper-active_guest">
+                <div class="chat__wrapper-active_guest-img">
+                    <img src="./assets/img/landing/rewiews/rewiews1.png" alt="alt">
+                    <div class="chat__wrapper-active_guest-dot"></div>
+                </div>
+                <p class="chat__wrapper-active_guest-message">Thx guys, that was fun Thx guys, that was funTh guys,
+                    that was fun Thx guys, that was guys, that was fun Thx guys, that was guys, that was fun Thx guys,
+                    that was guys, that was fun Thx guys, that was guys, that was fun Thx guys, that was guys, that was
+                    fun Thx guys, that was guys, that was fun Thx guys, that wasx guys…</p>
+            </div>
+
+            <div class="chat__wrapper-active_mine">
+                <div class="chat__wrapper-active_mine-img">
+                    <img src="./assets/img/cabinet/settings/dorn.jpg" alt="dorn">
+                    <div class="chat__wrapper-active_mine-dot"></div>
+                </div>
+                <p class="chat__wrapper-active_mine-message">Thx guys, that was fun guys, that was fun Thx guys, that
+                    was guys, that was fun Thx guys, that was guys, that was fun Thx guys, that was guys, that was fun
+                    Thx guys, that wasThx guys, that was funThx guys…</p>
+            </div>
+            <div class="chat__wrapper-active_guest">
+                <div class="chat__wrapper-active_guest-img">
+                    <img src="./assets/img/landing/rewiews/rewiews1.png" alt="alt">
+                    <div class="chat__wrapper-active_guest-dot"></div>
+                </div>
+                <p class="chat__wrapper-active_guest-message chat__wrapper-active_guest-messageFile">
+                    <a href="#" class="chat__wrapper-active_guest-messageFile_download">
+                        <img src="./assets/img/cabinet/settings/file-icon.svg" alt="file-icon">
+                        Hikoot_Clien_Pitch_V2.pdf
+                    </a>
+                </p>
+            </div>
+
+            <div class="chat__wrapper-active_mine">
+                <div class="chat__wrapper-active_mine-img">
+                    <img src="./assets/img/cabinet/settings/dorn.jpg" alt="dorn">
+                    <div class="chat__wrapper-active_mine-dot"></div>
+                </div>
+                <p class="chat__wrapper-active_mine-message chat__wrapper-active_mine-messageFile">
+                    <a href="#" class="chat__wrapper-active_mine-messageFile_download">
+                        <img src="./assets/img/cabinet/settings/file-icon.svg" alt="file-icon">
+                        Hikoot_Clien_Pitch_V2.pdf
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <!-- chat clean -->
+
+        <div class="chat__wrapper_bottom">
+            <p class="chat__wrapper_bottom-responds">Usually responds within <span>24 hours</span></p>
+            <form action="#">
+                <div class="chat__wrapper_typeMessage">
+                    <div class="profile-wrapper__right-side_submit-input">
+                        <label for="clipFile">
+                            <img class="chat__wrapper_typeMessage_clipFile" src="./assets/img/landing/logo&icons/clipFile.svg"
+                                alt="clipFile">
+                        </label>
+                        <input type="file" id="clipFile">
+                    </div>
+                    <input class="chat__wrapper_input" type="text" placeholder="Write a message…">
+                    <button type="button">
+                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.4036 20.4596L37.291 5.97827L3.77215 13.2212L16.4036 20.4596Z" fill="#7DB7FD" />
+                            <path d="M19.0207 34.9986L37.291 5.97836L16.5391 20.6532L19.0207 34.9986Z" fill="#7DB7FD" />
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="chat__payment-detail">
+        <div class="list-sellers">
+            <div class="list-sellers__left-side">
+                <section>
+                    <h4 class="list-sellers__left-side_title">Payment details</h4>
+                </section>
+            </div>
+        </div>
+        <div class="flex">
+            <div class="advertisement-details__left-side">
+                <div class="space-between">
+                    <div class="advertisement-details__left-side_img">
+                        <img src="./assets/img/cabinet/settings/dorn.jpg" alt="dorn">
+                    </div>
+                    <div class="advertisement-details__user-info">
+                        <div class="space-between">
+                            <div>
+                                <p class="advertisement-details__user-info_from">Buying from</p>
+                                <a class="advertisement-details__user-info_user-name" href="./profile.html">Baobinh</a>
+                            </div>
+                        </div>
+                        <div class="advertisement-details__price">
+                            <div>
+                                <p class="advertisement-details__price_title">Price</p>
+                                <p class="advertisement-details__price_cost">8,395,894 VND/SSC</p>
+                            </div>
+                            <div>
+                                <p class="advertisement-details__price_title">Payment reference</p>
+                                <p class="advertisement-details__price_payment-number">#53360T72969398</p>
+                            </div>
+                        </div>
+                        <div class="advertisement-details__bottom-row space-between">
+                            <div>
+                                <p class="advertisement-details__user-info_required">Payment method</p>
+                                <p class="advertisement-details__user-info_verification">Sacombank</p>
+                            </div>
+                            <div>
+                                <p class="advertisement-details__user-info_required">Bank accaunt name</p>
+                                <p class="advertisement-details__user-info_verification">TEH</p>
+                            </div>
+                            <div>
+                                <p class="advertisement-details__user-info_required">Bank accaunt namber</p>
+                                <p class="advertisement-details__user-info_verification">2004</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="advertisement-details__right-side">
+                <section class="accordion">
+
+                    <h3 class="accordion__title">Important</h3>
+                    <div>
+                        <p>Seller's SSC is hold in an escrow when you open the trade, so you can send payment to seller
+                            without worry. If the seller refused to release SSC after you sent the payment, click on
+                            the
+                            'Dispute' button and our support team with show up to help.</p>
+                    </div>
+
+                    <h3 class="accordion__title">Your wallet</h3>
+                    <div class="">
+                        <p>
+                            <div class="chat__clipboard">
+                                <input type="text" name="walletClipboard" id="walletClipboard" readonly placeholder="3K9jqXW41RP69E9gvFNKva4iUdV55vXEuM"
+                                    value="tfYUkasd32GJGbas671ftGASqd936DsdjkFGJ" class="chat__clipboard_input">
+                                <p data-clipboard-target="#walletClipboard" class="chat__clipboard_clipIcon copyToClipboard">
+                                    <img src="./assets/img/cabinet/wallet/copy.svg" alt="copy">
+                                </p>
+                            </div>Trading on Paypeer requires precision. You need to send the exact amount and using
+                            the correct Payment reference. Otherwise, the trade will be cancelled.
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    
+</main>
+
+<div class="banner-accountIsClosed banner-green">
+    <div class="banner-accountIsClosed__warning-img">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.447 2C11.3984 2 10.4259 2.54754 9.87916 3.44887L1.40916 17.5889C0.867998 18.5258 0.864815 19.6624 1.39267 20.5885C1.92053 21.5145 2.90015 22.091 3.96604 22.1027L20.917 22.1027C21.9939 22.091 22.9735 21.5145 23.5014 20.5885C24.0292 19.6624 24.0261 18.5258 23.493 17.6027L15.0149 3.44887C14.4682 2.54754 13.4957 2 12.447 2ZM3.13023 19.5981C2.95428 19.2894 2.95534 18.9105 3.13302 18.6028L11.5932 4.47941C11.7747 4.18171 12.0982 4 12.447 4C12.7966 4 13.1207 4.18251 13.302 4.48137L21.7692 18.6166C21.9387 18.9105 21.9398 19.2894 21.7638 19.5981C21.5879 19.9068 21.2613 20.0989 20.906 20.1028L3.97703 20.1027C3.63272 20.0989 3.30618 19.9068 3.13023 19.5981ZM11.447 9.10274V13.1027C11.447 13.655 11.8947 14.1027 12.447 14.1027C12.9993 14.1027 13.447 13.655 13.447 13.1027V9.10274C13.447 8.55046 12.9993 8.10274 12.447 8.10274C11.8947 8.10274 11.447 8.55046 11.447 9.10274ZM13.1541 15.3956C13.5447 15.7862 13.5447 16.4193 13.1541 16.8099C12.7636 17.2004 12.1304 17.2004 11.7399 16.8099C11.3494 16.4193 11.3494 15.7862 11.7399 15.3956C12.1304 15.0051 12.7636 15.0051 13.1541 15.3956Z"
+                fill="white"></path>
+        </svg>
+    </div>
+    <div class="banner-accountIsClosed__content">
+        <p>System message </p>
+        <p>For the transaction, send the specified amount to the buyer's bank account</p>
+    </div>
+    <div class="banner-accountIsClosed__close-btn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858Z"
+                fill="white"></path>
+        </svg>
+    </div>
+</div>
+
+
+<!-- video -->
+
+<div id="video" class="video-modal-window mfp-with-anim mfp-hide">
+    <iframe src="https://www.youtube.com/embed/sA6RXHenKj8" allow="autoplay; encrypted-media"
+        allowfullscreen></iframe>
+</div>
+
+<!-- log-in -->
+
+<div id="log-in" class="login-popUp mfp-with-anim mfp-hide">
+    <form action="#" method="POST">
+        <div class="login-popUp__wrapper">
+            <section>
+                <h3 class="login-popUp__title">Log in</h3>
+                <p class="login-popUp__text">Please login or register first</p>
+            </section>
+            <div class="login-popUp__wrapper-input">
+                <label for="login-in-popUp" class="login-popUp__label">enter your email</label>
+                <input type="text" id="login-in-popUp" class="login-popUp__input" required placeholder="john_doe@gmail.com">
+            </div>
+            <button type="submit" class="login-popUp__button">continue</button>
+            <p class="login-popUp__wrapper_signinWith">Or sign in with</p>
+        </div>
+
+        <div class="login-popUp__socials">
+            <a href="#" class="login-popUp__socials_facebook">Facebook</a>
+            <a href="#" class="login-popUp__socials_google">Google</a>
+        </div>
+    </form>
+</div>
+
+<!-- thank you -->
+
+<div id="thank-you" class="thank-you-popUp login-popUp mfp-with-anim mfp-hide">
+    <form action="#" method="POST">
+        <div class="login-popUp__wrapper">
+            <section>
+                <h3 class="login-popUp__title">Thank you</h3>
+                <p class="login-popUp__text">Your feedback was successfully sent</p>
+            </section>
+            <button type="submit" class="login-popUp__button">continue</button>
+        </div>
+    </form>
+</div>
+<footer class="footer">
+    <div class="footer__top-wrapper">
+        <div class="footer__top-wrapper_item">
+            <ul>
+                <li><img src="./assets/img/landing/logo&icons/logo-white.svg" alt="logo"></li>
+                <li class="footer__top-wrapper_item_link">© 2014–2019, Paypeer</li>
+                <li class="footer__top-wrapper_item_link">Babylon Solutions Limited</li>
+                <li class="footer__top-wrapper_item_link">Seychelles Reg. No. 168830</li>
+            </ul>
+        </div>
+        <div class="footer__top-wrapper_item">
+            <ul>
+                <li><a href="#" class="footer__top-wrapper_item_link">About</a></li>
+                <li><a href="#" class="footer__top-wrapper_item_link">About Us</a></li>
+                <li><a href="#" class="footer__top-wrapper_item_link">Careers</a></li>
+                <li><a href="#" class="footer__top-wrapper_item_link">Fees</a></li>
+                <li><a href="#" class="footer__top-wrapper_item_link">Privacy Policy</a></li>
+                <li><a href="#" class="footer__top-wrapper_item_link">Terms of Service</a></li>
+            </ul>
+        </div>
+        <div class="footer__top-wrapper_item">
+            <ul>
+                <li><a href="#" class="footer__top-wrapper_item_link">Support</a></li>
+                <li><a href="#" class="footer__top-wrapper_item_link">Contact</a></li>
+                <li><a href="#" class="footer__top-wrapper_item_link">FAQ</a></li>
+                <li><a href="#" class="footer__top-wrapper_item_link">Blog</a></li>
+            </ul>
+        </div>
+        <div class="footer__top-wrapper_item">
+            <ul>
+                <li><a href="#" class="footer__top-wrapper_item_link">Services</a></li>
+                <li><a href="#" class="footer__top-wrapper_item_link">English</a></li>
+                <li><a href="#" class="footer__top-wrapper_item_link">Affilate</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer__bottom-wrapper">
+        <div class="footer__bottom-wrapper_left-side">
+            <p>Copyright © 2019 <span class="bold">Paypeer</span></p>
+        </div>
+        <div class="footer__bottom-wrapper_right-side">
+            <a href="#" target="_blank"><svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.17391 0.736842C2.68043 2.53842 5.37887 4.23831 9 4.42105C8.80044 3.63853 8.78087 1.51568 10.3602 0.632947C11.0661 0.238737 11.7344 0 12.5217 0C13.5117 0 14.3233 0.319789 15.1873 1.09642C15.8909 0.999894 17.2041 0.468631 17.5156 0.260105C17.3129 0.992526 16.5013 1.93347 15.9143 2.15674C16.4528 2.15453 17.6377 1.85242 18 1.67337C17.4968 2.43453 16.6179 3.164 16.1366 3.46684C16.6938 8.16052 12.2502 13.9941 5.86957 14C4.04687 14.0015 2.06687 13.6375 0 12.5263C2.0387 12.751 4.22374 12.1292 5.47826 11.0526C3.89661 11.0187 2.29383 10.0152 1.56522 8.47368C2.358 8.70579 3.08896 8.82368 3.52174 8.47368C2.78374 8.39558 0.391304 7.1621 0.391304 4.77326C0.941478 5.20137 1.7327 5.64421 2.34783 5.52631C1.34061 4.96484 -0.122087 2.82726 1.17391 0.736842Z"
+                        fill="#fff" />
+                </svg>
+            </a>
+            <a href="#" target="_blank">
+                <svg width="9" height="20" viewBox="0 0 9 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.97264 11.4595H5.90881V20H1.53191V11.4595H0V7.91892H1.53191V5.89189C1.53191 4.59459 1.66869 3.21622 2.6535 1.91892C3.77508 0.432433 5.44377 0 6.89362 0C7.71429 0 8.37082 0.162162 9 0.405405V4.13514C8.39818 3.78378 7.87842 3.72973 7.63222 3.72973C6.97568 3.72973 6.59271 3.97297 6.40122 4.18919C5.93617 4.7027 5.90881 5.62162 5.90881 6.21622V7.91892H8.97264V11.4595Z"
+                        fill="#fff" />
+                </svg>
+            </a>
+            <a href="#" target="_blank">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6689 0H4.33105C1.94287 0 0 1.94287 0 4.33105V11.6691C0 14.0571 1.94287 16 4.33105 16H11.6691C14.0571 16 16 14.0571 16 11.6691V4.33105C16 1.94287 14.0571 0 11.6689 0ZM8 12.3749C5.58765 12.3749 3.62512 10.4124 3.62512 8C3.62512 5.58765 5.58765 3.62512 8 3.62512C10.4124 3.62512 12.3749 5.58765 12.3749 8C12.3749 10.4124 10.4124 12.3749 8 12.3749ZM11.1868 3.36414C11.1868 4.07703 11.7666 4.65686 12.4795 4.65686C13.1924 4.65686 13.7723 4.07703 13.7723 3.36414C13.7723 2.65125 13.1924 2.07129 12.4795 2.07129C11.7666 2.07129 11.1868 2.65125 11.1868 3.36414Z"
+                        fill="#fff" />
+                    <path d="M8.00037 4.56299C6.10535 4.56299 4.56348 6.10474 4.56348 7.99988C4.56348 9.8949 6.10535 11.4368 8.00037 11.4368C9.89551 11.4368 11.4373 9.8949 11.4373 7.99988C11.4373 6.10474 9.89551 4.56299 8.00037 4.56299Z"
+                        fill="#fff" />
+                    <path d="M12.4797 3.00928C12.2842 3.00928 12.125 3.16846 12.125 3.36401C12.125 3.55957 12.2842 3.71875 12.4797 3.71875C12.6754 3.71875 12.8346 3.55969 12.8346 3.36401C12.8346 3.16833 12.6754 3.00928 12.4797 3.00928Z"
+                        fill="#fff" />
+                </svg>
+            </a>
+        </div>
+    </div>
+
+</footer>
+
+<!-- JS -->
+<script src="./assets/js/jquery-3.3.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://rawgithub.com/dimsemenov/Magnific-Popup/master/dist/jquery.magnific-popup.js?v=0.8.9"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+<script src="./assets/js/datepicker.min.js"></script>
+<script src="./assets/js/scripts.min.js"></script>
+<script src="./assets/js/slick.min.js"></script>
+<!-- end JS -->
+
+</body>
+
+</html>

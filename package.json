@@ -23,5 +23,8 @@
         "air-datepicker": "^2.2.3",
         "jquery-nice-select": "^1.1.0",
         "masonry-layout": "^4.2.2"
+    },
+    "scripts": {
+        "start": "node index.js"
     }
 }
