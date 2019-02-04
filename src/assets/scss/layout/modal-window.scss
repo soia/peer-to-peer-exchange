@@ -137,6 +137,24 @@
     }
 }
 
+.thank-you-popUp {
+    height: auto;
+
+    .login-popUp__text {
+        color: $semiBlack;
+        font-family: $regularFont;
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .login-popUp__button {
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+}
+
 body {
 
     .mfp-close-btn-in .mfp-close {

@@ -16,6 +16,7 @@
       peerToPeer.initHideBannerAccountClosed();
       peerToPeer.initToggleHeaderIcon();
       peerToPeer.initHeaderCabinetMenu();
+      peerToPeer.initCustomSelect();
 
       peerToPeer.initMenu();
       peerToPeer.initSearch();
@@ -26,6 +27,56 @@
       peerToPeer.initDeckSelect();
       peerToPeer.initDatePicker();
       peerToPeer.initSlickSlider();
+    },
+
+    initCustomSelect: function () {
+      if (!$(".custom_select").length) return false;
+      let toggleSelect = $(".toggleSelect"),
+        selectOption = $(".selectOption");
+
+      toggleSelect.each(function () {
+        $(this).on("click", function () {
+          $(this)
+            .closest(".custom_select")
+            .toggleClass("opened");
+        });
+      });
+      selectOption.each(function () {
+        $(this).on("click", function () {
+          let newCurrency = $(this).attr("data-currency"),
+            prevCurrency = $(this)
+              .closest(".custom_select")
+              .find(".custom_select__choosen")
+              .attr("data-choosen");
+
+          $(this)
+            .closest(".custom_select")
+            .find(".custom_select__choosen")
+            .attr("data-choosen", newCurrency);
+          $(this).attr("data-currency", prevCurrency);
+          $(this)
+            .closest(".custom_select")
+            .toggleClass("opened");
+          refreshItemData($(".custom_select__choosen"));
+          refreshItemData($(this));
+        });
+      });
+
+      function refreshItemData(item) {
+        item.each(function () {
+          if ($(this).attr("data-choosen")) {
+            let data = $(this).attr("data-choosen");
+            $(this)
+              .find("span")
+              .html($(this).attr("data-choosen"));
+          } else {
+            let data = $(this).attr("data-currency");
+            $(this)
+              .find("span")
+              .html($(this).attr("data-currency"));
+          }
+        });
+      }
     },
 
     initActiveLink: function () {

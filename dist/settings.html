@@ -39,12 +39,23 @@
             </ul>
         </nav>
         <div class="header__right-side_language">
-            <select class="main-dropdown">
-                <option selected disabled value="1">En</option>
-                <option value="2">En</option>
-                <option value="3">Ru</option>
-                <option value="4">Ua</option>
-            </select>
+            <div class="custom_select custom_select__header">
+                <div data-choosen="En" class="custom_select__choosen toggleSelect selected">
+                    <span>En</span>
+                </div>
+                <div class="custom_select__options">
+                    <div data-currency="Ru" class="custom_select__option selectOption">
+                        <a href="#" class="custom_select__link">
+                            <span>Ru</span>
+                        </a>
+                    </div>
+                    <div data-currency="Ua" class="custom_select__option selectOption">
+                        <a href="#" class="custom_select__link">
+                            <span>Ua</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="log-in-header__right-side">
@@ -93,12 +104,23 @@
             </div>
         </div>
         <div class="header__right-side_language">
-            <select class="main-dropdown">
-                <option selected disabled value="1"><a href="">En</a></option>
-                <option value="2"><a href="#">En</a></option>
-                <option value="3"><a href="#">Ru</a></option>
-                <option value="4">Ua</option>
-            </select>
+            <div class="custom_select custom_select__header">
+                <div data-choosen="En" class="custom_select__choosen toggleSelect selected">
+                    <span>En</span>
+                </div>
+                <div class="custom_select__options">
+                    <div data-currency="Ru" class="custom_select__option selectOption">
+                        <a href="#" class="custom_select__link">
+                            <span>Ru</span>
+                        </a>
+                    </div>
+                    <div data-currency="Ua" class="custom_select__option selectOption">
+                        <a href="#" class="custom_select__link">
+                            <span>Ua</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -656,6 +678,20 @@
         <div class="login-popUp__socials">
             <a href="#" class="login-popUp__socials_facebook">Facebook</a>
             <a href="#" class="login-popUp__socials_google">Google</a>
+        </div>
+    </form>
+</div>
+
+<!-- thank you -->
+
+<div id="thank-you" class="thank-you-popUp login-popUp mfp-with-anim mfp-hide">
+    <form action="#" method="POST">
+        <div class="login-popUp__wrapper">
+            <section>
+                <h3 class="login-popUp__title">Thank you</h3>
+                <p class="login-popUp__text">Your feedback was successfully sent</p>
+            </section>
+            <button type="submit" class="login-popUp__button">continue</button>
         </div>
     </form>
 </div>
