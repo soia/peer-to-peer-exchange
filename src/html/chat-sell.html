@@ -1,0 +1,371 @@
+@@include('modules/html-head.html',{ "bodyClass": "chat__body", "pageTitle": "Send payment" })
+@@include('modules/header-landing.html',{
+"headerClass": "" })
+
+<main class="chat">
+
+    <!-- title block -->
+
+    <div class="chat__title-block">
+        <section>
+            <h4 class="chat__title-block_title">Send payment</h4>
+        </section>
+    </div>
+
+    <!-- progress-bar -->
+
+    <div class="chat__progress-bar">
+        <p class="chat__progress-bar_step-number-blue">1</p>
+        <div class="chat__progress-bar_line-blue"></div>
+        <p class="chat__progress-bar_step-blue">First Step</p>
+        <div class="chat__progress-bar_line-blue"></div>
+        <p class="chat__progress-bar_step-number-blue">2</p>
+        <div class="chat__progress-bar_line-blue"></div>
+        <p class="chat__progress-bar_step-blue">Second Step</p>
+        <div class="chat__progress-bar_line-green"></div>
+        <p class="chat__progress-bar_step-number-green">3</p>
+        <div class="chat__progress-bar_line-green"></div>
+        <p class="chat__progress-bar_step-green">Pay seller</p>
+        <div class="chat__progress-bar_line-gray"></div>
+        <p class="chat__progress-bar_step-number-gray">4</p>
+        <div class="chat__progress-bar_line-gray"></div>
+        <p class="chat__progress-bar_step-gray">Fourth step</p>
+    </div>
+
+    <!-- description-payment -->
+
+    <div class="chat-description_payment">
+        <p class="chat-description_payment-text">You are selling <span class="chat-description_payment-cost">0.49504950
+                SSC</span> to <a href="./profile.html" class="chat-description_payment-link">Baobinh.</a> Your SSC is
+            already locked and secured for this trade. Wait for confirmation of sending funds by the buying party.
+            After the trade is completed, your SSC will be sent to:
+        </p>
+        <div class="chat__clipboard">
+            <input type="text" name="chatClipboard" id="chatClipboard" readonly placeholder="3K9jqXW41RP69E9gvFNKva4iUdV55vXEuM"
+                value="tfYUkasd32GJGbas671ftGASqd936DsdjkFGJ" class="chat__clipboard_input">
+            <p data-clipboard-target="#chatClipboard" class="chat__clipboard_clipIcon copyToClipboard">
+                <img src="./assets/img/cabinet/wallet/copy.svg" alt="copy">
+            </p>
+        </div>
+    </div>
+
+    <!-- timer -->
+
+    <div class="chat__timer">
+        <div class="chat__timer_left-to-pay">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.8">
+                    <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99992 19.1666C4.93731 19.1666 0.833252 15.0626 0.833252 9.99998C0.833252 4.93737 4.93731 0.833313 9.99992 0.833313C15.0625 0.833313 19.1666 4.93737 19.1666 9.99998C19.1666 15.0626 15.0625 19.1666 9.99992 19.1666ZM9.99992 17.5C14.1421 17.5 17.4999 14.1421 17.4999 9.99998C17.4999 5.85784 14.1421 2.49998 9.99992 2.49998C5.85778 2.49998 2.49992 5.85784 2.49992 9.99998C2.49992 14.1421 5.85778 17.5 9.99992 17.5ZM9.99992 4.16665C10.4602 4.16665 10.8333 4.53974 10.8333 4.99998V9.6548L13.0892 11.9107C13.4146 12.2362 13.4146 12.7638 13.0892 13.0892C12.7637 13.4147 12.2361 13.4147 11.9107 13.0892L9.41066 10.5892C9.25438 10.433 9.16659 10.221 9.16659 9.99998V4.99998C9.16659 4.53974 9.53968 4.16665 9.99992 4.16665Z"
+                            fill="#00c99c" />
+                    </mask>
+                    <g mask="url(#mask0)">
+                        <rect width="20" height="20" fill="#00c99c" />
+                    </g>
+                </g>
+            </svg>
+            <p>Time left to pay</p>
+        </div>
+
+        <div class="chat__timer_counter">
+            <p class="chat__timer_counter-time">00:14:36</p>
+            <p class="chat__timer_counter-description">When the timer ends, the transaction will be automatically
+                completed.</p>
+        </div>
+
+    </div>
+
+    <!-- btn-block -->
+
+    <div class="chat__btn-block">
+        <button class="chat__btn-block-green">
+            I've got payment
+        </button>
+        <button class="chat__btn-block-red">
+            canceled trade
+        </button>
+        <button class="chat__btn-block-black">
+            <span>Open dispute</span>
+        </button>
+    </div>
+
+    <!-- title block -->
+
+    <div class="chat__title-block">
+        <section>
+            <h4 class="chat__title-block_title ">Chat</h4>
+        </section>
+        <div class="chat__wrapper-active_mine-img">
+                <img src="./assets/img/landing/rewiews/rewiews4.png" alt="arbitor">
+                <div class="chat__wrapper-active_mine-dot"></div>
+            </div>
+    </div>
+
+    <!-- chat wrapper -->
+
+    <div class="chat__wrapper chat__wrapper-online">
+        <div class="chat__wrapper_top">
+            <div class="chat__wrapper_top-line"></div>
+            <div class="chat__wrapper_top-today">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.8">
+                        <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99992 19.1666C4.93731 19.1666 0.833252 15.0626 0.833252 9.99998C0.833252 4.93737 4.93731 0.833313 9.99992 0.833313C15.0625 0.833313 19.1666 4.93737 19.1666 9.99998C19.1666 15.0626 15.0625 19.1666 9.99992 19.1666ZM9.99992 17.5C14.1421 17.5 17.4999 14.1421 17.4999 9.99998C17.4999 5.85784 14.1421 2.49998 9.99992 2.49998C5.85778 2.49998 2.49992 5.85784 2.49992 9.99998C2.49992 14.1421 5.85778 17.5 9.99992 17.5ZM9.99992 4.16665C10.4602 4.16665 10.8333 4.53974 10.8333 4.99998V9.6548L13.0892 11.9107C13.4146 12.2362 13.4146 12.7638 13.0892 13.0892C12.7637 13.4147 12.2361 13.4147 11.9107 13.0892L9.41066 10.5892C9.25438 10.433 9.16659 10.221 9.16659 9.99998V4.99998C9.16659 4.53974 9.53968 4.16665 9.99992 4.16665Z"
+                                fill="#9b9b9b" />
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <rect width="20" height="20" fill="#9b9b9b" />
+                        </g>
+                    </g>
+                </svg>
+                <p>Today</p>
+            </div>
+            <div class="chat__wrapper_top-line"></div>
+        </div>
+
+        <!-- chat clean -->
+
+        <div class="chat__wrapper-clean">
+            <p>Nobody has sent messages yet.</p>
+        </div>
+
+        <!-- chat active -->
+
+        <div class="chat__wrapper-active" id="scrollDown">
+            <div class="chat__wrapper-active_guest">
+                <div class="chat__wrapper-active_guest-img">
+                    <img src="./assets/img/landing/rewiews/rewiews1.png" alt="alt">
+                    <div class="chat__wrapper-active_guest-dot"></div>
+                </div>
+                <p class="chat__wrapper-active_guest-message">Thx guys, that was fun Thx guys, that was funThx guys…</p>
+            </div>
+
+            <div class="chat__wrapper-active_mine">
+                <div class="chat__wrapper-active_mine-img">
+                    <img src="./assets/img/cabinet/settings/dorn.jpg" alt="dorn">
+                    <div class="chat__wrapper-active_mine-dot"></div>
+                </div>
+                <p class="chat__wrapper-active_mine-message">Thx guys, that was fun Thx guys, that was funThx guys…</p>
+            </div>
+            <div class="chat__wrapper-active_guest">
+                <div class="chat__wrapper-active_guest-img">
+                    <img src="./assets/img/landing/rewiews/rewiews1.png" alt="alt">
+                    <div class="chat__wrapper-active_guest-dot"></div>
+                </div>
+                <p class="chat__wrapper-active_guest-message">Thx guys, that was fun Thx guys, that was funThx guys…</p>
+            </div>
+
+            <div class="chat__wrapper-active_mine">
+                <div class="chat__wrapper-active_mine-img">
+                    <img src="./assets/img/cabinet/settings/dorn.jpg" alt="dorn">
+                    <div class="chat__wrapper-active_mine-dot"></div>
+                </div>
+                <p class="chat__wrapper-active_mine-message">Thx guys, that was fun Thx guys, that was funThx guys…</p>
+            </div>
+            <div class="chat__wrapper-active_guest">
+                <div class="chat__wrapper-active_guest-img">
+                    <img src="./assets/img/landing/rewiews/rewiews1.png" alt="alt">
+                    <div class="chat__wrapper-active_guest-dot"></div>
+                </div>
+                <p class="chat__wrapper-active_guest-message">Thx guys, that was fun Thx guys, that was funThx guys…</p>
+            </div>
+
+            <div class="chat__wrapper-active_mine">
+                <div class="chat__wrapper-active_mine-img">
+                    <img src="./assets/img/cabinet/settings/dorn.jpg" alt="dorn">
+                    <div class="chat__wrapper-active_mine-dot"></div>
+                </div>
+                <p class="chat__wrapper-active_mine-message">Thx guys, that was fun Thx guys, that was fun Thx guys,
+                    that was guys, that was fun Thx guys, that wasguys, that was funThx guys…</p>
+            </div>
+            <div class="chat__wrapper-active_guest">
+                <div class="chat__wrapper-active_guest-img">
+                    <img src="./assets/img/landing/rewiews/rewiews1.png" alt="alt">
+                    <div class="chat__wrapper-active_guest-dot"></div>
+                </div>
+                <p class="chat__wrapper-active_guest-message">Thx guys, that was fun Thx guys, that was fun Thx guys,
+                    that was guys, that was fun Thx guys, that wasguys, that was funThx guys…</p>
+            </div>
+
+            <div class="chat__wrapper-active_mine">
+                <div class="chat__wrapper-active_mine-img">
+                    <img src="./assets/img/cabinet/settings/dorn.jpg" alt="dorn">
+                    <div class="chat__wrapper-active_mine-dot"></div>
+                </div>
+                <p class="chat__wrapper-active_mine-message">Thx guys, that was guys, that was fun Thx guys, that was
+                    guys, that was fun Thx guys, that was guys, that was fun Thx guys, that was fun Thx guys, that was
+                    funThx guys…</p>
+            </div>
+            <div class="chat__wrapper-active_guest">
+                <div class="chat__wrapper-active_guest-img">
+                    <img src="./assets/img/landing/rewiews/rewiews1.png" alt="alt">
+                    <div class="chat__wrapper-active_guest-dot"></div>
+                </div>
+                <p class="chat__wrapper-active_guest-message">Thx guys, that was fun Thx guys, that was funTh guys,
+                    that was fun Thx guys, that was guys, that was fun Thx guys, that was guys, that was fun Thx guys,
+                    that was guys, that was fun Thx guys, that was guys, that was fun Thx guys, that was guys, that was
+                    fun Thx guys, that was guys, that was fun Thx guys, that wasx guys…</p>
+            </div>
+
+            <div class="chat__wrapper-active_mine">
+                <div class="chat__wrapper-active_mine-img">
+                    <img src="./assets/img/cabinet/settings/dorn.jpg" alt="dorn">
+                    <div class="chat__wrapper-active_mine-dot"></div>
+                </div>
+                <p class="chat__wrapper-active_mine-message">Thx guys, that was fun guys, that was fun Thx guys, that
+                    was guys, that was fun Thx guys, that was guys, that was fun Thx guys, that was guys, that was fun
+                    Thx guys, that wasThx guys, that was funThx guys…</p>
+            </div>
+            <div class="chat__wrapper-active_guest">
+                <div class="chat__wrapper-active_guest-img">
+                    <img src="./assets/img/landing/rewiews/rewiews1.png" alt="alt">
+                    <div class="chat__wrapper-active_guest-dot"></div>
+                </div>
+                <p class="chat__wrapper-active_guest-message chat__wrapper-active_guest-messageFile">
+                    <a href="#" class="chat__wrapper-active_guest-messageFile_download">
+                        <img src="./assets/img/cabinet/settings/file-icon.svg" alt="file-icon">
+                        Hikoot_Clien_Pitch_V2.pdf
+                    </a>
+                </p>
+            </div>
+
+            <div class="chat__wrapper-active_mine">
+                <div class="chat__wrapper-active_mine-img">
+                    <img src="./assets/img/cabinet/settings/dorn.jpg" alt="dorn">
+                    <div class="chat__wrapper-active_mine-dot"></div>
+                </div>
+                <p class="chat__wrapper-active_mine-message chat__wrapper-active_mine-messageFile">
+                    <a href="#" class="chat__wrapper-active_mine-messageFile_download">
+                        <img src="./assets/img/cabinet/settings/file-icon.svg" alt="file-icon">
+                        Hikoot_Clien_Pitch_V2.pdf
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <!-- chat clean -->
+
+        <div class="chat__wrapper_bottom">
+            <p class="chat__wrapper_bottom-responds">Usually responds within <span>24 hours</span></p>
+            <form action="#">
+                <div class="chat__wrapper_typeMessage">
+                    <div class="profile-wrapper__right-side_submit-input">
+                        <label for="clipFile">
+                            <img class="chat__wrapper_typeMessage_clipFile" src="./assets/img/landing/logo&icons/clipFile.svg"
+                                alt="clipFile">
+                        </label>
+                        <input type="file" id="clipFile">
+                    </div>
+                    <input class="chat__wrapper_input" type="text" placeholder="Write a message…">
+                    <button type="button">
+                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.4036 20.4596L37.291 5.97827L3.77215 13.2212L16.4036 20.4596Z" fill="#7DB7FD" />
+                            <path d="M19.0207 34.9986L37.291 5.97836L16.5391 20.6532L19.0207 34.9986Z" fill="#7DB7FD" />
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="chat__payment-detail">
+        <div class="list-sellers">
+            <div class="list-sellers__left-side">
+                <section>
+                    <h4 class="list-sellers__left-side_title">Payment details</h4>
+                </section>
+            </div>
+        </div>
+        <div class="flex">
+            <div class="advertisement-details__left-side">
+                <div class="space-between">
+                    <div class="advertisement-details__left-side_img">
+                        <img src="./assets/img/cabinet/settings/dorn.jpg" alt="dorn">
+                    </div>
+                    <div class="advertisement-details__user-info">
+                        <div class="space-between">
+                            <div>
+                                <p class="advertisement-details__user-info_from">Buying from</p>
+                                <a class="advertisement-details__user-info_user-name" href="./profile.html">Baobinh</a>
+                            </div>
+                        </div>
+                        <div class="advertisement-details__price">
+                            <div>
+                                <p class="advertisement-details__price_title">Price</p>
+                                <p class="advertisement-details__price_cost">8,395,894 VND/SSC</p>
+                            </div>
+                            <div>
+                                <p class="advertisement-details__price_title">Payment reference</p>
+                                <p class="advertisement-details__price_payment-number">#53360T72969398</p>
+                            </div>
+                        </div>
+                        <div class="advertisement-details__bottom-row space-between">
+                            <div>
+                                <p class="advertisement-details__user-info_required">Payment method</p>
+                                <p class="advertisement-details__user-info_verification">Sacombank</p>
+                            </div>
+                            <div>
+                                <p class="advertisement-details__user-info_required">Bank accaunt name</p>
+                                <p class="advertisement-details__user-info_verification">TEH</p>
+                            </div>
+                            <div>
+                                <p class="advertisement-details__user-info_required">Bank accaunt namber</p>
+                                <p class="advertisement-details__user-info_verification">2004</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="advertisement-details__right-side">
+                <section class="accordion">
+
+                    <h3 class="accordion__title">Important</h3>
+                    <div>
+                        <p>Seller's SSC is hold in an escrow when you open the trade, so you can send payment to seller
+                            without worry. If the seller refused to release SSC after you sent the payment, click on
+                            the
+                            'Dispute' button and our support team with show up to help.</p>
+                    </div>
+
+                    <h3 class="accordion__title">Your wallet</h3>
+                    <div class="">
+                        <p>
+                            <div class="chat__clipboard">
+                                <input type="text" name="walletClipboard" id="walletClipboard" readonly placeholder="3K9jqXW41RP69E9gvFNKva4iUdV55vXEuM"
+                                    value="tfYUkasd32GJGbas671ftGASqd936DsdjkFGJ" class="chat__clipboard_input">
+                                <p data-clipboard-target="#walletClipboard" class="chat__clipboard_clipIcon copyToClipboard">
+                                    <img src="./assets/img/cabinet/wallet/copy.svg" alt="copy">
+                                </p>
+                            </div>Trading on Paypeer requires precision. You need to send the exact amount and using
+                            the correct Payment reference. Otherwise, the trade will be cancelled.
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<div class="banner-accountIsClosed banner-green">
+    <div class="banner-accountIsClosed__warning-img">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.447 2C11.3984 2 10.4259 2.54754 9.87916 3.44887L1.40916 17.5889C0.867998 18.5258 0.864815 19.6624 1.39267 20.5885C1.92053 21.5145 2.90015 22.091 3.96604 22.1027L20.917 22.1027C21.9939 22.091 22.9735 21.5145 23.5014 20.5885C24.0292 19.6624 24.0261 18.5258 23.493 17.6027L15.0149 3.44887C14.4682 2.54754 13.4957 2 12.447 2ZM3.13023 19.5981C2.95428 19.2894 2.95534 18.9105 3.13302 18.6028L11.5932 4.47941C11.7747 4.18171 12.0982 4 12.447 4C12.7966 4 13.1207 4.18251 13.302 4.48137L21.7692 18.6166C21.9387 18.9105 21.9398 19.2894 21.7638 19.5981C21.5879 19.9068 21.2613 20.0989 20.906 20.1028L3.97703 20.1027C3.63272 20.0989 3.30618 19.9068 3.13023 19.5981ZM11.447 9.10274V13.1027C11.447 13.655 11.8947 14.1027 12.447 14.1027C12.9993 14.1027 13.447 13.655 13.447 13.1027V9.10274C13.447 8.55046 12.9993 8.10274 12.447 8.10274C11.8947 8.10274 11.447 8.55046 11.447 9.10274ZM13.1541 15.3956C13.5447 15.7862 13.5447 16.4193 13.1541 16.8099C12.7636 17.2004 12.1304 17.2004 11.7399 16.8099C11.3494 16.4193 11.3494 15.7862 11.7399 15.3956C12.1304 15.0051 12.7636 15.0051 13.1541 15.3956Z"
+                fill="white"></path>
+        </svg>
+    </div>
+    <div class="banner-accountIsClosed__content">
+        <p class="banner-green__title">System message </p>
+        <p class="banner-green__subTitle">For the transaction, send the specified amount to the buyer's bank account</p>
+    </div>
+    <div class="banner-accountIsClosed__close-btn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858Z"
+                fill="white"></path>
+        </svg>
+    </div>
+</div>
+
+@@include('modules/modal-window.html')
+@@include('modules/html-footer.html')

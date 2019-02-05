@@ -5,12 +5,7 @@
 <main class="buy-sell">
 
     <!-- Buy Now -->
-    <div class="list-sellers">
-        <div class="list-sellers__left-side">
-            <section>
-                <h4 class="list-sellers__left-side_title">Buy Now</h4>
-            </section>
-        </div>
+    <div class="list-sellers buy-sell__tabs">
         <div class="list-sellers__right-side">
             <ul class="tab-container__tab">
                 <li class="tab-container__tab-item tab-link turquoise selected-item" data-tab="tab-1">
@@ -25,7 +20,11 @@
 
     <!-- tab 1 -->
     <div class="tab-content tab-content-remove selected-item" id="tab-1">
-
+            <div class="list-sellers__left-side buy-sell__tabs_title">
+                    <section>
+                        <h4 class="list-sellers__left-side_title">Buy Now</h4>
+                    </section>
+                </div>
         <form action="#" class="tab-buy">
 
             <div class="tab-buy__row">
@@ -149,7 +148,142 @@
                     </div>
                 </div>
             </div>
-            
+
+        </form>
+
+    </div>
+
+    <!-- tab 2 -->
+    <div class="tab-content tab-content-remove" id="tab-2">
+            <div class="list-sellers__left-side buy-sell__tabs_title">
+                    <section>
+                        <h4 class="list-sellers__left-side_title">Sell Now</h4>
+                    </section>
+                </div>
+        <form action="#" class="tab-buy">
+
+            <div class="tab-buy__row">
+
+                <div class="tab-buy__inputs">
+                    <label for="amount">Amount of SSC*</label>
+                    <input type="number" name="amount" id="amount" placeholder="0.00000000" step="0.001">
+                    <p class="tab-buy__inputs_currency">ssc</p>
+                    <img class="tab-buy__inputs_img" src="./assets/img/landing/logo&icons/twoArrows.svg" alt="twoArrows">
+                </div>
+
+                <div class="tab-buy__wrapper-dropdown">
+                    <select class="main-dropdown tab-buy__dropdown">
+                        <option selected disabled value="1">Your Paypeer Wallet</option>
+                        <option value="2">Your Paypeer Wallet</option>
+                        <option value="3">Your Personal Wallet</option>
+                    </select>
+                    <p class="tab-buy__wrapper-dropdown_label">Receive SSC to *</p>
+                    <img class="tab-buy__inputs_img" src="./assets/img/landing/logo&icons/walletBill.svg" alt="walletBill">
+                </div>
+            </div>
+
+            <!-- create advertisement -->
+
+            <div class="buy-sell__advertisement">
+                <div class="buy-sell__advertisement_item">
+                    <p class="tab-buy__row__price">≈ 7083.95<span>$</span></p>
+                    <img class="tab-buy__inputs_img" src="./assets/img/landing/logo&icons/loading.svg" alt="loading">
+                </div>
+
+                <div class="buy-sell__advertisement_item">
+                    <p class="tab-buy__row__price_blue">No one want to sell 1. You can</p>
+                    <img class="tab-buy__inputs_img" src="./assets/img/landing/logo&icons/red-warning.svg" alt="warning">
+                </div>
+
+                <a href="./createAd.html" class="accordion__authentication-container_right-side-btn"><span>Create
+                        advertisement</span></a>
+
+            </div>
+
+            <!-- List Buy From -->
+
+            <div class="buy-sell__list-buy-from">
+                <div class="list-sellers">
+                    <div class="list-sellers__left-side">
+                        <section>
+                            <h4 class="list-sellers__left-side_title">List Buy From</h4>
+                        </section>
+                    </div>
+                </div>
+
+                <div class="tab-buy__row tab-buy__row_seller_link">
+                    <a href="./profile.html">
+                        <div class="tab-buy__row_seller">
+                            <div class="tab-buy__row_seller-img">
+                                <img class="graph-block__item_img" src="./assets/img/landing/sellers/seller1.png" alt="seller">
+                                <div class="tab-buy__row_seller-dots-quick"></div>
+                            </div>
+                            <div class="tab-buy__row_seller-name">
+                                <p class="tab-buy__row_seller-name_first">Samuel</p>
+                                <p class="tab-buy__row_seller-name_last">Spencer</p>
+                                <p class="tab-buy__row_seller-name_quick">Quick seller</p>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="tab-buy__row_payment">
+                        <div class="tab-buy__row_payment-method">
+                            <p>Payment method</p>
+                            <p>Vietcombank</p>
+                        </div>
+                        <div class="tab-buy__row_payment-price">
+                            <p>Price</p>
+                            <p>87,837,628 VND/SSC</p>
+                        </div>
+                    </div>
+
+                    <div class="tab-buy__row_button">
+                        <div class="tab-buy__row_button-total">
+                            <p>Total</p>
+                            <p>500-159,676$</p>
+                        </div>
+                        <a href="./sellSSC-single.html" class="btn-red">
+                            <span class="btn-red-inside">Sell</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tab-buy__row tab-buy__row_seller_link">
+                    <a href="./profile.html">
+                        <div class="tab-buy__row_seller">
+                            <div class="tab-buy__row_seller-img">
+                                <img class="graph-block__item_img" src="./assets/img/landing/sellers/seller2.png" alt="seller">
+                                <div class="tab-buy__row_seller-dots-slow"></div>
+                            </div>
+                            <div class="tab-buy__row_seller-name">
+                                <p class="tab-buy__row_seller-name_first">Kit</p>
+                                <p class="tab-buy__row_seller-name_last">Lambra</p>
+                                <p class="tab-buy__row_seller-name_slow">Slow seller</p>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="tab-buy__row_payment">
+                        <div class="tab-buy__row_payment-method">
+                            <p>Payment method</p>
+                            <p>Sacombank</p>
+                        </div>
+                        <div class="tab-buy__row_payment-price">
+                            <p>Price</p>
+                            <p>96,999.00VND/SSC</p>
+                        </div>
+                    </div>
+
+                    <div class="tab-buy__row_button">
+                        <div class="tab-buy__row_button-total">
+                            <p>Total</p>
+                            <p>3,000-999,999$</p>
+                        </div>
+                        <a href="./sellSSC-single.html" class="btn-red">
+                            <span class="btn-red-inside">Sell</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </form>
 
     </div>

@@ -38,6 +38,7 @@
     &__list-buy-from {
         margin-top: 50px;
         transform: translateX(-125px);
+        width: calc(100% + 125px);
 
         .list-sellers {
             padding: 0;
@@ -46,6 +47,20 @@
         .tab-buy__row_seller_link {
             width: calc(100% + 125px);
         }
+    }
+
+    &__tabs {
+        justify-content: flex-end;
+
+        &_title {
+            transform: translate(122px, -112px);
+            position: absolute;
+            display: none;
+        }
+    }
+
+    .selected-item .buy-sell__tabs_title { 
+        display: block !important;
     }
 }
 
@@ -76,4 +91,12 @@
         padding-bottom: 60px;
     }
     
+}
+
+.sell-single {
+    .accordion__authentication-container_right-side-btn {
+        border: 1px solid $red;
+        color: $red;
+        margin-top: 32px;
+    } 
 }

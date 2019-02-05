@@ -211,7 +211,7 @@
       toggleClass.on("click", function () {
 
         let bannerAccountIsClosed = $(".banner-accountIsClosed");
-        $(this).closest(bannerAccountIsClosed).toggleClass("banner-accountIsClosed__active");
+        $(this).closest(bannerAccountIsClosed).hide();
       });
     },
 
@@ -659,14 +659,24 @@
   });
 })(jQuery);
 
-const showBanner =  function (title, subTitle, color) {
-  var block = $('.banner-red'),
-  titleFunc = $('.banner-red__title'),
-  subTitleFunc = $('.banner-red__subTitle'),
-  bannerFunc = $('.banner-accountIsClosed');
+const showBanner = function (title, subTitle, color) {
 
-  block.css("display", "flex");
-  titleFunc.html(title);
-  subTitleFunc.html(subTitle);
-  bannerFunc.css("background-color", color);
+  return new Promise(function (resolve, reject) {
+    
+    try {
+      const block = $('.banner-red'),
+        titleFunc = $('.banner-red__title'),
+        subTitleFunc = $('.banner-red__subTitle'),
+        bannerFunc = $('.banner-accountIsClosed');
+
+      block.css("display", "flex");
+      titleFunc.html(title);
+      subTitleFunc.html(subTitle);
+      bannerFunc.css("background-color", color);
+      resolve();
+    }
+    catch (error) {
+      reject(console.log(error))
+    }
+  });
 }

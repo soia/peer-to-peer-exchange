@@ -725,9 +725,7 @@
     }
 
     &__active {
-        position: relative;
-        transform: translateY(200px);
-        z-index: 2;
+        display: none;
     }
 }
 
