@@ -18,7 +18,6 @@
       peerToPeer.initHeaderCabinetMenu();
       peerToPeer.initCustomSelect();
       peerToPeer.initScrollDownChat();
-
       peerToPeer.initMenu();
       peerToPeer.initSearch();
       peerToPeer.initLiked();
@@ -659,3 +658,15 @@
     peerToPeer.init();
   });
 })(jQuery);
+
+const showBanner =  function (title, subTitle, color) {
+  var block = $('.banner-red'),
+  titleFunc = $('.banner-red__title'),
+  subTitleFunc = $('.banner-red__subTitle'),
+  bannerFunc = $('.banner-accountIsClosed');
+
+  block.css("display", "flex");
+  titleFunc.html(title);
+  subTitleFunc.html(subTitle);
+  bannerFunc.css("background-color", color);
+}

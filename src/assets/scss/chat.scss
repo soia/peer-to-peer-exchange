@@ -96,6 +96,10 @@
             margin: 35px 0 0 128px;
             max-width: 1000px;
 
+            @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                margin: 35px 0 0 40px;
+            }
+
             &-text {
                 line-height: 44px;
                 color: #1f1f1f;
@@ -244,6 +248,10 @@
 
     &__wrapper {
         margin-left: 122px;
+
+        @media screen and (min-width: 769px) and (max-width: 1250px) { 
+            margin-left: 40px;
+        }
 
         &-online {
             .chat__wrapper-clean {
@@ -488,6 +496,49 @@
         ::-webkit-scrollbar {
             width: 0px;
             background: transparent;
+        }
+
+        &-vote {
+            display: flex;
+            justify-content: center;
+            margin: 70px;
+
+            &_item {
+                &:not(:last-child) {
+                    margin-right: 225px;
+                }
+            }
+        }
+    }
+
+    &__sent-message {
+        margin: 65px 0 0 40px;
+
+        &_mail {
+            display: flex;
+            align-items: center;
+
+            &-desciption {
+                color: $lightBlue;
+                font-family: $regularFont;
+                font-size: 16px;
+                margin-left: 60px;
+            }
+        }
+
+        &_rate {
+            margin: 20px 0 30px 80px;
+
+            &-description {
+                color: $semiBlack;
+                font-family: $regularFont;
+                font-size: 32px;
+            }
+
+            &-link {
+                color: $lightBlue;
+                border-bottom: 2px solid $lightBlue; 
+            }
         }
     }
 
