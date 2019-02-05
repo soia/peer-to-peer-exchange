@@ -18,6 +18,7 @@
       peerToPeer.initHeaderCabinetMenu();
       peerToPeer.initCustomSelect();
       peerToPeer.initScrollDownChat();
+      peerToPeer.initAutoCloseMenu();
       peerToPeer.initMenu();
       peerToPeer.initSearch();
       peerToPeer.initLiked();
@@ -291,6 +292,16 @@
       scrollDown.scrollTop(scrollDown.prop("scrollHeight"));
     },
 
+    initAutoCloseMenu: function () {
+      $(document).mouseup(function (e) {
+        var block = $(".menu-active");
+        if (!block.is(e.target)
+          && block.has(e.target).length === 0) {
+          block.toggleClass('menu-active');
+        }
+      });
+    },
+    
     initMenu: function () {
       let dynamicMenu = $("#menu"),
         btnMenu = $(".btnMenu"),
@@ -680,13 +691,3 @@ const showBanner = function (title, subTitle, color) {
     }
   });
 }
-
-jQuery(function($){
-  $(document).mouseup(function (e){ // отслеживаем событие клика по веб-документу
-      var block = $(".menu-active"); // определяем элемент, к которому будем применять условия (можем указывать ID, класс либо любой другой идентификатор элемента)
-      if (!block.is(e.target) // проверка условия если клик был не по нашему блоку
-          && block.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
-          block.toggleClass('menu-active'); // если условия выполняются - скрываем наш элемент
-      }
-  });
-});
