@@ -87,22 +87,22 @@
     }
 }
   
-.custom_select.opened .custom_select__options {
+.custom_select.menu-active .custom_select__options {
     display: block;
     position: absolute;  
     margin-top: 12px;
     border-radius: 5px;
 }
   
-.custom_select.opened .hideOptions {
+.custom_select.menu-active .hideOptions {
     display: block
 }
   
-.custom_select.opened .showOptions {
+.custom_select.menu-active .showOptions {
     display: none
 }
   
-.opened {
+.menu-active {
     
     &:after {
       transform: rotate(-135deg);

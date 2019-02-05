@@ -293,14 +293,14 @@
             }
         }
 
-        .header-menu-active {
+        .menu-active {
 
             &:after {
                 transform: rotate(-135deg);
             }
         }
 
-        .header-menu-active {
+        .menu-active {
 
             .log-in-header__right-side_dropdown-menu_list {
                 transform: translateY(0);

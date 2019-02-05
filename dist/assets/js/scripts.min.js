@@ -227,7 +227,7 @@
       let toggleClass = $(".log-in-header__right-side_dropdown");
 
       toggleClass.on("click", function () {
-        toggleClass.toggleClass("header-menu-active");
+        toggleClass.toggleClass("menu-active");
       });
 
       let stopPropagation = $('.log-in-header__right-side_dropdown-menu_list');
@@ -245,7 +245,7 @@
         $(this).on("click", function () {
           $(this)
             .closest(".custom_select")
-            .toggleClass("opened");
+            .toggleClass("menu-active");
         });
       });
       selectOption.each(function () {
@@ -263,7 +263,7 @@
           $(this).attr("data-currency", prevCurrency);
           $(this)
             .closest(".custom_select")
-            .toggleClass("opened");
+            .toggleClass("menu-active");
           refreshItemData($(".custom_select__choosen"));
           refreshItemData($(this));
         });
@@ -680,3 +680,13 @@ const showBanner = function (title, subTitle, color) {
     }
   });
 }
+
+jQuery(function($){
+  $(document).mouseup(function (e){ // отслеживаем событие клика по веб-документу
+      var block = $(".menu-active"); // определяем элемент, к которому будем применять условия (можем указывать ID, класс либо любой другой идентификатор элемента)
+      if (!block.is(e.target) // проверка условия если клик был не по нашему блоку
+          && block.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+          block.toggleClass('menu-active'); // если условия выполняются - скрываем наш элемент
+      }
+  });
+});
