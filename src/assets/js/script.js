@@ -19,6 +19,7 @@
       peerToPeer.initCustomSelect();
       peerToPeer.initScrollDownChat();
       peerToPeer.initAutoCloseMenu();
+      peerToPeer.initAosAnimation();
       peerToPeer.initMenu();
       peerToPeer.initSearch();
       peerToPeer.initLiked();
@@ -300,6 +301,10 @@
           block.toggleClass('menu-active');
         }
       });
+    },
+
+    initAosAnimation: function () {
+      AOS.init();
     },
     
     initMenu: function () {
