@@ -8,7 +8,8 @@
     &__title-block {
         display: flex;
         justify-content: space-between;
-        
+        align-items: center;
+
         &_title {
             color: $semiBlack;
             font-family: $boldFont;
@@ -304,7 +305,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: flex-start;
-                    border-radius: 20px;
+                    border-radius: 35px;
                     border-bottom-left-radius: 0;
                     padding: 20px 40px;
                 }
@@ -366,7 +367,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: flex-end;
-                    border-radius: 20px;
+                    border-radius: 35px;
                     border-bottom-right-radius: 0;
                     padding: 20px 40px;
                 }
@@ -387,6 +388,89 @@
                         height: 32px;
                         margin-right: 15px;
                         background-color: $white;
+                    }
+                }
+            }
+
+            &_arbitrator {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                margin: 15px 0;
+
+                &-img {
+                    position: relative;
+                    display: inline-block;
+
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        border: 2px solid $red;
+                    }
+                }
+
+                &-dot {
+                    width: 17px;
+                    height: 17px;
+                    border-radius: 50%;
+                    border: 4px solid $white;
+                    background-color: $red;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                }
+
+                &-wrapper {
+                    margin-left: 25px;
+                }
+
+                &-firstName, &-lastName {
+                    color: $darkBlack;
+                    font-family: $regularFont;
+                    font-weight: $medium;
+                    font-size: 16px;
+                    line-height: 16px;
+                }
+
+                &-status {
+                    color: $red;
+                    font-family: $regularFont;
+                    margin-top: 5px;
+                    font-size: 16px;
+                    line-height: 16px;
+                }
+
+                &-message {
+                    color: $semiBlack;
+                    font-family: $regularFont;
+                    font-size: 14px;
+                    margin-left: 40px;
+                    width: calc(50% - 90px);
+                    background-color: $white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    border-radius: 35px;
+                    border-bottom-left-radius: 0;
+                    padding: 20px 40px;
+                }
+
+                &-messageFile {
+                    &_download {
+                        color: $semiBlack;
+                        font-family: $regularFont;
+                        font-size: 14px;
+                        margin-right: 40px;
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    img {
+                        width: 32px;
+                        height: 32px;
+                        margin-right: 15px;
                     }
                 }
             }
