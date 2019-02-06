@@ -145,11 +145,11 @@
     <section class="accordion">
 
         <!-- Authentication -->
-        <h3 class="accordion__title">Authy Authentication</h3>
+        <h3 class="accordion__title">Two factored Authentication</h3>
         <form action="#">
             <div class="accordion__authentication-container">
                 <div class="accordion__authentication-container_left-side">
-                    <p>Low account security: Authy Authentication is <span class="disabled">Disabled</span></p>
+                    <p>Low account security: Two factored Authentication is <span class="disabled">Disabled</span></p>
                 </div>
                 <div class="accordion__authentication-container_right-side">
                     <button type="button" class="accordion__authentication-container_right-side-btn"><span>Enable</span></button>
@@ -157,12 +157,15 @@
             </div>
             <div class="accordion__authentication-open">
                 <div class="accordion__authentication-open_qrCode" id="qrCode">
+                    <div class="accordion__authentication-open_subtitle">
+                        <p>Protect your user account by entering a one time code every time you withdraw fund or release trade.
+                            We recommend Google Authenticator for <a href="https://itunes.apple.com/ru/app/google-authenticator/id388497605?mt=8"
+                                target="_blank">iOS</a>
+                            or <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=ru"
+                                target="_blank">Android.</a></p>
+                    </div>
                 </div>
-                <div class="accordion__authentication-open_subtitle">
-                    <p>Protect your user account by entering a one time code every time you withdraw fund or release trade.
-                        We recommend Google Authenticator for <a href="https://itunes.apple.com/ru/app/google-authenticator/id388497605?mt=8" target="_blank">iOS</a>
-                        or <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=ru" target="_blank">Android.</a></p>
-                </div>
+            
                 <div class="accordion__authentication-open_input">
                     <label for="inputQrCode">Authentication key</label>
                     <input type="text" name="inputQrCode" id="inputQrCode" readonly placeholder="nc4mf2yodsfdsagfwx2awgimm27rldm"
@@ -172,12 +175,12 @@
                     </p>
                 </div>
                 <div class="accordion__authentication-open_input">
-                    <label for="authenticationCode">Authy authentication code</label>
+                    <label for="authenticationCode">2FA code</label>
                     <input type="text" name="authenticationCode" id="authenticationCode" value="">
                 </div>
-
+            
                 <div class="accordion__authentication-open_btn-wrapper">
-                    <button type="submit" class="accordion__authentication-open_btn-wrapper_enable"><span>Enable Authy Authentication</span></button>
+                    <button type="submit" class="accordion__authentication-open_btn-wrapper_enable"><span>Enable 2FA</span></button>
                     <button type="button" class="accordion__authentication-open_btn-wrapper_cancel"><span>Cancel</span></button>
                 </div>
             </div>
