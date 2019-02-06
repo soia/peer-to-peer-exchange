@@ -106,7 +106,7 @@
         e.preventDefault();
 
         $(this).toggleClass('openRewiews');
-        $(this).siblings( ".openRewiews" ).toggleClass('openRewiews');
+        $(this).siblings(".openRewiews").toggleClass('openRewiews');
       });
     },
 
@@ -146,33 +146,17 @@
     initQrCode: function () {
       try {
         const qrcode = new QRCode("qrCode");
-      
+
         function makeCode() {
-          const elText = document.getElementById("inputQrCode");
-      
-          if (!elText.value) {
-            console.log("Input a text");
-            elText.focus();
-            return;
-          }
-      
-          qrcode.makeCode(elText.value);
+          const elText = document.getElementById("qrCode");
+
+          qrcode.makeCode(elText.getAttribute('data-qr-text'));
         }
-      
+
         makeCode();
-      
-        $("#inputQrCode").
-          on("blur", function () {
-            makeCode();
-          }).
-          on("keydown", function (e) {
-            if (e.keyCode == 13) {
-              makeCode();
-            }
-          });
-      
+
       } catch (e) {
-        
+
       }
     },
 
@@ -208,10 +192,10 @@
         }
       }, 1000);
     },
-    
+
     initHideBannerAccountClosed: function () {
       let toggleClass = $(".banner-accountIsClosed__close-btn");
-      
+
       toggleClass.on("click", function () {
 
         let bannerAccountIsClosed = $(".banner-accountIsClosed");
@@ -235,7 +219,7 @@
       });
 
       let stopPropagation = $('.log-in-header__right-side_dropdown-menu_list');
-      stopPropagation.click(function(e){
+      stopPropagation.click(function (e) {
         e.stopPropagation();
       });
     },
@@ -331,17 +315,19 @@
       const input = document.getElementById('addFiles'),
         output = document.getElementById('fileList');
 
-      input.addEventListener("change", showFiles);
+      if (input) {
+        input.addEventListener("change", showFiles);
 
-      function showFiles() {
-        output.innerHTML = '<ul>';
-        for (let i = 0; i < input.files.length; ++i) {
-          output.innerHTML += '<li>' + '<img src="./assets/img/cabinet/settings/file-icon.svg" alt="file-icon">' + input.files.item(i).name + '</li>';
+        function showFiles() {
+          output.innerHTML = '<ul>';
+          for (let i = 0; i < input.files.length; ++i) {
+            output.innerHTML += '<li>' + '<img src="./assets/img/cabinet/settings/file-icon.svg" alt="file-icon">' + input.files.item(i).name + '</li>';
+          }
+          output.innerHTML += '</ul>';
         }
-        output.innerHTML += '</ul>';
       }
     },
-    
+
     initMenu: function () {
       let dynamicMenu = $("#menu"),
         btnMenu = $(".btnMenu"),
@@ -713,7 +699,7 @@
 const showBanner = function (title, subTitle, color) {
 
   return new Promise(function (resolve, reject) {
-    
+
     try {
       const block = $('.banner-red'),
         titleFunc = $('.banner-red__title'),

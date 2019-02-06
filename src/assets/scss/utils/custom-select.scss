@@ -108,3 +108,54 @@
       transform: rotate(-135deg);
     }
 }
+
+
+.wallet-dropdown {
+    position: relative;
+    margin-left: 12px;
+    width: 50%;
+    height: 90px;
+    background-color: #f2f3f9;
+    border: none;
+    outline: none;
+  
+    .custom_select__header {
+      &:after {
+        left: auto;
+        right: 45px;
+      }
+    }
+  
+    .custom_select__choosen {
+      font-family: "FuturaPT",sans-serif;
+      color: #4a4a4a;
+      font-size: 36px;
+      font-weight: 400;
+      line-height: inherit;
+      padding: 27px 0 27px 24px;
+    }
+  
+    .custom_select__options {
+      margin-top: 0 !important;
+      width: 100%;
+    }
+  
+    .custom_select__option {
+      width: 100%;
+      height: 90px;
+      padding: 27px 0 27px 24px;
+      font-family: "FuturaPT",sans-serif;
+      background-color: #f2f3f9 !important;
+      border: none;
+      color: #4a4a4a;
+      padding: 27px 0 27px 24px;
+      font-size: 36px;
+      outline: none;
+      font-weight: 400 !important;
+      transition: all 0.25s;
+  
+      &:hover {
+        background-color: $white !important;
+      }
+    }
+  }
