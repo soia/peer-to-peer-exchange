@@ -20,6 +20,8 @@
       peerToPeer.initScrollDownChat();
       peerToPeer.initAutoCloseMenu();
       peerToPeer.initAosAnimation();
+      peerToPeer.initshowAuthentication();
+
       peerToPeer.initMenu();
       peerToPeer.initSearch();
       peerToPeer.initLiked();
@@ -305,6 +307,24 @@
 
     initAosAnimation: function () {
       AOS.init();
+    },
+
+
+    initshowAuthentication: function () {
+      let hideContainer = $(".accordion__authentication-container_right-side-btn"),
+        container = $('.accordion__authentication-container'),
+        open = $('.accordion__authentication-open'),
+        cancel = $('.accordion__authentication-open_btn-wrapper_cancel');
+
+      hideContainer.on("click", function () {
+        $(this).closest(container).hide();
+        $(this).closest(container).siblings(open).show();
+      });
+
+      cancel.on("click", function () {
+        $(this).closest(open).hide();
+        $(this).closest(open).siblings(container).show();
+      });
     },
     
     initMenu: function () {

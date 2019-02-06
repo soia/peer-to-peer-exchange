@@ -29,6 +29,32 @@
                     <button type="button" class="accordion__authentication-container_right-side-btn"><span>Enable</span></button>
                 </div>
             </div>
+            <div class="accordion__authentication-open">
+                <div class="accordion__authentication-open_qrCode" id="qrCode">
+                </div>
+                <div class="accordion__authentication-open_subtitle">
+                    <p>Protect your user account by entering a one time code every time you withdraw fund or release trade.
+                        We recommend Google Authenticator for <a href="https://itunes.apple.com/ru/app/google-authenticator/id388497605?mt=8" target="_blank">iOS</a>
+                        or <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=ru" target="_blank">Android.</a></p>
+                </div>
+                <div class="accordion__authentication-open_input">
+                    <label for="inputQrCode">Authentication key</label>
+                    <input type="text" name="inputQrCode" id="inputQrCode" readonly placeholder="nc4mf2yodsfdsagfwx2awgimm27rldm"
+                        value="nc4mf2yodsfdsagfwx2awgimm27rldm">
+                    <p data-clipboard-target="#inputQrCode" class="copyToClipboard">
+                        <img src="./assets/img/cabinet/wallet/copy.svg" alt="copy">
+                    </p>
+                </div>
+                <div class="accordion__authentication-open_input">
+                    <label for="authenticationCode">Authy authentication code</label>
+                    <input type="text" name="authenticationCode" id="authenticationCode" value="">
+                </div>
+
+                <div class="accordion__authentication-open_btn-wrapper">
+                    <button type="submit" class="accordion__authentication-open_btn-wrapper_enable"><span>Enable Authy Authentication</span></button>
+                    <button type="button" class="accordion__authentication-open_btn-wrapper_cancel"><span>Cancel</span></button>
+                </div>
+            </div>
         </form>
 
         <!-- Notification -->
