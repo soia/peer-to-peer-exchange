@@ -21,7 +21,7 @@
       peerToPeer.initAutoCloseMenu();
       peerToPeer.initAosAnimation();
       peerToPeer.initshowAuthentication();
-
+      peerToPeer.initshowUploadedFiles();
       peerToPeer.initMenu();
       peerToPeer.initSearch();
       peerToPeer.initLiked();
@@ -325,6 +325,21 @@
         $(this).closest(open).hide();
         $(this).closest(open).siblings(container).show();
       });
+    },
+
+    initshowUploadedFiles: function () {
+      const input = document.getElementById('addFiles'),
+        output = document.getElementById('fileList');
+
+      input.addEventListener("change", showFiles);
+
+      function showFiles() {
+        output.innerHTML = '<ul>';
+        for (let i = 0; i < input.files.length; ++i) {
+          output.innerHTML += '<li>' + '<img src="./assets/img/cabinet/settings/file-icon.svg" alt="file-icon">' + input.files.item(i).name + '</li>';
+        }
+        output.innerHTML += '</ul>';
+      }
     },
     
     initMenu: function () {

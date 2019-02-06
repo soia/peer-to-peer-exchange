@@ -174,8 +174,36 @@
 
             &_wrapper {
                 display: flex;
+                flex-direction: column;
                 margin-left: 83px;
-            }
+
+                &-list {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    li {
+                        color: $semiBlack;
+                        font-family: $regularFont;
+                        list-style: none;
+                        display: flex;
+                        align-items: center;
+                        font-size: 22px;
+                        margin: 24px 24px 0 0;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        width: 250px;
+                    }
+
+                    img { 
+                        margin-right: 24px;
+                    }
+                }
+
+                .help-block {
+                    text-align: left;
+                    display: none;
+                }
+            }       
 
             &_input-wrapper {
                 position: relative;
