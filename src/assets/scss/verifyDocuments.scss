@@ -35,8 +35,7 @@
                 &_identity {
                     color: $semiBlack;
                     font-family: $regularFont;
-                    font-size: 36px;
-                    line-height: 36px;
+                    font-size: 30px;
                     margin: 10px 0 0 83px;
 
                     .not-uploaded {
@@ -235,8 +234,7 @@
                         width: calc(100% - 83px);
                         height: 90px;
                         padding: 27px 24px 27px 24px;
-                        font-size: 32px;
-                        line-height: 36px;
+                        font-size: 30px;
                         margin-left: 83px;
     
                         @media screen and (min-width: 769px) and (max-width: 1250px) { 

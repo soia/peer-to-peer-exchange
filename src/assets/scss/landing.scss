@@ -121,7 +121,7 @@
                 max-width: 200px;
 
                 @media screen and (min-width: 769px) and (max-width: 1250px) { 
-                    justify-content: space-between;
+                    justify-content: flex-start;
                     max-width: 150px;
                 }
 
@@ -389,8 +389,7 @@
             right: 80px;
             font-family: $regularFont;
             color: $semiBlack;
-            font-size: 36px;
-            line-height: 36px;
+            font-size: 30px;
             text-transform: uppercase;
             user-select: none;
 
@@ -416,8 +415,7 @@
             padding: 27px 150px 27px 24px;
             font-family: $regularFont;
             color: $semiBlack;
-            font-size: 36px;
-            line-height: 36px;
+            font-size: 30px;
             outline: none;
 
             @media screen and (min-width: 769px) and (max-width: 1250px) { 
@@ -453,8 +451,7 @@
         padding: 27px 0 27px 24px;
         font-family: $regularFont;
         color: $semiBlack;
-        font-size: 36px;
-        line-height: 36px;
+        font-size: 30px;
         outline: none;
 
         @media screen and (min-width: 769px) and (max-width: 1250px) { 
@@ -480,8 +477,7 @@
             border: none;
             color: $semiBlack;
             padding: 27px 0 27px 24px;
-            font-size: 36px;
-            line-height: 36px;
+            font-size: 30px;
             outline: none;
             font-weight: $normal !important;
 
