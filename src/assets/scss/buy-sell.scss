@@ -9,13 +9,22 @@
 
         &__inputs {
             margin-right: 80px;
+            width: calc(50% - 40px);
 
             &_img {
                 position: absolute;
                 left: -80px;
                 top: 50%;
                 transform: translateY(-50%);
+                width: 24px;
+                height: 24px;
+                display: block !important;
             }
+        }
+
+        .wallet-dropdown {
+            margin-left: 80px;
+            width: calc(50% - 40px);
         }
 
         &__wrapper-dropdown {
@@ -43,6 +52,11 @@
         .wallet-dropdown {
             margin: 50px 0 0 0;
             width: calc(100% - 80px);
+        }
+
+        .wallet-dropdown {
+            margin-left: 0 !important;
+            width: calc(100% - 80px) !important;
         }
     }
 
