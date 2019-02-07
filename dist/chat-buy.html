@@ -184,7 +184,7 @@
         <div class="chat__timer_left-to-pay">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g opacity="0.8">
-                    <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                    <mask id="mask0" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99992 19.1666C4.93731 19.1666 0.833252 15.0626 0.833252 9.99998C0.833252 4.93737 4.93731 0.833313 9.99992 0.833313C15.0625 0.833313 19.1666 4.93737 19.1666 9.99998C19.1666 15.0626 15.0625 19.1666 9.99992 19.1666ZM9.99992 17.5C14.1421 17.5 17.4999 14.1421 17.4999 9.99998C17.4999 5.85784 14.1421 2.49998 9.99992 2.49998C5.85778 2.49998 2.49992 5.85784 2.49992 9.99998C2.49992 14.1421 5.85778 17.5 9.99992 17.5ZM9.99992 4.16665C10.4602 4.16665 10.8333 4.53974 10.8333 4.99998V9.6548L13.0892 11.9107C13.4146 12.2362 13.4146 12.7638 13.0892 13.0892C12.7637 13.4147 12.2361 13.4147 11.9107 13.0892L9.41066 10.5892C9.25438 10.433 9.16659 10.221 9.16659 9.99998V4.99998C9.16659 4.53974 9.53968 4.16665 9.99992 4.16665Z"
                             fill="#00c99c" />
                     </mask>
@@ -236,11 +236,11 @@
             <div class="chat__wrapper_top-today">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.8">
-                        <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                        <mask id="mask01"  maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99992 19.1666C4.93731 19.1666 0.833252 15.0626 0.833252 9.99998C0.833252 4.93737 4.93731 0.833313 9.99992 0.833313C15.0625 0.833313 19.1666 4.93737 19.1666 9.99998C19.1666 15.0626 15.0625 19.1666 9.99992 19.1666ZM9.99992 17.5C14.1421 17.5 17.4999 14.1421 17.4999 9.99998C17.4999 5.85784 14.1421 2.49998 9.99992 2.49998C5.85778 2.49998 2.49992 5.85784 2.49992 9.99998C2.49992 14.1421 5.85778 17.5 9.99992 17.5ZM9.99992 4.16665C10.4602 4.16665 10.8333 4.53974 10.8333 4.99998V9.6548L13.0892 11.9107C13.4146 12.2362 13.4146 12.7638 13.0892 13.0892C12.7637 13.4147 12.2361 13.4147 11.9107 13.0892L9.41066 10.5892C9.25438 10.433 9.16659 10.221 9.16659 9.99998V4.99998C9.16659 4.53974 9.53968 4.16665 9.99992 4.16665Z"
                                 fill="#9b9b9b" />
                         </mask>
-                        <g mask="url(#mask0)">
+                        <g mask="url(#mask01)">
                             <rect width="20" height="20" fill="#9b9b9b" />
                         </g>
                     </g>
@@ -457,16 +457,16 @@
 
                     <h3 class="accordion__title">Your wallet</h3>
                     <div class="">
+                        <div class="chat__clipboard">
+                            <input type="text" name="walletClipboard" id="walletClipboard" readonly placeholder="3K9jqXW41RP69E9gvFNKva4iUdV55vXEuM"
+                                value="tfYUkasd32GJGbas671ftGASqd936DsdjkFGJ" class="chat__clipboard_input">
+                            <p data-clipboard-target="#walletClipboard" class="chat__clipboard_clipIcon copyToClipboard">
+                                <img src="./assets/img/cabinet/wallet/copy.svg" alt="copy">
+                            </p>
+                        </div>
                         <p>
-                            <div class="chat__clipboard">
-                                <input type="text" name="walletClipboard" id="walletClipboard" readonly placeholder="3K9jqXW41RP69E9gvFNKva4iUdV55vXEuM"
-                                    value="tfYUkasd32GJGbas671ftGASqd936DsdjkFGJ" class="chat__clipboard_input">
-                                <p data-clipboard-target="#walletClipboard" class="chat__clipboard_clipIcon copyToClipboard">
-                                    <img src="./assets/img/cabinet/wallet/copy.svg" alt="copy">
-                                </p>
-                            </div>Trading on Paypeer requires precision. You need to send the exact amount and using
-                            the correct Payment reference. Otherwise, the trade will be cancelled.
-                        </p>
+                            Trading on Paypeer requires precision. You need to send the exact amount and using
+                            the correct Payment reference. Otherwise, the trade will be cancelled.</p>
                     </div>
                 </section>
             </div>
@@ -494,51 +494,6 @@
     </div>
 </div>
 
-
-<!-- video -->
-
-<div id="video" class="video-modal-window mfp-with-anim mfp-hide">
-    <iframe src="https://www.youtube.com/embed/sA6RXHenKj8" allow="autoplay; encrypted-media"
-        allowfullscreen></iframe>
-</div>
-
-<!-- log-in -->
-
-<div id="log-in" class="login-popUp mfp-with-anim mfp-hide">
-    <form action="#" method="POST">
-        <div class="login-popUp__wrapper">
-            <section>
-                <h3 class="login-popUp__title">Log in</h3>
-                <p class="login-popUp__text">Please login or register first</p>
-            </section>
-            <div class="login-popUp__wrapper-input">
-                <label for="login-in-popUp" class="login-popUp__label">enter your email</label>
-                <input type="text" id="login-in-popUp" class="login-popUp__input" required placeholder="john_doe@gmail.com">
-            </div>
-            <button type="submit" class="login-popUp__button">continue</button>
-            <p class="login-popUp__wrapper_signinWith">Or sign in with</p>
-        </div>
-
-        <div class="login-popUp__socials">
-            <a href="#" class="login-popUp__socials_facebook">Facebook</a>
-            <a href="#" class="login-popUp__socials_google">Google</a>
-        </div>
-    </form>
-</div>
-
-<!-- thank you -->
-
-<div id="thank-you" class="thank-you-popUp login-popUp mfp-with-anim mfp-hide">
-    <form action="#" method="POST">
-        <div class="login-popUp__wrapper">
-            <section>
-                <h3 class="login-popUp__title">Thank you</h3>
-                <p class="login-popUp__text">Your feedback was successfully sent</p>
-            </section>
-            <button type="submit" class="login-popUp__button">continue</button>
-        </div>
-    </form>
-</div>
 <footer class="footer">
     <div class="footer__top-wrapper">
         <div class="footer__top-wrapper_item">
@@ -607,6 +562,51 @@
 
 </footer>
 
+
+<!-- video -->
+
+<div id="video" class="video-modal-window mfp-with-anim mfp-hide">
+    <iframe src="https://www.youtube.com/embed/sA6RXHenKj8" allow="autoplay; encrypted-media"
+        allowfullscreen></iframe>
+</div>
+
+<!-- log-in -->
+
+<div id="log-in" class="login-popUp mfp-with-anim mfp-hide">
+    <form action="#" method="POST">
+        <div class="login-popUp__wrapper">
+            <section>
+                <h3 class="login-popUp__title">Log in</h3>
+                <p class="login-popUp__text">Please login or register first</p>
+            </section>
+            <div class="login-popUp__wrapper-input">
+                <label for="login-in-popUp" class="login-popUp__label">enter your email</label>
+                <input type="text" id="login-in-popUp" class="login-popUp__input" required placeholder="john_doe@gmail.com">
+            </div>
+            <button type="submit" class="login-popUp__button">continue</button>
+            <p class="login-popUp__wrapper_signinWith">Or sign in with</p>
+        </div>
+
+        <div class="login-popUp__socials">
+            <a href="#" class="login-popUp__socials_facebook">Facebook</a>
+            <a href="#" class="login-popUp__socials_google">Google</a>
+        </div>
+    </form>
+</div>
+
+<!-- thank you -->
+
+<div id="thank-you" class="thank-you-popUp login-popUp mfp-with-anim mfp-hide">
+    <form action="#" method="POST">
+        <div class="login-popUp__wrapper">
+            <section>
+                <h3 class="login-popUp__title">Thank you</h3>
+                <p class="login-popUp__text">Your feedback was successfully sent</p>
+            </section>
+            <button type="submit" class="login-popUp__button">continue</button>
+        </div>
+    </form>
+</div>
 <!-- JS -->
 <script src="./assets/js/jquery-3.3.1.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>

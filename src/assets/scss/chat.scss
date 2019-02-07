@@ -127,6 +127,7 @@
         width: 100%;
         max-width: 530px;
         position: relative;
+        margin-bottom: 10px;
 
         &_input {
             background-color: transparent;
@@ -630,5 +631,9 @@
 
     .banner-accountIsClosed {
         background-color: $turquoise;
+    }
+
+    .accordion .ui-accordion-content {
+        padding: 25px 80px 25px 80px !important;
     }
 }
