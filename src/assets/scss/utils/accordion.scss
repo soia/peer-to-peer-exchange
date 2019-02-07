@@ -1,7 +1,7 @@
 body .accordion {
     padding: 0 122px;
 
-    @media screen and (min-width: 769px) and (max-width: 1250px) { 
+    @media screen and (min-width: 769px) and (max-width: 1300px) { 
         padding: 0 40px;
     }
 
@@ -265,7 +265,7 @@ body .accordion {
                     &:last-child {
                         font-family: $regularFont;
                         font-size: 18px;
-                        line-height: 21px;
+                        line-height: 25px;
                     }
                 }
             }
@@ -501,8 +501,8 @@ body .accordion {
         padding: 50px 80px 50px 80px;
         margin-bottom: 20px;
 
-        @media screen and (min-width: 769px) and (max-width: 1250px) { 
-            padding: 50px 43px 50px 43px;
+        @media screen and (min-width: 769px) and (max-width: 1300px) { 
+            padding: 50px 80px 50px 43px;
         }
     }
 }

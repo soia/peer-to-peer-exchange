@@ -3,6 +3,10 @@
     .tab-buy {
         margin: 20px 122px 40px 244px;
 
+        @media screen and (min-width: 769px) and (max-width: 1300px) { 
+            margin: 20px 40px 40px 160px !important;
+        }
+
         &__inputs {
             margin-right: 80px;
 
@@ -22,12 +26,11 @@
     &__advertisement {
         margin-top: 35px;
         flex-direction: column;
-        display: inline-flex;
+        width: 50%;
 
         &_item {
             margin-bottom: 30px;
             position: relative;
-            display: inline-block;
 
             .tab-buy__row__price_blue {
                 color: $red;
@@ -39,7 +42,7 @@
 
         .wallet-dropdown {
             margin: 50px 0 0 0;
-            width: calc(50% - 80px);
+            width: calc(100% - 80px);
         }
     }
 
@@ -64,6 +67,10 @@
             transform: translate(122px, -112px);
             position: absolute;
             display: none;
+
+            @media screen and (min-width: 769px) and (max-width: 1300px) { 
+                transform: translate(40px, -112px);
+            }
         }
     }
 
@@ -85,7 +92,7 @@
         &__wrapper-dropdown {
             display: flex;
             margin: 50px 0 0 0;
-            width: calc(50% - 80px);
+            width: calc(100% - 80px);
         }
     }
 

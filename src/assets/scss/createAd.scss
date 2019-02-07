@@ -7,7 +7,7 @@
         line-height: 34px;
         margin: 64px 0 98px 122px;
 
-        @media screen and (min-width: 769px) and (max-width: 1250px) { 
+        @media screen and (min-width: 769px) and (max-width: 1300px) { 
             margin: 64px 0 98px 40px;
         }
     }
@@ -15,7 +15,7 @@
     &__wrapper {
         margin-left: 159px;
 
-        @media screen and (min-width: 769px) and (max-width: 1250px) { 
+        @media screen and (min-width: 769px) and (max-width: 1300px) { 
             margin-left: 40px;
         }
     }
@@ -166,7 +166,7 @@
                 position: relative;
                 margin-top: 60px;
 
-                @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                @media screen and (min-width: 769px) and (max-width: 1300px) { 
                     width: 400px;
                 }
 
@@ -181,7 +181,7 @@
                     font-size: 30px;
                     outline: none;
 
-                    @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                    @media screen and (min-width: 769px) and (max-width: 1300px) { 
                         font-size: 24px;
                     }
 
@@ -227,7 +227,7 @@
                 width: 463px;
                 margin-right: 148px;
 
-                @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                @media screen and (min-width: 769px) and (max-width: 1300px) { 
                     width: 400px;
                     margin-right: 40px;
                 }
@@ -244,7 +244,7 @@
                 outline: none;
                 width: 100%;
 
-                @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                @media screen and (min-width: 769px) and (max-width: 1300px) { 
                     font-size: 24px;
                 }
 
@@ -273,7 +273,7 @@
                     outline: none;
                     font-weight: $normal !important;
 
-                    @media screen and (min-width: 769px) and (max-width: 1250px) { 
+                    @media screen and (min-width: 769px) and (max-width: 1300px) { 
                         font-size: 24px;
                     }
                 }

@@ -329,19 +329,31 @@
     },
 
     initWalletSelect: function () {
-      let toggleSelect = $(".custom_select__option"),
-        selectChoosen = $(".wallet-dropdown__choosen"),
-        dropdownInput = $(".wallet-dropdown__input"),
-        dropdown = $(".wallet-dropdown");
+      let dropdownInput = $(".wallet-dropdown__input"),
+          dropdown = $(".wallet-dropdown"),
+          toggleSelect = $(".custom_select__option"),
+          selectChoosen = $(".wallet-dropdown__choosen"),
+          selectHeader = $(".custom_select__header"),
+          selectOptions = $(".custom_select__options");
 
       toggleSelect.each(function () {
         $(this).on("click", function () {
-          if (selectChoosen.attr("data-choosen") === 'Your Personal Wallet') {
-            dropdownInput.show();
-            dropdown.addClass('wallet-dropdown_open');
+          if ($(this).closest(selectOptions).siblings(selectChoosen).attr("data-choosen") === 'Your Personal Wallet') {
+            $(this)
+            .closest(selectHeader)
+            .siblings(dropdownInput)
+            .show();
+            $(this)
+            .closest(dropdown)
+            .addClass('wallet-dropdown_open');
           } else {
-            dropdownInput.hide();
-            dropdown.removeClass('wallet-dropdown_open');
+            $(this)
+            .closest(selectHeader)
+            .siblings(dropdownInput)
+            .hide();
+            $(this)
+            .closest(dropdown)
+            .removeClass('wallet-dropdown_open');
           }
         });
       });
