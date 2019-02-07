@@ -21,10 +21,13 @@
 
     &__advertisement {
         margin-top: 35px;
+        flex-direction: column;
+        display: inline-flex;
 
         &_item {
             margin-bottom: 30px;
             position: relative;
+            display: inline-block;
 
             .tab-buy__row__price_blue {
                 color: $red;
@@ -32,6 +35,11 @@
                 font-size: 24px;
                 line-height: 28px;
             }
+        }
+
+        .wallet-dropdown {
+            margin: 50px 0 0 0;
+            width: calc(50% - 80px);
         }
     }
 
@@ -85,6 +93,7 @@
         border: 1px solid $turquoise;
         color: $turquoise;
         margin-top: 32px;
+        z-index: -1;
     }
 
     .list-sellers {
@@ -98,5 +107,6 @@
         border: 1px solid $red;
         color: $red;
         margin-top: 32px;
+        z-index: -1;
     } 
 }

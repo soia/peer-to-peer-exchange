@@ -8,7 +8,6 @@
       peerToPeer.initOpenModal();
       peerToPeer.initTabs();
       peerToPeer.initShowHideRewiews();
-      peerToPeer.initSelect();
       peerToPeer.initUploadImage();
       peerToPeer.initCopyToClipboard();
       peerToPeer.initQrCode();
@@ -16,12 +15,14 @@
       peerToPeer.initHideBannerAccountClosed();
       peerToPeer.initToggleHeaderIcon();
       peerToPeer.initHeaderCabinetMenu();
-      peerToPeer.initCustomSelect();
       peerToPeer.initScrollDownChat();
       peerToPeer.initAutoCloseMenu();
       peerToPeer.initAosAnimation();
       peerToPeer.initshowAuthentication();
       peerToPeer.initshowUploadedFiles();
+      peerToPeer.initSelect();
+      peerToPeer.initCustomSelect();
+      peerToPeer.initWalletSelect();
       peerToPeer.initMenu();
       peerToPeer.initSearch();
       peerToPeer.initLiked();
@@ -108,10 +109,6 @@
         $(this).toggleClass('openRewiews');
         $(this).siblings(".openRewiews").toggleClass('openRewiews');
       });
-    },
-
-    initSelect: function () {
-      $('select').niceSelect();
     },
 
     initUploadImage: function () {
@@ -224,6 +221,59 @@
       });
     },
 
+    initScrollDownChat: function () {
+      const scrollDown = $('#scrollDown');
+      scrollDown.scrollTop(scrollDown.prop("scrollHeight"));
+    },
+
+    initAutoCloseMenu: function () {
+      $(document).mouseup(function (e) {
+        var block = $(".menu-active");
+        if (!block.is(e.target)
+          && block.has(e.target).length === 0) {
+          block.toggleClass('menu-active');
+        }
+      });
+    },
+
+    initAosAnimation: function () {
+      AOS.init();
+    },
+
+    initshowAuthentication: function () {
+      let hideContainer = $(".accordion__authentication-container_right-side-btn"),
+        container = $('.accordion__authentication-container'),
+        open = $('.accordion__authentication-open'),
+        cancel = $('.accordion__authentication-open_btn-wrapper_cancel');
+
+      hideContainer.on("click", function () {
+        $(this).closest(container).hide();
+        $(this).closest(container).siblings(open).show();
+      });
+
+      cancel.on("click", function () {
+        $(this).closest(open).hide();
+        $(this).closest(open).siblings(container).show();
+      });
+    },
+
+    initshowUploadedFiles: function () {
+      const input = document.getElementById('addFiles'),
+        output = document.getElementById('fileList');
+
+      if (input) {
+        input.addEventListener("change", showFiles);
+
+        function showFiles() {
+          output.innerHTML = '<ul>';
+          for (let i = 0; i < input.files.length; ++i) {
+            output.innerHTML += '<li>' + '<img src="./assets/img/cabinet/settings/file-icon.svg" alt="file-icon">' + input.files.item(i).name + '</li>';
+          }
+          output.innerHTML += '</ul>';
+        }
+      }
+    },
+
     initCustomSelect: function () {
       if (!$(".custom_select").length) return false;
       let toggleSelect = $(".toggleSelect"),
@@ -274,58 +324,27 @@
       }
     },
 
-    initScrollDownChat: function () {
-      const scrollDown = $('#scrollDown');
-      scrollDown.scrollTop(scrollDown.prop("scrollHeight"));
+    initSelect: function () {
+      $('select').niceSelect();
     },
 
-    initAutoCloseMenu: function () {
-      $(document).mouseup(function (e) {
-        var block = $(".menu-active");
-        if (!block.is(e.target)
-          && block.has(e.target).length === 0) {
-          block.toggleClass('menu-active');
-        }
-      });
-    },
+    initWalletSelect: function () {
+      let toggleSelect = $(".custom_select__option"),
+        selectChoosen = $(".wallet-dropdown__choosen"),
+        dropdownInput = $(".wallet-dropdown__input"),
+        dropdown = $(".wallet-dropdown");
 
-    initAosAnimation: function () {
-      AOS.init();
-    },
-
-
-    initshowAuthentication: function () {
-      let hideContainer = $(".accordion__authentication-container_right-side-btn"),
-        container = $('.accordion__authentication-container'),
-        open = $('.accordion__authentication-open'),
-        cancel = $('.accordion__authentication-open_btn-wrapper_cancel');
-
-      hideContainer.on("click", function () {
-        $(this).closest(container).hide();
-        $(this).closest(container).siblings(open).show();
-      });
-
-      cancel.on("click", function () {
-        $(this).closest(open).hide();
-        $(this).closest(open).siblings(container).show();
-      });
-    },
-
-    initshowUploadedFiles: function () {
-      const input = document.getElementById('addFiles'),
-        output = document.getElementById('fileList');
-
-      if (input) {
-        input.addEventListener("change", showFiles);
-
-        function showFiles() {
-          output.innerHTML = '<ul>';
-          for (let i = 0; i < input.files.length; ++i) {
-            output.innerHTML += '<li>' + '<img src="./assets/img/cabinet/settings/file-icon.svg" alt="file-icon">' + input.files.item(i).name + '</li>';
+      toggleSelect.each(function () {
+        $(this).on("click", function () {
+          if (selectChoosen.attr("data-choosen") === 'Your Personal Wallet') {
+            dropdownInput.show();
+            dropdown.addClass('wallet-dropdown_open');
+          } else {
+            dropdownInput.hide();
+            dropdown.removeClass('wallet-dropdown_open');
           }
-          output.innerHTML += '</ul>';
-        }
-      }
+        });
+      });
     },
 
     initMenu: function () {

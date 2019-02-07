@@ -99,13 +99,16 @@
                 </div>
             
                 <div class="wallet-dropdown">
+                    <label for="wallet-dropdown__input" class="wallet-dropdown__label">receive SSC to *</label>
+                    <input type="text" id="wallet-dropdown__input" placeholder="Input your SSC adress here" class="wallet-dropdown__input wallet-dropdown__input_active">
                     <div class="custom_select custom_select__header">
-                        <div data-choosen="Your Paypeer Wallet" class="custom_select__choosen toggleSelect selected">
+                        <div data-choosen="Your Paypeer Wallet" class="custom_select__choosen wallet-dropdown__choosen toggleSelect selected">
                             <span>Your Paypeer Wallet</span>
                         </div>
                         <div class="custom_select__options">
                             <div data-currency="Your Personal Wallet" class="custom_select__option selectOption">
                                 <span>Your Personal Wallet</span>
+                                <p class="custom_select__option_fee">Withdrawal fee SSC 0.005</p>
                             </div>
                         </div>
                     </div>
