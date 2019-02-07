@@ -190,7 +190,7 @@
                 <div class="verifyDocuments__info_addFiles_wrapper">
                     <div class="verifyDocuments__info_addFiles-btn">
                         <label for="addFiles">+ Add files</label>
-                        <input type="file" id="addFiles" class="addFiles" multiple>
+                        <input maxlength="32" type="file" id="addFiles" class="addFiles" multiple>
                     </div>
                     <div class="help-block">Must be required.</div>
                     <div id="fileList" class="verifyDocuments__info_addFiles_wrapper-list"></div>
@@ -200,7 +200,7 @@
                         <img class="verifyDocuments__info_addFiles_input-wrapper_item-img" src="./assets/img/cabinet/settings/user.svg"
                             alt="user">
                         <label for="realName">Real name</label>
-                        <input type="text" name="realName" id="realName" placeholder="John Doe">
+                        <input maxlength="32" type="text" name="realName" id="realName" placeholder="John Doe">
                     </div>
                     <div class="verifyDocuments__info_addFiles_input-wrapper_item">
                         <svg class="verifyDocuments__info_addFiles_input-wrapper_item-img" width="24" height="24" viewBox="0 0 24 24"
@@ -213,7 +213,7 @@
                             </mask>
                         </svg>
                         <label for="documentNumber">Document Number</label>
-                        <input type="text" name="documentNumber" id="documentNumber" placeholder="NV 245802">
+                        <input maxlength="32" type="text" name="documentNumber" id="documentNumber" placeholder="NV 245802">
                     </div>
 
                     <button type="submit" class="verifyDocuments__info_addFiles_input-wrapper_btn"><span>Verify</span></button>
@@ -310,7 +310,7 @@
             </section>
             <div class="login-popUp__wrapper-input">
                 <label for="login-in-popUp" class="login-popUp__label">enter your email</label>
-                <input type="text" id="login-in-popUp" class="login-popUp__input" required placeholder="john_doe@gmail.com">
+                <input maxlength="32" maxlength="32" type="text" id="login-in-popUp" class="login-popUp__input" required placeholder="john_doe@gmail.com">
             </div>
             <button type="submit" class="login-popUp__button">continue</button>
             <p class="login-popUp__wrapper_signinWith">Or sign in with</p>

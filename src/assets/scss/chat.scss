@@ -300,6 +300,7 @@
                     color: $semiBlack;
                     font-family: $regularFont;
                     font-size: 14px;
+                    line-height: 18px;
                     margin-left: 40px;
                     width: calc(50% - 90px);
                     background-color: $white;
@@ -362,15 +363,16 @@
                     color: $white;
                     font-family: $regularFont;
                     font-size: 14px;
+                    line-height: 18px;
                     margin-right: 40px;
                     width: calc(50% - 90px);
                     background-color: $lightBlue;
                     display: flex;
                     align-items: center;
-                    justify-content: flex-end;
                     border-radius: 35px;
                     border-bottom-right-radius: 0;
                     padding: 20px 40px;
+                    justify-content: flex-start;
                 }
 
                 &-messageFile {
@@ -447,6 +449,7 @@
                     color: $semiBlack;
                     font-family: $regularFont;
                     font-size: 14px;
+                    line-height: 18px;
                     margin-left: 40px;
                     width: calc(50% - 90px);
                     background-color: $white;

@@ -15,7 +15,6 @@ body .accordion {
                 color: $semiBlack;
                 font-family: $regularFont;
                 font-size: 24px;
-                line-height: 24px;
 
                 .disabled {
                     color: $lightBlue;
@@ -220,7 +219,6 @@ body .accordion {
             color: $semiBlack;
             font-family: $regularFont;
             font-size: 24px;
-            line-height: 24px;
             display: none;
         }
 
@@ -340,7 +338,6 @@ body .accordion {
                 color: $semiBlack;
                 font-family: $regularFont;
                 font-size: 24px;
-                line-height: 24px;
             }
         }
 
@@ -365,7 +362,6 @@ body .accordion {
                 color: $semiBlack;
                 font-family: $regularFont;
                 font-size: 24px;
-                line-height: 24px;
 
                 .disabled {
                     color: $lightBlue;
@@ -402,7 +398,6 @@ body .accordion {
                 color: $semiBlack;
                 font-family: $regularFont;
                 font-size: 24px;
-                line-height: 24px;
             }
         }
 
@@ -430,7 +425,6 @@ body .accordion {
             color: $semiBlack;
             font-family: $regularFont;
             font-size: 24px;
-            line-height: 24px;
             margin-bottom: 40px;
         }
     }
@@ -463,7 +457,6 @@ body .accordion {
         font-family: $regularFont;
         font-weight: $medium;
         font-size: 24px;
-        line-height: 24px;
         border: none;
         outline: none;
         padding: 28px 43px;
@@ -500,6 +493,7 @@ body .accordion {
         background-color: $white;
         padding: 50px 80px 50px 80px;
         margin-bottom: 20px;
+        line-height: 31px;
 
         @media screen and (min-width: 769px) and (max-width: 1300px) { 
             padding: 50px 80px 50px 43px;

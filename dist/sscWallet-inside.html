@@ -177,7 +177,7 @@
                         </svg>
                         <div class="sscWalletInside-Qr-container__input">
                             <label for="inputQrCode">Wallet</label>
-                            <input type="text" name="inputQrCode" id="inputQrCode" readonly placeholder="3K9jqXW41RP69E9gvFNKva4iUdV55vXEuM"
+                            <input maxlength="32" type="text" name="inputQrCode" id="inputQrCode" readonly placeholder="3K9jqXW41RP69E9gvFNKva4iUdV55vXEuM"
                                 value="3K9jqXW41RP69E9gvFNKva4iUdV55vXEuM">
                             <p data-clipboard-target="#inputQrCode" class="buySell__price-form__inputs_currency copyToClipboard copyToClipboard-wallet-inside">
                                 <img src="./assets/img/cabinet/wallet/copy.svg" alt="copy">
@@ -507,7 +507,7 @@
                                 fill="black" />
                         </svg>
                         <label for="availableBalance">Available balance</label>
-                        <input type="number" name="availableBalance" id="availableBalance" placeholder="0.00000712"
+                        <input maxlength="32" type="number" name="availableBalance" id="availableBalance" placeholder="0.00000712"
                             step="0.001">
                     </div>
                     <div class="sscWalletInside-tabs__input-wrapper_item">
@@ -517,7 +517,7 @@
                                 fill="black" />
                         </svg>
                         <label for="sscAmount">SSC amount*</label>
-                        <input type="text" name="sscAmount" id="sscAmount" placeholder="Write your amount">
+                        <input maxlength="32" type="text" name="sscAmount" id="sscAmount" placeholder="Write your amount">
                         <p class="sscWalletInside-tabs__input-wrapper_item-dropDown-text">Maximum number of ssc
                             withdrawn:-0.00000000</p>
                     </div>
@@ -528,7 +528,7 @@
                                 fill="black" />
                         </svg>
                         <label for="walletToSend">Wallet to send</label>
-                        <input type="text" name="walletToSend" id="walletToSend" placeholder="3K9jqXW41RP69E9gvFNKva4iUdV55vXEuM">
+                        <input maxlength="32" type="text" name="walletToSend" id="walletToSend" placeholder="3K9jqXW41RP69E9gvFNKva4iUdV55vXEuM">
                     </div>
 
                     <button type="submit" class="sscWalletInside-tabs__input-wrapper_btn"><span>To Send</span></button>
@@ -1292,7 +1292,7 @@
             </section>
             <div class="login-popUp__wrapper-input">
                 <label for="login-in-popUp" class="login-popUp__label">enter your email</label>
-                <input type="text" id="login-in-popUp" class="login-popUp__input" required placeholder="john_doe@gmail.com">
+                <input maxlength="32" maxlength="32" type="text" id="login-in-popUp" class="login-popUp__input" required placeholder="john_doe@gmail.com">
             </div>
             <button type="submit" class="login-popUp__button">continue</button>
             <p class="login-popUp__wrapper_signinWith">Or sign in with</p>
