@@ -258,20 +258,45 @@
     },
 
     initshowUploadedFiles: function () {
-      const input = document.getElementById('addFiles'),
-        output = document.getElementById('fileList');
+      const inputaddAvatar = $("#addAvatar"),
+        inputaddFiles = $("#addFiles"),
+        output = $(".verifyDocuments__info_addFiles_wrapper-list"),
+        wrapper = $(".verifyDocuments__info_addFiles_wrapper");
 
-      if (input) {
-        input.addEventListener("change", showFiles);
+      if (inputaddAvatar) {
+        inputaddAvatar.on("change", function () {
+          $(this)
+          .closest(wrapper)
+          .find(output)
+          .html('<ul>');
 
-        function showFiles() {
-          output.innerHTML = '<ul>';
-          for (let i = 0; i < input.files.length; ++i) {
-            output.innerHTML += '<li>' + '<img src="./assets/img/cabinet/settings/file-icon.svg" alt="file-icon">' + input.files.item(i).name + '</li>';
+          for (let i = 0; i < inputaddAvatar[0].files.length; ++i) {
+            $(this)
+            .closest(wrapper)
+            .find(output)
+            .html(output.html() + '<li><img src="./assets/img/cabinet/settings/file-icon.svg" alt="file-icon">' + inputaddAvatar[0].files.item(i).name + '</li>');
           }
-          output.innerHTML += '</ul>';
-        }
-      }
+          
+          $(this)
+          .closest(wrapper)
+          .find(output)
+          .html(output.html() + '</ul>');
+        });
+      };
+
+      if (inputaddFiles) {
+
+        inputaddFiles.on("change", function () {
+
+          $(this).closest(wrapper).find(output).html('<ul>');
+
+          for (let i = 0; i < inputaddFiles[0].files.length; ++i) {
+            $(this).closest(wrapper).find(output).html($(this).closest(wrapper).find(output).html() + '<li><img src="./assets/img/cabinet/settings/file-icon.svg" alt="file-icon">' + inputaddFiles[0].files.item(i).name + '</li>');
+          }
+
+          $(this).closest(wrapper).find(output).html($(this).closest(wrapper).find(output).html() + '</ul>');
+        });
+      };
     },
 
     initCustomSelect: function () {

@@ -39,3 +39,83 @@ html {
 @import "./advertisement";
 @import "./buy-sell";
 @import "./chat";
+
+
+.sim-button{
+	cursor: pointer;
+}
+
+.button28 {
+	color: rgba(255,255,255,1);
+	transition: all 0.3s;
+  position: relative;
+  width: 220px;
+  height: 60px;
+  margin: 0;
+  background-color: #ff455c;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+.button28 span{
+  transition: all 0.3s;
+  font-family: "CoreSans Regular",sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: $white;
+}
+.button28 a{
+	color: rgba(51,51,51,1);
+	text-decoration: none;
+	display: block;
+}
+.button28::before{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0;
+	transition: all 0.3s;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #9b9b9b;
+	border-bottom-color: #9b9b9b;
+	transform: scale(0.1, 1);
+	
+}
+.button28:hover span{
+  letter-spacing: 4px;
+  color: #9b9b9b;
+	}
+.button28:hover::before{
+	opacity: 1;	
+	transform: scale(1, 1);
+	
+}
+.button28::after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	transition: all 0.3s;
+	
+}
+.button28:hover::after{
+	opacity: 0;	
+	transform: scale(0.1, 1);
+}

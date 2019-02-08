@@ -145,7 +145,8 @@
                 </div>
                 <p class="verifyDocuments__warning_info-text_warningInfo">Warning Info</p>
             </div>
-            <p class="verifyDocuments__warning_info-text_identity">Identity verification status: <span class="not-uploaded">NOT
+            <p class="verifyDocuments__warning_info-text_identity">Identity verification status: <span
+                    class="not-uploaded">NOT
                     UPLOADED</span></p>
             <div class="verifyDocuments__warning_list">
                 <p>The verification picture needs to satisfy these conditions:</p>
@@ -162,7 +163,8 @@
                 <img src="./assets/img/cabinet/settings/alert.svg" alt="alert"></div>
             <div class="verifyDocuments__warning_verification-text">
                 <p class="verifyDocuments__warning_verification-text_verification">The verification process is instant.
-                    It takes only <span class="verification-minutes">2 - 3 minutes</span> to get your account verified.</p>
+                    It takes only <span class="verification-minutes">2 - 3 minutes</span> to get your account verified.
+                </p>
             </div>
         </div>
     </div>
@@ -187,36 +189,51 @@
 
         <div class="verifyDocuments__info_addFiles">
             <form action="#" class="verifyDocuments__info_addFiles-form">
-                <div class="verifyDocuments__info_addFiles_wrapper">
-                    <div class="verifyDocuments__info_addFiles-btn">
-                        <label for="addFiles">+ Add files</label>
-                        <input maxlength="32" type="file" id="addFiles" class="addFiles" multiple>
+                <div class="flex">
+                    <div class="verifyDocuments__info_addFiles_wrapper">
+                        <div class="verifyDocuments__info_addFiles-btn">
+                            <label for="addAvatar">+ Add Avatar</label>
+                            <input maxlength="32" type="file" id="addAvatar" class="addFiles">
+                        </div>
+                        <div class="help-block">Must be required.</div>
+                        <div id="fileList" class="verifyDocuments__info_addFiles_wrapper-list"></div>
                     </div>
-                    <div class="help-block">Must be required.</div>
-                    <div id="fileList" class="verifyDocuments__info_addFiles_wrapper-list"></div>
+                
+                    <div class="verifyDocuments__info_addFiles_wrapper">
+                        <div class="verifyDocuments__info_addFiles-btn">
+                            <label for="addFiles">+ Add files</label>
+                            <input maxlength="32" type="file" id="addFiles" class="addFiles" multiple>
+                        </div>
+                        <div class="help-block">Must be required.</div>
+                        <div id="fileList" class="verifyDocuments__info_addFiles_wrapper-list"></div>
+                    </div>
                 </div>
                 <div class="verifyDocuments__info_addFiles_input-wrapper">
                     <div class="verifyDocuments__info_addFiles_input-wrapper_item">
-                        <img class="verifyDocuments__info_addFiles_input-wrapper_item-img" src="./assets/img/cabinet/settings/user.svg"
-                            alt="user">
+                        <img class="verifyDocuments__info_addFiles_input-wrapper_item-img"
+                            src="./assets/img/cabinet/settings/user.svg" alt="user">
                         <label for="realName">Real name</label>
                         <input maxlength="32" type="text" name="realName" id="realName" placeholder="John Doe">
                     </div>
                     <div class="verifyDocuments__info_addFiles_input-wrapper_item">
-                        <svg class="verifyDocuments__info_addFiles_input-wrapper_item-img" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12ZM13 16V12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12V16C11 16.5523 11.4477 17 12 17C12.5523 17 13 16.5523 13 16ZM12.7071 8.29289C13.0976 8.68342 13.0976 9.31658 12.7071 9.70711C12.3166 10.0976 11.6834 10.0976 11.2929 9.70711C10.9024 9.31658 10.9024 8.68342 11.2929 8.29289C11.6834 7.90237 12.3166 7.90237 12.7071 8.29289Z"
+                        <svg class="verifyDocuments__info_addFiles_input-wrapper_item-img" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12ZM13 16V12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12V16C11 16.5523 11.4477 17 12 17C12.5523 17 13 16.5523 13 16ZM12.7071 8.29289C13.0976 8.68342 13.0976 9.31658 12.7071 9.70711C12.3166 10.0976 11.6834 10.0976 11.2929 9.70711C10.9024 9.31658 10.9024 8.68342 11.2929 8.29289C11.6834 7.90237 12.3166 7.90237 12.7071 8.29289Z"
                                 fill="#A0A0A0" />
                             <mask maskUnits="userSpaceOnUse" x="1" y="1" width="22" height="22">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12ZM13 16V12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12V16C11 16.5523 11.4477 17 12 17C12.5523 17 13 16.5523 13 16ZM12.7071 8.29289C13.0976 8.68342 13.0976 9.31658 12.7071 9.70711C12.3166 10.0976 11.6834 10.0976 11.2929 9.70711C10.9024 9.31658 10.9024 8.68342 11.2929 8.29289C11.6834 7.90237 12.3166 7.90237 12.7071 8.29289Z"
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12ZM13 16V12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12V16C11 16.5523 11.4477 17 12 17C12.5523 17 13 16.5523 13 16ZM12.7071 8.29289C13.0976 8.68342 13.0976 9.31658 12.7071 9.70711C12.3166 10.0976 11.6834 10.0976 11.2929 9.70711C10.9024 9.31658 10.9024 8.68342 11.2929 8.29289C11.6834 7.90237 12.3166 7.90237 12.7071 8.29289Z"
                                     fill="white" />
                             </mask>
                         </svg>
                         <label for="documentNumber">Document Number</label>
-                        <input maxlength="32" type="text" name="documentNumber" id="documentNumber" placeholder="NV 245802">
+                        <input maxlength="32" type="text" name="documentNumber" id="documentNumber"
+                            placeholder="NV 245802">
                     </div>
 
-                    <button type="submit" class="verifyDocuments__info_addFiles_input-wrapper_btn"><span>Verify</span></button>
+                    <button type="submit"
+                        class="verifyDocuments__info_addFiles_input-wrapper_btn"><span>Verify</span></button>
                 </div>
             </form>
         </div>

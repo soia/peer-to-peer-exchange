@@ -122,6 +122,7 @@
 
             &-btn {
                 margin-right: 100px;
+                width: 100%;
 
                 label {
                     color: $white;
@@ -131,7 +132,9 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    width: 146px;
+                    width: fit-content;
+                    padding: 0 10px;
+                    min-width: 146px;
                     height: 48px;
                     font-size: 14px;
                     line-height: 14px;
@@ -190,7 +193,7 @@
                         margin: 24px 24px 0 0;
                         text-overflow: ellipsis;
                         overflow: hidden;
-                        width: 250px;
+                        width: 300px;
                     }
 
                     img { 
