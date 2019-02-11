@@ -169,6 +169,12 @@
             }
         }
 
+        &_mute { 
+            &-disabled {
+                display: none;
+            }
+        }
+
         &_bell {
             margin: 0 28px 0 24px;
 
@@ -312,8 +318,12 @@
         }    
 
         .header-icon-active {
-            svg path {
-                fill: $lightBlue;
+            .log-in-header__right-side_mute-ative {
+                display: none;
+            }
+
+            .log-in-header__right-side_mute-disabled {
+                display: block;
             }
         }
 
