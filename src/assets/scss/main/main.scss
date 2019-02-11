@@ -123,6 +123,23 @@ body {
     input[type=number]{
     -moz-appearance: textfield;
     }
+
+    &:not(.landing_body) {
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: $bgColor;
+        }
+    
+        main {
+            margin-top: 76px;
+        }
+    
+        .header__left-side, .header__right-side, .log-in-header__right-side {
+            padding-bottom: 21px;
+        }
+    }
 }
 
 // custom scroll

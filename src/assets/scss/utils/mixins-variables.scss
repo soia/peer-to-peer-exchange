@@ -25,67 +25,403 @@ $mainBorder: 1px solid rgba(207, 213, 231, .5);
 
 // Mixins
 
-@mixin btn-empty-black { 
-    border: 1px solid $semiBlack;
-    color: $semiBlack;
-    font-family: $regularFont;
-    font-weight: $medium;
-    background-color: transparent;
-    font-size: 14px;
-    line-height: 14px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    cursor: pointer;
+@mixin btn-empty-green { 
+    color: rgba(255,255,255,1);
+    transition: all 0.5s;
+    border: 1px solid rgba(255,255,255,0.5);
     position: relative;
+    margin: 0;
+    background-color: transparent;
+    border: 1px solid $turquoise;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    outline: none;
 
-    &:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        transform: scaleY(0);
-        transform-origin: top center;
-        background: $lightBlue;
-        transition: transform .4s,-webkit-transform .4s,-moz-transform .4s,-o-transform .4s;
+    &:hover {
+        span {
+            color: $white;
+        }
+    }
+
+	span{
+		z-index: 2;	
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		color: $turquoise;
+		font-family: $regularFont;
+		font-weight: 700;
+		font-size: 14px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
     }
     
-    &:hover:after {
-        transform: scaleY(1);
-        transform-origin: bottom center;
+	&::before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		opacity: 0;
+		background-color: $turquoise;
+		transition: all 0.4s;
+		transform: scale(1, 0.5);
     }
+    
+	&:hover::before{
+		opacity: 1;
+		transform: scale(1, 1);
+	}
+}
+
+@mixin btn-green {
+    color: rgba(255,255,255,1);
+    transition: all 0.5s;
+    border: 1px solid rgba(255,255,255,0.5);
+    position: relative;
+    margin: 0;
+    background-color: $turquoise;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+
+    &:hover {
+        border: 1px solid $turquoise;
+
+        span {
+            color: $turquoise;
+        }
+    }
+
+	span{
+		z-index: 2;	
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		color: $white;
+		font-family: $regularFont;
+		font-weight: 700;
+		font-size: 14px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+    }
+    
+	&::before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		opacity: 0;
+		background-color: $white;
+		transition: all 0.4s;
+		transform: scale(1, 0.5);
+    }
+    
+	&:hover::before{
+		opacity: 1;
+		transform: scale(1, 1);
+	}
+}
+
+@mixin btn-empty-red { 
+    color: rgba(255,255,255,1);
+    transition: all 0.5s;
+    border: 1px solid rgba(255,255,255,0.5);
+    position: relative;
+    margin: 0;
+    background-color: transparent;
+    border: 1px solid $red;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+        span {
+            color: $white;
+        }
+    }
+
+	span{
+		z-index: 2;	
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		color: $red;
+		font-family: $regularFont;
+		font-weight: 700;
+		font-size: 14px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+    }
+    
+	&::before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		opacity: 0;
+		background-color: $red;
+		transition: all 0.4s;
+		transform: scale(1, 0.5);
+    }
+    
+	&:hover::before{
+		opacity: 1;
+		transform: scale(1, 1);
+	}
+}
+
+@mixin btn-red {
+    color: rgba(255,255,255,1);
+    transition: all 0.5s;
+    border: 1px solid rgba(255,255,255,0.5);
+    position: relative;
+    margin: 0;
+    background-color: $red;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+
+    &:hover {
+        border: 1px solid $red;
+
+        span {
+            color: $red;
+        }
+    }
+
+	span{
+		z-index: 2;	
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		color: $white;
+		font-family: $regularFont;
+		font-weight: 700;
+		font-size: 14px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+    }
+    
+	&::before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		opacity: 0;
+		background-color: $white;
+		transition: all 0.4s;
+		transform: scale(1, 0.5);
+    }
+    
+	&:hover::before{
+		opacity: 1;
+		transform: scale(1, 1);
+	}
+}
+
+@mixin btn-blue {
+    color: rgba(255,255,255,1);
+    transition: all 0.5s;
+    border: 1px solid rgba(255,255,255,0.5);
+    position: relative;
+    margin: 0;
+    background-color: $lightBlue;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
 
     &:hover {
         border: 1px solid $lightBlue;
 
-        .btn-white-text, span {
-            color: $white;
-            position: relative;
-            z-index: 1;
+        span {
+            color: $lightBlue;
         }
     }
+
+	span{
+		z-index: 2;	
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		color: $white;
+		font-family: $regularFont;
+		font-weight: 700;
+		font-size: 14px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+    }
+    
+	&::before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		opacity: 0;
+		background-color: $white;
+		transition: all 0.4s;
+		transform: scale(1, 0.5);
+    }
+    
+	&:hover::before{
+		opacity: 1;
+		transform: scale(1, 1);
+	}
 }
 
-@mixin btn-blue { 
-    background-color: $lightBlue;
-    color: $white;
-    font-family: $regularFont;
-    font-weight: $bold;
-    font-size: 14px;
-    line-height: 14px;
+@mixin btn-empty-black { 
+    color: rgba(255,255,255,1);
+    transition: all 0.5s;
+    border: 1px solid rgba(255,255,255,0.5);
+    position: relative;
+    margin: 0;
+    background-color: transparent;
+    border: 1px solid $black;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: all 0.25s;
+    cursor: pointer;
+    outline: none;
 
     &:hover {
-        opacity: 0.9;
+        border: 1px solid $lightBlue;
+
+        span {
+            color: $white;
+        }
+    }
+
+	span{
+		z-index: 2;	
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		color: $black;
+		font-family: $regularFont;
+		font-weight: 700;
+		font-size: 14px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+    }
+    
+	&::before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		opacity: 0;
+        background-color: $lightBlue;
+		transition: all 0.4s;
+		transform: scale(1, 0.5);
+    }
+    
+	&:hover::before{
+		opacity: 1;
+		transform: scale(1, 1);
+	}
+}
+
+@mixin tab-buy-sell {
+
+    .tab-container__tab-item {
+        width: 164px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        span {
+            font-family: $regularFont;
+            font-weight: $bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 14px;
+            line-height: 14px;
+            position: relative;
+            z-index: 9;
+        }
+        
+        &:first-child {
+            color: $turquoise;
+            border: 1px solid $turquoise;
+            position: relative;
+        }
+
+        &:last-child {
+            color: $red;
+            border: 1px solid $red;
+            position: relative;
+        }
+    }
+
+    .red.selected-item {
+        background-color: $red;
+        span {
+            color: $white;
+        }
+    }
+    
+    .turquoise.selected-item {
+        background-color: $turquoise;
+    
+        span {
+            color: $white;
+        }
     }
 }
 
@@ -171,18 +507,6 @@ $mainBorder: 1px solid rgba(207, 213, 231, .5);
     letter-spacing: 2px;
 }
 
-@mixin btn-red {
-    border: 2px solid $red;
-    transition: all 0.25s;
-    position: relative;
-    text-transform: uppercase;
-    transition: all 0.25s;
-
-    &:hover {
-        opacity: 0.9;
-    }
-}
-
 @mixin empty-red-btn-hover {
     &:after {
         content: "";
@@ -223,58 +547,6 @@ $mainBorder: 1px solid rgba(207, 213, 231, .5);
     height: 100%;
     transition: all 0.25s;
     letter-spacing: 2px;
-}
-
-@mixin tab-buy-sell {
-
-    .tab-container__tab-item {
-        width: 164px;
-        height: 36px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-
-        span {
-            font-family: $regularFont;
-            font-weight: $bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 14px;
-            line-height: 14px;
-            position: relative;
-            z-index: 9;
-        }
-        
-        &:first-child {
-            color: $turquoise;
-            border: 1px solid $turquoise;
-            position: relative;
-            @include empty-turquoise-btn-hover;
-        }
-
-        &:last-child {
-            color: $red;
-            border: 1px solid $red;
-            position: relative;
-            @include empty-red-btn-hover;
-        }
-    }
-
-    .red.selected-item {
-        background-color: $red;
-        span {
-            color: $white;
-        }
-    }
-    
-    .turquoise.selected-item {
-        background-color: $turquoise;
-    
-        span {
-            color: $white;
-        }
-    }
 }
 
 @mixin linkMenu {

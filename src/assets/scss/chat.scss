@@ -187,35 +187,16 @@
         margin: 0 0 65px 120px;
 
         &-green, &-red, &-black  {
-            font-family: $regularFont;
-            font-weight: $medium;
-            font-size: 14px;
-            line-height: 14px;
             width: 220px;
             height: 60px;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        &-green, &-red {
-            color: $white;
-            transition: all 0.25s;
-            margin-right: 24px;
-
-            &:hover {
-                opacity: 0.9;
-            }
         }
 
         &-green {
-            background-color: $turquoise;
+           @include btn-green;
         }
 
         &-red {
-            background-color: $red;
+            @include btn-red;
         }
 
         &-black {
@@ -484,7 +465,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin: 60px 0;
+            margin: 60px 0 60px 122px;
 
             &-line {
                 width: 100%;
@@ -638,5 +619,9 @@
 
     .accordion .ui-accordion-content {
         padding: 25px 80px 25px 80px !important;
+    }
+
+    .open-chat-disabled {
+        display: none;
     }
 }

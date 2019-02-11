@@ -1,10 +1,10 @@
 .sscWallet {
     &__wrapper {
         display: flex;
-        margin: 70px 122px 95px 160px;
+        padding: 70px 122px 95px 160px;
 
         @media screen and (min-width: 769px) and (max-width: 1300px) { 
-            margin: 70px 40px 95px 40px;
+            padding: 70px 40px 95px 40px;
         }
     }
 
@@ -69,7 +69,8 @@
         &_btn {
             width: 220px;
             height: 60px;
-            margin-top: 40px;
+            margin-top: 40px !important;
+            @include btn-blue;
         }
     }
 }
@@ -207,7 +208,8 @@
             }
     
             .selected-item {
-                @include btn-blue;
+                background-color: $lightBlue;
+                color: $white;
             }
         }
     }

@@ -33,9 +33,6 @@ body .accordion {
                 @include btn-empty-black;
                 width: 220px;
                 height: 60px;
-                font-size: 14px !important;
-                font-weight: 700;
-                line-height: 14px;
             }
             
         }
@@ -272,21 +269,7 @@ body .accordion {
                 button {
                     width: 146px;
                     height: 48px;
-                    background-color: $red;
-                    color: $white;
-                    font-family: $regularFont;
-                    font-size: 14px;
-                    font-weight: $medium;
-                    line-height: 14px;
-                    text-transform: uppercase;
-                    letter-spacing: 1px;
-                    border: none;
-                    cursor: pointer;
-                    transition: all 0.25s;
-
-                    &:hover {
-                        opacity: 0.9;
-                    }
+                    @include btn-red;
                 }
             }
         }
@@ -460,6 +443,10 @@ body .accordion {
         border: none;
         outline: none;
         padding: 28px 43px;
+
+        @media screen and (min-width: 769px) and (max-width: 1300px) { 
+            font-size: 18px;
+        }
     }
 
     .ui-state-default {

@@ -5,10 +5,10 @@
         font-weight: $medium;
         font-size: 34px;
         line-height: 34px;
-        margin: 64px 0 98px 122px;
+        padding: 64px 0 98px 122px;
 
         @media screen and (min-width: 769px) and (max-width: 1300px) { 
-            margin: 64px 0 98px 40px;
+            padding: 64px 0 98px 40px;
         }
     }
 

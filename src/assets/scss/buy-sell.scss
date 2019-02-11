@@ -58,6 +58,28 @@
             margin-left: 0 !important;
             width: calc(100% - 80px) !important;
         }
+
+        &_link-green, &_link-red {
+            width: 220px;
+            height: 60px;
+            margin-top: 32px !important;
+        }
+
+        &_link-green {
+            @include btn-empty-green;
+        }
+
+        &_link-red {
+            @include btn-empty-red;
+        }
+
+        .sell__advertisement {
+            @include btn-empty-red;
+            width: 220px;
+            height: 60px;
+            margin-top: 32px !important;
+            display: flex;
+        }
     }
 
     &__list-buy-from {
@@ -110,24 +132,9 @@
         }
     }
 
-    .accordion__authentication-container_right-side-btn {
-        border: 1px solid $turquoise;
-        color: $turquoise;
-        margin-top: 32px;
-        z-index: -1;
-    }
 
     .list-sellers {
         padding-bottom: 60px;
     }
     
-}
-
-.sell-single {
-    .accordion__authentication-container_right-side-btn {
-        border: 1px solid $red;
-        color: $red;
-        margin-top: 32px;
-        z-index: -1;
-    } 
 }

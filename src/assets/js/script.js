@@ -23,6 +23,8 @@
       peerToPeer.initSelect();
       peerToPeer.initCustomSelect();
       peerToPeer.initWalletSelect();
+      peerToPeer.initOpenChat();
+
       peerToPeer.initMenu();
       peerToPeer.initSearch();
       peerToPeer.initLiked();
@@ -381,6 +383,25 @@
             .removeClass('wallet-dropdown_open');
           }
         });
+      });
+    },
+
+    initOpenChat: function () {
+      let openChat = $('.open-chat');
+
+      openChat.each(function () {
+        $(this).on('click', function () {
+
+          let toggleText = $(this).find('span');
+          toggleText.text(function(i, toggle){
+               return toggle === 'open chat' ? 'hide chat' : 'open chat'
+            });
+
+          let $this = $(this),
+            index = $('.open-chat').index($this),
+            content = $('.chat__wrapper').eq(index);
+          content.toggleClass("open-chat-disabled");
+        })
       });
     },
 
