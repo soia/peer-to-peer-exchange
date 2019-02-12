@@ -211,13 +211,13 @@
     },
 
     initHeaderCabinetMenu: function () {
-      let toggleClass = $(".log-in-header__right-side_dropdown");
+      let toggleClass = $(".dropdown-header");
 
       toggleClass.on("click", function () {
-        toggleClass.toggleClass("menu-active");
+        $(this).toggleClass("menu-active");
       });
 
-      let stopPropagation = $('.log-in-header__right-side_dropdown-menu_list');
+      let stopPropagation = $('.dropdown-header-list');
       stopPropagation.click(function (e) {
         e.stopPropagation();
       });

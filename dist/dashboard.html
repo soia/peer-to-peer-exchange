@@ -16,7 +16,7 @@
 </head>
 
 <body class="dashboard__body" id="body">
-    <header class="header log-in-header">
+<header class="header log-in-header" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="700">
 
     <div class="header__left-side">
         <div class="header__left-side_logo">
@@ -64,13 +64,31 @@
         <a href="./sscWallet-inside.html" class="log-in-header__right-side_balance">Balance <span class="log-in-header__right-side_balance-money">0.00000000</span>
             <span class="log-in-header__right-side_balance-currency">ssc</span></a>
 
-        <div class="log-in-header__right-side_bell">
+        <div class="log-in-header__right-side_bell dropdown-header">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g opacity="0.7">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M1.66665 14.9999C0.555535 14.9999 0.555535 13.3333 1.66665 13.3333C2.58712 13.3333 3.33331 12.5871 3.33331 11.6666V7.49992C3.33331 3.81802 6.31808 0.833252 9.99998 0.833252C13.6819 0.833252 16.6666 3.81802 16.6666 7.49992V11.6666C16.6666 12.5871 17.4128 13.3333 18.3333 13.3333C19.4444 13.3333 19.4444 14.9999 18.3333 14.9999H1.66665ZM15 11.6666V7.49992C15 4.73849 12.7614 2.49992 9.99998 2.49992C7.23856 2.49992 4.99998 4.73849 4.99998 7.49992V11.6666C4.99998 12.2737 4.83766 12.843 4.55404 13.3333H15.4459C15.1623 12.843 15 12.2737 15 11.6666ZM10.0001 19.1636C10.8915 19.1636 11.7154 18.6891 12.1626 17.9181C12.4849 17.3625 12.0841 16.6666 11.4418 16.6666H8.55847C7.91621 16.6666 7.51537 17.3625 7.83763 17.9181C8.28488 18.6891 9.1088 19.1636 10.0001 19.1636Z"
                         fill="black" />
                 </g>
             </svg>
+            <ul class="log-in-header__right-side_dropdown-menu_list log-in-header__right-side_bell-notification  dropdown-header-list">
+                <li>
+                    <p class="notification-event">Your trade with Nicolas was successfully finished with good feedback.</p>
+                    <p class="notification-time">12:11</p>
+                </li>
+                <li>
+                    <p class="notification-event">Your trade with Nicolas was successfully finished with good feedback.</p>
+                    <p class="notification-time">12:11</p>
+                </li>
+                <li>
+                    <p class="notification-event">Your trade with Nicolas was successfully finished with good feedback.</p>
+                    <p class="notification-time">12:11</p>
+                </li>
+                <li>
+                    <p class="notification-event">Your trade with Nicolas was successfully finished with good feedback.</p>
+                    <p class="notification-time">12:11</p>
+                </li>
+            </ul>
         </div>
 
         <div class="log-in-header__right-side_mute">
@@ -104,8 +122,8 @@
             </svg>
         </div>
 
-        <div class="log-in-header__right-side_dropdown">
-            <ul class="log-in-header__right-side_dropdown-menu_list">
+        <div class="log-in-header__right-side_dropdown dropdown-header">
+            <ul class="log-in-header__right-side_dropdown-menu_list dropdown-header-list">
                 <li><a href="./settings.html"><img src="./assets/img/cabinet/settings/settings.svg" alt="settings">
                         Setings</a></li>
                 <li><a href="./profile.html"><img src="./assets/img/cabinet/settings/profile.svg" alt="profile">Profile</a></li>

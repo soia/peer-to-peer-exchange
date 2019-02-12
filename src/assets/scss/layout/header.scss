@@ -177,9 +177,46 @@
 
         &_bell {
             margin: 0 28px 0 24px;
+            position: relative;
 
             @media screen and (min-width: 769px) and (max-width: 1300px) { 
                 margin: 0 10px 0 10px;
+            }
+
+            &-notification {
+                width: 390px;
+                top: 63px;
+                left: -180px !important;
+                height: 265px;
+                overflow-y: scroll;
+
+                li {
+                    width: 100% !important;
+                    height: fit-content !important;
+                    padding: 12px 24px;
+                    transition: 0.25s;
+
+                    &:hover {
+                        .notification-event, .notification-time {
+                            color: $semiBlack;
+                        }
+                    }
+                }
+
+                .notification-event, .notification-time {
+                    color: #919bb0;
+                    font-family: $regularFont;
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+
+                .notification-event {
+
+                }
+
+                .notification-time {
+                    margin-top: 4px;
+                }
             }
         }
 

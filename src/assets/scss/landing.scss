@@ -10,6 +10,12 @@
         height: 1085px;
         z-index: -1;
     }
+
+    .tab-content.selected-item {
+        .buy-sell__tabs_title {
+            display: flex;
+        }
+    }
 }
 
 // peer to peer exchange
@@ -132,6 +138,10 @@
 }
 
 // list of sellers
+
+.landing-list-sellers {
+    justify-content: flex-end !important;
+}
 
 .list-sellers {
     padding: 100px 122px 70px 122px;
