@@ -286,6 +286,10 @@
 
         &_ads {
             padding: 50px 122px 70px 122px;
+
+            @media screen and (min-width: 769px) and (max-width: 1300px) { 
+                padding: 50px 40px 70px 40px;
+            }
         }
     }
 
@@ -301,5 +305,9 @@
         font-family: $boldFont;
         font-size: 30px;
         line-height: 30px;
+
+        @media screen and (min-width: 769px) and (max-width: 1300px) { 
+            padding: 65px 40px 0 70px;
+        }
     }
 }

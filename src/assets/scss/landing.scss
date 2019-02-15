@@ -34,13 +34,18 @@
     position: relative;
 
     @media screen and (min-width: 769px) and (max-width: 1300px) { 
-        margin: 90px 36px 0 40px;
+        margin: 40px 36px 0 40px;
     }
 
     &__text {
         position: absolute;
         top: calc(15%);
         transform: translateY(-15%);
+
+        @media screen and (min-width: 769px) and (max-width: 1300px) { 
+            top: 0;
+            transform: translateY(0%);
+        }
 
         &_title {
             color: $semiBlack;
@@ -72,6 +77,11 @@
         top: 65%;
         transform: translateY(-65%);
         width: 100%;
+
+        @media screen and (min-width: 769px) and (max-width: 1300px) { 
+            top: 79%;
+            transform: translateY(-79%);
+        }
 
         &_button {
             display: flex;
