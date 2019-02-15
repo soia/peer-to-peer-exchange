@@ -17,8 +17,12 @@
         }
     }
 
-    .list-sellers {
-        padding-top: 0 !important;
+    .list-sellers, .tab-content {
+        background-color: #efeded;
+    }
+
+    .wrapper__pagination {
+        padding-bottom: 50px;
     }
 }
 
@@ -65,8 +69,8 @@
         display: flex;
         margin-top: 60px;
         position: absolute;
-        top: 60%;
-        transform: translateY(-60%);
+        top: 65%;
+        transform: translateY(-65%);
         width: 100%;
 
         &_button {
