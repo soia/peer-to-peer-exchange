@@ -282,11 +282,23 @@
                 }
             }
         }
+
+        &_ads {
+            padding: 50px 122px 70px 122px;
+        }
     }
 
     .tab-content-remove.selected-item {
         .sscWalletInside-tabs__title {
             display: block !important;
         }
+    }
+
+    .sss-ads-title {
+        padding: 65px 122px 0 159px;
+        color: $semiBlack;
+        font-family: $boldFont;
+        font-size: 30px;
+        line-height: 30px;
     }
 }

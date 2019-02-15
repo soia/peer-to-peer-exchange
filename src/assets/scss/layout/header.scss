@@ -171,8 +171,22 @@
             }
         }
 
-        &_mute { 
+        &_mute {
+            height: 24px;
+            width: 24px;
+            
+            &:hover {
+                svg path {
+                    fill: $lightBlue;
+                }
+            }
+
             &-disabled {
+                &:hover {
+                    svg path {
+                        fill: $lightBlue;
+                    }
+                }
                 display: none;
             }
         }
