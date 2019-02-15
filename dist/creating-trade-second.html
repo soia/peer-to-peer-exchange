@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link rel="stylesheet" href="./assets/css/style.css" />
 
-    <title>Sell SSC</title>
+    <title>Creating trade</title>
 </head>
 
-<body class="buy-single__body" id="body">
+<body class="createTrade__body" id="body">
 <header class="header log-in-header wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.1s">
 
     <div class="header__left-side">
@@ -169,140 +169,34 @@
 
 </header>
 
-<main class="buy-sell buy-single sell-single">
+<main class="createTrade">
+    <h3 class="createTrade__title">
+        Creating you trade
+    </h3>
 
-    <div class="list-sellers">
-        <div class="list-sellers__left-side">
-            <section>
-                <h4 class="list-sellers__left-side_title">Selling SSC using VND VIA Vietcombank in Vietnam from Baobinh</h4>
-            </section>
-        </div>
-    </div>
-
-    <form action="#" class="tab-buy">
-
-        <div class="tab-buy__row">
-
-            <div class="tab-buy__inputs">
-                <label for="amount">Amount of SSC*</label>
-                <input maxlength="32" type="number" name="amount" id="amount" placeholder="0.04950495" step="0.001">
-                <p class="tab-buy__inputs_currency">ssc</p>
-                <img class="tab-buy__inputs_img" src="./assets/img/landing/logo&icons/twoArrows.svg" alt="twoArrows">
-            </div>
-
-            <div class="tab-buy__inputs">
-                <label for="amount2">Amount of VND*</label>
-                <input maxlength="32" type="number" name="amount2" id="amount2" placeholder="337.001" step="0.001">
-                <p class="tab-buy__inputs_currency">VND</p>
-                <img class="tab-buy__inputs_img" src="./assets/img/landing/logo&icons/twoArrows.svg" alt="twoArrows">
-            </div>
+    <form action="#" class="createTrade__form">
+        <div class="createTrade__form_confirmation">
+            <svg class="createTrade__form_svg-green" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12ZM13 16V12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12V16C11 16.5523 11.4477 17 12 17C12.5523 17 13 16.5523 13 16ZM12.7071 8.29289C13.0976 8.68342 13.0976 9.31658 12.7071 9.70711C12.3166 10.0976 11.6834 10.0976 11.2929 9.70711C10.9024 9.31658 10.9024 8.68342 11.2929 8.29289C11.6834 7.90237 12.3166 7.90237 12.7071 8.29289Z"
+                    fill="#00c99c"></path>
+            </svg>
+            <p class="createTrade__form_title-green">A confirmation code has been sent to you number. Please enter it below to
+                verufy you phone number.</p>
         </div>
 
-        <!-- create advertisement -->
-
-        <div class="buy-sell__advertisement">
-            <div class="buy-sell__advertisement_item">
-                <p class="tab-buy__row__price">≈ 7083.95<span>$</span></p>
-                <img class="tab-buy__inputs_img" src="./assets/img/landing/logo&icons/loading.svg" alt="loading">
-            </div>
-
-            <div class="wallet-dropdown">
-                <label for="wallet-dropdown__input" class="wallet-dropdown__label">receive SSC to *</label>
-                <input maxlength="32" type="text" id="wallet-dropdown__input" placeholder="Input your SSC adress here" class="wallet-dropdown__input wallet-dropdown__input_active">
-                <div class="custom_select custom_select__header">
-                    <div data-choosen="Your Paypeer Wallet" class="custom_select__choosen wallet-dropdown__choosen toggleSelect selected">
-                        <span>Your Paypeer Wallet</span>
-                    </div>
-                    <div class="custom_select__options">
-                        <div data-currency="Your Personal Wallet" class="custom_select__option selectOption">
-                            <span>Your Personal Wallet</span>
-                            <p class="custom_select__option_fee">Withdrawal fee SSC 0.005</p>
-                        </div>
-                    </div>
-                </div>
-                <img class="tab-buy__inputs_img" src="./assets/img/landing/logo&icons/walletBill.svg" alt="walletBill">
-            </div>
-
-            <a href="./chat-sell.html" class="sell__advertisement"><span>Sell SSC</span></a>
-
+        <div class="createTrade__form_input">
+            <img class="createTrade__form_input-img" src="./assets/img/cabinet/icons/done.svg" alt="done">
+            <label for="verification">Ferification</label>
+            <input maxlength="32" type="number" name="verification" id="verification" placeholder="Verification code">
         </div>
-
-        <!-- List Buy From -->
-
-        <div class="buy-sell__list-buy-from">
-            <div class="list-sellers">
-                <div class="list-sellers__left-side">
-                    <section>
-                        <h4 class="list-sellers__left-side_title">Advertisement details</h4>
-                    </section>
-                </div>
-            </div>
-            <div class="flex">
-                    <div class="advertisement-details__left-side">
-                        <div class="space-between">
-                            <div class="advertisement-details__left-side_img">
-                                <img src="./assets/img/cabinet/settings/dorn.jpg" alt="dorn">
-                            </div>
-                            <div class="advertisement-details__user-info">
-                                <div class="space-between">
-                                    <div>
-                                        <p class="advertisement-details__user-info_from">Buying from</p>
-                                        <a class="advertisement-details__user-info_user-name" href="./profile.html">Baobinh</a>
-                                    </div>
-                                    <div>
-                                        <p class="advertisement-details__user-info_required">Required</p>
-                                        <p class="advertisement-details__user-info_verification">You need <span>documents verification</span></p>
-                                    </div>
-                                </div>
-                                <div class="advertisement-details__price">
-                                    <div>
-                                        <p class="advertisement-details__price_title">Price</p>
-                                        <p class="advertisement-details__price_cost">8,395,894 VND/SSC</p>
-                                    </div>
-                                </div>
-                                <div class="advertisement-details__bottom-row space-between">
-                                    <div>
-                                        <p class="advertisement-details__user-info_required">Payment method</p>
-                                        <p class="advertisement-details__user-info_verification">Sacombank</p>
-                                    </div>
-                                    <div>
-                                        <p class="advertisement-details__user-info_required">Location</p>
-                                        <p class="advertisement-details__user-info_verification">Vietnam</p>
-                                    </div>
-                                    <div>
-                                        <p class="advertisement-details__user-info_required">Payment window</p>
-                                        <p class="advertisement-details__user-info_verification">15 minutes</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="advertisement-details__right-side">
-                        <section class="accordion">
-        
-                            <h3 class="accordion__title">Is it safe to sell SSC ?</h3>
-                            <div>
-                                <p>Seller's SSC is hold in an escrow when you open the trade, so you can send payment to seller
-                                    without worry. If the seller refused to release SSC after you sent the payment, click on
-                                    the
-                                    'Dispute' button and our support team with show up to help.</p>
-                            </div>
-        
-                            <h3 class="accordion__title">When will I recive SSC ?</h3>
-                            <div class="">
-                                <p>Seller's SSC is hold in an escrow when you open the trade, so you can send payment to seller
-                                    without worry. If the seller refused to release SSC after you sent the payment, click on
-                                    the
-                                    'Dispute' button and our support team with show up to help.</p>
-                            </div>
-                        </section>
-                    </div>
-                </div>
+        <div class="createTrade__form_buttons">
+            <a href="#" type="submit" class="createTrade__form_input-btn-green"><span>Verify</span></a>
+            <a href="#" type="submit" class="createTrade__form_input-btn-red"><span><p class="createTrade__form_buttons-timer">(00:16)</p>Haven`t received sms?</span></a>
+            <a href="#" type="submit" class="createTrade__form_input-btn-black"><span>Back</span></a>
         </div>
-
     </form>
-
 </main>
 
 <footer class="footer">

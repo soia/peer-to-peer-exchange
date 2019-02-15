@@ -65,7 +65,7 @@ body {
 
     .fixed-social-icons {
         position: fixed;
-        bottom: 120px;
+        bottom: 75px;
         right: 25px;
         display: flex;
         flex-direction: column;
@@ -77,6 +77,7 @@ body {
 
         &__links {
             padding: 15px;
+            visibility: hidden;
 
             &:not(:last-child) {
                 margin-bottom: 80px;

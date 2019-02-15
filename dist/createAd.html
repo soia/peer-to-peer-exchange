@@ -8,15 +8,14 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
     <link rel="stylesheet" href="https://rawgithub.com/dimsemenov/Magnific-Popup/master/dist/magnific-popup.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
     <title>Create new advertisement</title>
 </head>
 
-<body class="createAd__body" id="body">
-<header class="header log-in-header" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="700">
+<body class="createAdvertisement__body" id="body">
+<header class="header log-in-header wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.1s">
 
     <div class="header__left-side">
         <div class="header__left-side_logo">
@@ -170,19 +169,19 @@
 
 </header>
 
-<main class="createAd.html">
-    <h3 class="createAd__title">
+<main class="createAdvertisementvertisement">
+    <h3 class="createAdvertisement__title">
         Create new advertisement
     </h3>
 
-    <div class="createAd__wrapper">
-        <div class="createAd__wantToBuy">
-            <div class="createAd__wantToBuy_icon">
+    <div class="createAdvertisement__wrapper">
+        <div class="createAdvertisement__wantToBuy">
+            <div class="createAdvertisement__wantToBuy_icon">
                 <img src="./assets/img/landing/buy-sell/filter.svg" alt="icon">
             </div>
-            <div class="createAd__wantToBuy_wrapper-tabs">
-                <p class="createAd__wantToBuy_wrapper-tabs-text">I want to</p>
-                <div class="createAd__wantToBuy_tabs">
+            <div class="createAdvertisement__wantToBuy_wrapper-tabs">
+                <p class="createAdvertisement__wantToBuy_wrapper-tabs-text">I want to</p>
+                <div class="createAdvertisement__wantToBuy_tabs">
                     <ul class="tab-container__tab">
                         <li class="tab-container__tab-item tab-link turquoise selected-item" data-tab="tab-1">
                             <span>Buy ssc</span>
@@ -201,34 +200,34 @@
 
         <div class="tab-content tab-content-remove selected-item" id="tab-1">
             <form action="#" method="POST">
-                <div class="createAd__price">
-                    <div class="createAd__price_icon">
+                <div class="createAdvertisement__price">
+                    <div class="createAdvertisement__price_icon">
                         <img src="./assets/img/landing/buy-sell/marker.svg" alt="icon">
                     </div>
-                    <p class="createAd__price_text">Price</p>
+                    <p class="createAdvertisement__price_text">Price</p>
                 </div>
-                <div class="createAd__price-form">
-                    <div class="createAd__price-form_wrapper">
-                        <div class="createAd__price-form_line">
+                <div class="createAdvertisement__price-form">
+                    <div class="createAdvertisement__price-form_wrapper">
+                        <div class="createAdvertisement__price-form_line">
                             <img src="./assets/img/landing/buy-sell/line.svg" alt="line">
                         </div>
-                        <div class="createAd__price-form_content">
-                            <div class="createAd__price-form_subprice">
+                        <div class="createAdvertisement__price-form_content">
+                            <div class="createAdvertisement__price-form_subprice">
                                 <p>Price</p>
                                 <p>23,230 VND/USD</p>
                                 <p>Price of 1 USD in VND</p>
                             </div>
-                            <div class="createAd__price-form__inputs">
+                            <div class="createAdvertisement__price-form__inputs">
                                 <label for="amountOfSsc">Amount of SSC*</label>
                                 <input maxlength="32" type="number" name="amountOfSsc" id="amountOfSsc" placeholder="23300.848432708604" step="0.001">
-                                <p class="createAd__price-form__inputs_currency">ssc</p>
+                                <p class="createAdvertisement__price-form__inputs_currency">ssc</p>
                             </div>
-                            <div class="createAd__price-form__inputs">
+                            <div class="createAdvertisement__price-form__inputs">
                                 <label for="priceInUsd">Price for one SSC in USD</label>
                                 <input maxlength="32" type="number" name="priceInUsd" id="priceInUsd" placeholder="1000.84">
-                                <p class="createAd__price-form__inputs_currency">usd</p>
+                                <p class="createAdvertisement__price-form__inputs_currency">usd</p>
                             </div>
-                            <div class="createAd__price-form_receive-price">
+                            <div class="createAdvertisement__price-form_receive-price">
                                 <p>SSC price that you receive</p>
                                 <p>93,372,985 VND</p>
                             </div>
@@ -236,25 +235,25 @@
                     </div>
                 </div>
 
-                <div class="createAd__price">
-                    <div class="createAd__price_icon">
+                <div class="createAdvertisement__price">
+                    <div class="createAdvertisement__price_icon">
                         <img src="./assets/img/landing/buy-sell/info.svg" alt="icon">
                     </div>
-                    <p class="createAd__price_text">Payment information</p>
+                    <p class="createAdvertisement__price_text">Payment information</p>
                 </div>
-                <div class="createAd__price-form">
-                    <div class="createAd__price-form_wrapper">
-                        <div class="createAd__price-form_line">
+                <div class="createAdvertisement__price-form">
+                    <div class="createAdvertisement__price-form_wrapper">
+                        <div class="createAdvertisement__price-form_line">
                             <img src="./assets/img/landing/buy-sell/line2.svg" alt="line">
                         </div>
-                        <div class="createAd__price-form_content">
-                            <div class="createAd__price-form_subprice">
+                        <div class="createAdvertisement__price-form_content">
+                            <div class="createAdvertisement__price-form_subprice">
                                 <p>Payment method</p>
                                 <p>Bank transfer</p>
                             </div>
                             <div class="flex">
-                                <div class="createAd__price-form__select">
-                                    <select class="main-dropdown createAd__price-form__dropdown">
+                                <div class="createAdvertisement__price-form__select">
+                                    <select class="main-dropdown createAdvertisement__price-form__dropdown">
                                         <option selected disabled value="1">ACB(Ngan Hang A chau)</option>
                                         <option value="2">ACB(Ngan Hang A chau)</option>
                                         <option value="3">ACB(Ngan Hang A chau)</option>
@@ -264,12 +263,12 @@
                                         <option value="7">ACB(Ngan Hang A chau)</option>
                                     </select>
                                 </div>
-                                <div class="createAd__price-form__inputs">
+                                <div class="createAdvertisement__price-form__inputs">
                                     <label for="bankAccount">Bank account number</label>
                                     <input maxlength="32" type="text" name="bankAccount" id="bankAccount" placeholder="Write you Number">
                                 </div>
                             </div>
-                            <div class="createAd__price-form__inputs">
+                            <div class="createAdvertisement__price-form__inputs">
                                 <label for="bankAccountName">Bank account name</label>
                                 <input maxlength="32" type="text" name="bankAccountName" id="bankAccountName" placeholder="Write your account Name">
                             </div>
@@ -277,7 +276,7 @@
                     </div>
                 </div>
 
-                <button type="submit" class="createAd__price-form__submit"><span>Create</span></button>
+                <button type="submit" class="createAdvertisement__price-form__submit"><span>Create</span></button>
 
             </form>
         </div>
@@ -286,34 +285,34 @@
 
         <div class="tab-content tab-content-remove" id="tab-2">
             <form action="#" method="POST">
-                <div class="createAd__price">
-                    <div class="createAd__price_icon">
+                <div class="createAdvertisement__price">
+                    <div class="createAdvertisement__price_icon">
                         <img src="./assets/img/landing/buy-sell/marker.svg" alt="icon">
                     </div>
-                    <p class="createAd__price_text">Price</p>
+                    <p class="createAdvertisement__price_text">Price</p>
                 </div>
-                <div class="createAd__price-form">
-                    <div class="createAd__price-form_wrapper">
-                        <div class="createAd__price-form_line">
+                <div class="createAdvertisement__price-form">
+                    <div class="createAdvertisement__price-form_wrapper">
+                        <div class="createAdvertisement__price-form_line">
                             <img src="./assets/img/landing/buy-sell/line.svg" alt="line">
                         </div>
-                        <div class="createAd__price-form_content">
-                            <div class="createAd__price-form_subprice">
+                        <div class="createAdvertisement__price-form_content">
+                            <div class="createAdvertisement__price-form_subprice">
                                 <p>Price</p>
                                 <p>25,410 VND/USD</p>
                                 <p>Price of 1 USD in VND</p>
                             </div>
-                            <div class="createAd__price-form__inputs">
+                            <div class="createAdvertisement__price-form__inputs">
                                 <label for="amount">Amount of SSC*</label>
                                 <input maxlength="32" type="number" name="amount" id="amount" placeholder="34100.8484" step="0.001">
-                                <p class="createAd__price-form__inputs_currency">ssc</p>
+                                <p class="createAdvertisement__price-form__inputs_currency">ssc</p>
                             </div>
-                            <div class="createAd__price-form__inputs">
+                            <div class="createAdvertisement__price-form__inputs">
                                 <label for="priceForOne">Price for one SSC in USD</label>
                                 <input maxlength="32" type="number" name="priceForOne" id="priceForOne" placeholder="1230.50">
-                                <p class="createAd__price-form__inputs_currency">usd</p>
+                                <p class="createAdvertisement__price-form__inputs_currency">usd</p>
                             </div>
-                            <div class="createAd__price-form_receive-price">
+                            <div class="createAdvertisement__price-form_receive-price">
                                 <p>SSC price that you receive</p>
                                 <p>65,150,765 VND</p>
                             </div>
@@ -321,25 +320,25 @@
                     </div>
                 </div>
 
-                <div class="createAd__price">
-                    <div class="createAd__price_icon">
+                <div class="createAdvertisement__price">
+                    <div class="createAdvertisement__price_icon">
                         <img src="./assets/img/landing/buy-sell/info.svg" alt="icon">
                     </div>
-                    <p class="createAd__price_text">Payment information</p>
+                    <p class="createAdvertisement__price_text">Payment information</p>
                 </div>
-                <div class="createAd__price-form">
-                    <div class="createAd__price-form_wrapper">
-                        <div class="createAd__price-form_line">
+                <div class="createAdvertisement__price-form">
+                    <div class="createAdvertisement__price-form_wrapper">
+                        <div class="createAdvertisement__price-form_line">
                             <img src="./assets/img/landing/buy-sell/line2.svg" alt="line">
                         </div>
-                        <div class="createAd__price-form_content">
-                            <div class="createAd__price-form_subprice">
+                        <div class="createAdvertisement__price-form_content">
+                            <div class="createAdvertisement__price-form_subprice">
                                 <p>Payment method</p>
                                 <p>Bank transfer</p>
                             </div>
                             <div class="flex">
-                                <div class="createAd__price-form__select">
-                                    <select class="main-dropdown createAd__price-form__dropdown">
+                                <div class="createAdvertisement__price-form__select">
+                                    <select class="main-dropdown createAdvertisement__price-form__dropdown">
                                         <option selected disabled value="1">ACB(Ngan Hang A chau)</option>
                                         <option value="2">ACB(Ngan Hang A chau)</option>
                                         <option value="3">ACB(Ngan Hang A chau)</option>
@@ -349,12 +348,12 @@
                                         <option value="7">ACB(Ngan Hang A chau)</option>
                                     </select>
                                 </div>
-                                <div class="createAd__price-form__inputs">
+                                <div class="createAdvertisement__price-form__inputs">
                                     <label for="bankAccountNumber">Bank account number</label>
                                     <input maxlength="32" type="text" name="bankAccountNumber" id="bankAccountNumber" placeholder="Write you Number">
                                 </div>
                             </div>
-                            <div class="createAd__price-form__inputs">
+                            <div class="createAdvertisement__price-form__inputs">
                                 <label for="bankName">Bank account name</label>
                                 <input maxlength="32" type="text" name="bankName" id="bankName" placeholder="Write your account Name">
                             </div>
@@ -362,7 +361,7 @@
                     </div>
                 </div>
 
-                <button type="submit" class="createAd__price-form__submit"><span>Create</span></button>
+                <button type="submit" class="createAdvertisement__price-form__submit"><span>Create</span></button>
 
             </form>
         </div>
@@ -484,17 +483,17 @@
     </form>
 </div>
 <!-- JS -->
-<script src="./assets/js/jquery-3.3.1.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://rawgithub.com/dimsemenov/Magnific-Popup/master/dist/jquery.magnific-popup.js?v=0.8.9"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
 <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="./assets/js/datepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script src="./assets/js/scripts.min.js"></script>
-<script src="./assets/js/slick.min.js"></script>
+
 <!-- end JS -->
 
 </body>

@@ -1,0 +1,117 @@
+.createTrade {
+
+    &__title {
+        color: $semiBlack;
+        font-family: $regularFont;
+        font-weight: $medium;
+        font-size: 34px;
+        line-height: 34px;
+        padding: 64px 0 21px 122px;
+
+        @media screen and (min-width: 769px) and (max-width: 1300px) { 
+            padding: 64px 0 98px 40px;
+        }
+    }
+
+    &__form {
+        margin: 0 122px 0 161px;
+
+        @media screen and (min-width: 769px) and (max-width: 1300px) { 
+            margin: 0 40px 0 40px;
+        }
+
+        &_confirmation {
+            display: flex;
+            margin-bottom: 42px;
+        }
+
+        &_svg-red, &_svg-green {
+            margin-right: 60px;
+        }
+
+        &_svg-red {
+            path {
+                fill: $red;
+            }
+        }
+
+        &_svg-green {
+            path {
+                fill: $turquoise;
+            }
+        }
+
+        &_title-green, &_title-red {
+            font-family: $regularFont;
+            font-size: 24px;
+            line-height: 28px;
+        }
+
+        &_title-green {
+            color: $turquoise;
+        }
+
+        &_title-red {
+            color: $red;
+        }
+
+        &_input {
+            @include main-input;
+            position: relative;
+            width: 100%;
+            margin-bottom: 30px;
+
+            &-img {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            input {
+                width: calc(100% - 83px);
+                height: 90px;
+                padding: 27px 24px 27px 24px;
+                font-size: 30px;
+                margin-left: 83px;
+
+                @media screen and (min-width: 769px) and (max-width: 1300px) { 
+                    font-size: 24px;
+                }
+            }
+
+            label {
+                margin-left: 83px;
+            }
+
+            &-btn-green {
+                @include btn-green;
+                width: 220px;
+                height: 60px;
+                margin-right: 24px;
+            }
+
+            &-btn-red {
+                @include btn-red;
+                width: 342px;
+                height: 60px;
+                margin-right: 24px;
+            }
+
+            &-btn-black {
+                @include btn-empty-black;
+                width: 220px;
+                height: 60px;
+            }
+        }
+
+        &_buttons {
+            display: flex;
+            margin-left: 83px;
+
+            &-timer {
+                margin-right: 15px;
+            }
+        }
+    }
+}
