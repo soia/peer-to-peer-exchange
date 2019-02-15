@@ -82,6 +82,7 @@
                 overflow-x: hidden;
                 overflow-y: -webkit-paged-y;
                 margin-right: 15px;
+                height: 55px;
 
                 &:first-child {
                     width: 5%;
@@ -118,14 +119,12 @@
                         font-size: 14px;
                         line-height: 14px;
                         margin-bottom: 15px;
-                        height: 14px;
                     }
 
                     &:last-child {
                         font-family: $regularFont;
                         font-size: 18px;
                         line-height: 18px;
-                        height: 18px;
                     }
 
                 }
