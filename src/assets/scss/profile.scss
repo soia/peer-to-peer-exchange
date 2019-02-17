@@ -148,6 +148,10 @@
             &_messenger {
                 flex-direction: row;
                 justify-content: space-between;
+
+                &-btn {
+                    margin-right: 25px;
+                }
             }
 
             &_title {

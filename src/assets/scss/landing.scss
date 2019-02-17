@@ -419,6 +419,14 @@
         }
     }
 
+    &__inputs-red {
+        border: 1px solid $red;
+    }
+
+    &__inputs-green {
+        border: 1px solid $turquoise;
+    }
+
     &__inputs {
         position: relative;
         margin-right: 12px;

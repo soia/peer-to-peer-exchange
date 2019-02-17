@@ -141,7 +141,8 @@
     
       &_active {
         width: 85%;
-        height: 90px;
+        height: 89px;
+        border-bottom: 1px solid $turquoise !important;
         position: relative;
         z-index: 9999;
         background-color: #f2f3f9;
