@@ -422,15 +422,47 @@ $mainBorder: 1px solid rgba(207, 213, 231, .5);
         }
         
         &:first-child {
-            @include btn-empty-green;
+            // @include btn-empty-green;
             position: relative;
+            border: 1px solid#78DBC5;
+            transition: all 0.25s;
 
+            span {
+                color: $turquoise;
+            }
 
+            &:hover{
+                background-color: #78DBC5;
+                opacity: 0.9;
+
+                span {
+                    color: $white;
+                }
+            }
         }
 
         &:last-child {
-            @include btn-empty-red;
+            // @include btn-empty-red;
             position: relative;
+            border: 1px solid #F799A5;
+            ransition: all 0.25s;
+            
+            // &:hover::before{
+            //     opacity: 0.5;
+            // }
+
+            span {
+                color: $red;
+            }
+
+            &:hover{
+                background-color: #F799A5;
+                opacity: 0.9;
+
+                span {
+                    color: $white;
+                }
+            }
         }
     }
 
@@ -448,9 +480,9 @@ $mainBorder: 1px solid rgba(207, 213, 231, .5);
         outline: none;
         overflow: hidden;
         transition: 0.25s;
-    
-        &:hover {
-            opacity: 0.9;
+
+        &:hover{
+            background-color: $red;
         }
     
         span{
@@ -489,10 +521,12 @@ $mainBorder: 1px solid rgba(207, 213, 231, .5);
         outline: none;
         overflow: hidden;
         transition: 0.25s;
-    
-        &:hover {
-            opacity: 0.9;
+
+        &:hover{
+                
+            background-color: $turquoise;
         }
+
     
         span{
             z-index: 2;	
